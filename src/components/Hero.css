@@ -1,0 +1,138 @@
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #ff7e5f, #feb47b);
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  text-align: left;
+}
+
+.hero h1 {
+  font-size: 4rem;
+}
+
+.hero p {
+  margin: 1rem 0;
+}
+
+.cta-button {
+  margin-top: 20px;
+  padding: 1rem 2rem;
+  background-color: #ff5733;
+  color: white;
+  border: none;
+  text-decoration: none;
+}
+
+.scrolling-text-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #feb47b, #ff7e5f);
+  position: relative;
+  overflow: hidden;
+}
+
+.horizontal-line {
+  width: 1000px;
+  height: 2px;
+  background-image: linear-gradient(
+    353deg,
+    hsla(0, 0%, 100%, 0.35),
+    #fff 52%,
+    hsla(0, 0%, 100%, 0.35)
+  );
+  box-sizing: border-box;
+  position: relative;
+}
+
+.icon-center {
+  position: absolute;
+  top: -42.5px; /* Center vertically */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85px;
+  height: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.scrolling-text {
+  display: flex;
+  animation: scroll-text 100s linear infinite;
+  white-space: nowrap;
+  font-family: "Futura font", sans-serif;
+  font-size: 288px;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 100%;
+  padding: 90px 0;
+  margin: 60px;
+}
+
+.scrolling-text-item {
+  display: inline-block;
+  padding: 0 50px; /* Adds spacing between items */
+  background: none; /* Removed the background property */
+  color: transparent; /* Text will be transparent, but... */
+  background-clip: text;
+  -webkit-background-clip: text; /* Gradient will only affect the text */
+  background-image: linear-gradient(
+    90deg,
+    #ffffff,
+    #2c2b2b
+  ); /* Gradient on text */
+  -webkit-text-fill-color: transparent; /* Ensures text fill is transparent */
+}
+
+.scrolling-text-item:nth-child(2n) {
+  background-image: linear-gradient(
+    90deg,
+    #ffffff,
+    #2c2b2b
+  ); /* Alternate gradient */
+}
+
+@keyframes scroll-text {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .cta-button {
+    padding: 0.75rem 1.5rem;
+  }
+
+  .scrolling-text {
+    font-size: 72px;
+  }
+
+  .scrolling-text-item {
+    font-size: 72px;
+    padding: 0 25px;
+  }
+}

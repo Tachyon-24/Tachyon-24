@@ -1,0 +1,11 @@
+.about {
+  padding: 5rem 2rem;
+  text-align: center;
+  background-color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 3rem 1rem;
+  }
+}
