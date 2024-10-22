@@ -11,6 +11,7 @@ function App() {
     <div className="App">
       <Header />
       <Hero />
+      {/* checking PR */}
       <div className="section">
         <EventsSection />
         <AboutSection />
