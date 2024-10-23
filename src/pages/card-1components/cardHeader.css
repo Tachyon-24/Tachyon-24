@@ -35,11 +35,9 @@ nav::-webkit-scrollbar-thumb {
 }
 
 
-.header {
-    position: fixed;
+.cardheader {
     width: 100%;
     top: 0;
-    background: transparent;
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -47,7 +45,10 @@ nav::-webkit-scrollbar-thumb {
     color: black;
     z-index: 1000; /* Ensure the header is above other elements */
     box-sizing: border-box;
+    background: linear-gradient(to bottom, #b5227b, transparent);
+    
   }
+
   
   .logo {
     margin-top: 40px;
@@ -59,14 +60,14 @@ nav::-webkit-scrollbar-thumb {
     width: 110px;
   }
   
-  nav{
+  .cardheader > nav{
     margin-right: 70px;
     overflow-x: auto; /* Enable horizontal scrolling */
     white-space: nowrap; /* Prevent wrapping of nav items */
     width: 350px; /* Set a fixed width (adjust as needed) */
   } 
 
-  nav ul {
+  .cardheader > nav ul {
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -75,16 +76,16 @@ nav::-webkit-scrollbar-thumb {
     margin-right: 20px;
   }
   
-  nav ul li {
+  .cardheader > nav ul li {
     margin: 0 1rem;
   }
   
-  nav ul li a {
+  .cardheader > nav ul li a {
     text-decoration: none;
-    color: black;
+    color: white;
   }
   
-  nav ul li a:hover {
+  .cardheader > nav ul li a:hover {
     color: #ff5733;
   }
   

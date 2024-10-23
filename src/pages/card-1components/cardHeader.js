@@ -4,7 +4,7 @@ import "./cardHeader.css";
 const cardHeader = () => {
     return (
         <>
-             <header className="header">
+             <header className="cardheader">
                 <div className="logo"><img id="logo-img" src= "/logo.png"  alt="logo" /></div>
                 <nav>
                     <ul>
