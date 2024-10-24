@@ -1,0 +1,95 @@
+nav::-webkit-scrollbar {
+    width: 100px;
+    height: 10px; 
+}
+
+nav::-webkit-scrollbar-track {
+    background: transparent; 
+    border: 1px grey solid;
+}
+
+nav::-webkit-scrollbar-thumb {
+    background: grey; 
+}
+
+@media (max-width : 700px){
+    nav::-webkit-scrollbar {
+        width: 0px;
+        height: 0px; 
+    }
+    
+    nav::-webkit-scrollbar-track {
+        background: transparent; 
+    }
+    
+    nav::-webkit-scrollbar-thumb {
+        background: transparent; 
+    }
+
+    .logo {
+        margin-top: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    
+}
+
+
+.cardheader {
+    width: 100%;
+    top: 0;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    z-index: 1000; /* Ensure the header is above other elements */
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, #b5227b, transparent);
+    
+  }
+
+  
+  .logo {
+    margin-top: 40px;
+    margin-left: 40px;
+  }
+
+  #logo-img{
+    height : 110px;
+    width: 110px;
+  }
+  
+  .cardheader > nav{
+    margin-right: 70px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping of nav items */
+    width: 350px; /* Set a fixed width (adjust as needed) */
+  } 
+
+  .cardheader > nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-right: 20px; /* Add padding to the right side */
+    margin-right: 20px;
+  }
+  
+  .cardheader > nav ul li {
+    margin: 0 1rem;
+  }
+  
+  .cardheader > nav ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .cardheader > nav ul li a:hover {
+    color: #ff5733;
+  }
+  
+  .contact-button {
+    margin-right: 20px; /* Add margin to the right side */
+  }
+  
