@@ -23,21 +23,7 @@ const cardHeader = () => {
                     <li>
                         <a href="#hero">Home4</a>
                     </li>
-                    <li>
-                        <a href="#hero">Home5</a>
-                    </li>
-                    <li>
-                        <a href="#hero">Home6</a>
-                    </li>
-                    <li>
-                        <a href="#hero">Home7</a>
-                    </li>
-                    <li>
-                        <a href="#hero">Home8</a>
-                    </li>
-                    <li>
-                        <a href="#hero">Home9</a>
-                    </li>
+                    
                     </ul>
                 </nav>
             </header>
