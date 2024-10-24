@@ -12,9 +12,23 @@ function App() {
   return (
     <Router>
       <div className="App">
+        {/* This will load the base page elements */}
         <Routes>
-          <Route path = "/" element = {<><Header /> <Hero /> <EventsSection /> <AboutSection /> <Footer /></>} /> {/* this route loads the base page elements*/}
-          <Route path = "/card-1" element = {<Card1 />} /> {/* this route loads the card page's elements */}
+          <Route 
+            path="/" 
+            element={
+              <>
+                <Header />
+                <Hero />
+                <EventsSection />
+                <AboutSection />
+                <Footer />
+              </>
+            } 
+          />
+          
+          {/* This will load the card-1 page */}
+          <Route path="/card-1" element={<Card1 />} />
         </Routes>
       </div>
     </Router>

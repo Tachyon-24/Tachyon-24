@@ -20,8 +20,6 @@ const cardHeader = () => {
                     <li>
                         <a href="#hero">Home3</a>
                     </li>
-
-                    
                     <li>
                         <a href="#hero">Home4</a>
                     </li>
