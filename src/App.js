@@ -8,11 +8,14 @@ import AboutSection from "./components/AboutSection";
 import Footer from "./components/Footer";
 import Card1 from "./pages/card-1";   //adding the card's page
 
+
+
 function App() {
   return (
     <Router>
       <div className="App">
         {/* This will load the base page elements */}
+        
         <Routes>
           <Route 
             path="/" 
