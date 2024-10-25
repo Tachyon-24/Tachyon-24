@@ -1,0 +1,89 @@
+.card-container {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-scroll {
+  display: flex;
+  gap: 20px; /* Adjust gap between cards */
+  animation: scroll 30s linear infinite; /* Adjust the speed if necessary */
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* FlipCard container styling */
+.flip-card {
+  width: 300px;
+  height: 500px;
+  padding: 20px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front and back sides */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Front side styling */
+.flip-card-front {
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+}
+
+.flip-card-image {
+  width: 80%;
+  height: 60%;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.flip-card-front h3 {
+  font-size: 1.5em;
+  color: #333;
+}
+
+/* Back side styling */
+.flip-card-back {
+  background-color: #1e1e1e;
+  color: #fff;
+  transform: rotateY(180deg);
+  padding: 20px;
+  text-align: center;
+  font-size: 1.2em;
+}

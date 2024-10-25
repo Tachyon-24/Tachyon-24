@@ -7,6 +7,7 @@ import EventsSection from "./components/EventsSection";
 import AboutSection from "./components/AboutSection";
 import Footer from "./components/Footer";
 import Card1 from "./pages/card-1";   //adding the card's page
+import FlipCard2 from "./components/FlipCard2";
 
 
 
@@ -23,6 +24,7 @@ function App() {
               <>
                 <Header />
                 <Hero />
+                <FlipCard2/>
                 <EventsSection />
                 <AboutSection />
                 <Footer />
