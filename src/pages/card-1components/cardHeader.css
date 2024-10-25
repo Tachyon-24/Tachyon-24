@@ -61,9 +61,7 @@ nav::-webkit-scrollbar-thumb {
   }
   
   .cardheader > nav{
-    margin-right: 70px;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    white-space: nowrap; /* Prevent wrapping of nav items */
+    margin-right: 150px;
     width: 350px; /* Set a fixed width (adjust as needed) */
   } 
 

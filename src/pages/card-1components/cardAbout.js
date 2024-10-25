@@ -14,11 +14,11 @@ const cardAbout = () => {
                         <span className="Abilitiestxt">Abilities</span>
                         <div className="border"></div>
                         <ul className="ulAbilites">
-                            <li>Ability1</li>
-                            <li>Ability2</li>
-                            <li>Ability3</li>
-                            <li>Ability4</li>
-                            <li><a href="https://kimetsu-no-yaiba.fandom.com/wiki/Nezuko_Kamado#Abilities">View More</a></li>
+                            <li><img className="abilities-background" src="https://cdn.prod.website-files.com/6215709a2879ceb5988bb02e/62157e7159df8360db310be5_Regeneration.svg" alt=""></img>Ability1</li>
+                            <li><img className="abilities-background" src="https://cdn.prod.website-files.com/6215709a2879ceb5988bb02e/62157e8579a5732e7f2b2b70_strength.svg" alt=""></img>Ability2</li>
+                            <li><img className="abilities-background" src="https://cdn.prod.website-files.com/6215709a2879ceb5988bb02e/62157eada31431926cee6417_size.svg" alt=""></img>Ability3</li>
+                            <li><img className="abilities-background" src="https://cdn.prod.website-files.com/6215709a2879ceb5988bb02e/62157eb2051086343d5ce938_blood.svg" alt=""></img>Ability4</li>
+                            <li><a href="https://kimetsu-no-yaiba.fandom.com/wiki/Nezuko_Kamado#Abilities"><img style={{border:"1px solid white", "border-radius" : "500px", padding : "2px", "margin-right" : "20px"}} src="https://cdn.prod.website-files.com/6215709a2879ceb5988bb02e/6215779be20f8ca838d9d591_more.svg" alt=""></img>View More</a></li>
                         </ul>
                     </div>
                     <div className="animepic">
