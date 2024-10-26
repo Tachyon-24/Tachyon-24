@@ -4,15 +4,31 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, #ff7e5f, #feb47b);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../public/background.jpg") no-repeat;
+  background-position: top center, 65% 50%;
+  background-size: cover, auto;
+  background-repeat: no-repeat, no-repeat;
   color: white;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 
-.hero-content {
+.hero::before {
+  content: "";
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), black);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
   bottom: 20px;
   left: 20px;
   text-align: left;
@@ -20,10 +36,13 @@
 
 .hero h1 {
   font-size: 4rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero p {
   margin: 1rem 0;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .cta-button {
@@ -33,6 +52,13 @@
   color: white;
   border: none;
   text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e04e2a;
 }
 
 .scrolling-text-container {
@@ -41,7 +67,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, #feb47b, #ff7e5f);
+  background: transparent; /* Make background transparent */
   position: relative;
   overflow: hidden;
 }
@@ -75,7 +101,7 @@
 
 .scrolling-text {
   display: flex;
-  animation: scroll-text 100s linear infinite;
+  animation: scroll-text 10s linear infinite; /* Adjusted duration */
   white-space: nowrap;
   font-family: "Futura font", sans-serif;
   font-size: 288px;
@@ -111,10 +137,10 @@
 
 @keyframes scroll-text {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 

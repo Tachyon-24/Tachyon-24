@@ -4,6 +4,7 @@ import "./FlipCard.css";
 import FlipCard from "./FlipCard";
 
 const FlipCard2 = () => {
+  
   const cards = [
     { image: "https://example.com/image1.jpg", title: "Card 1", description: "Info about Card 1" },
     { image: "https://example.com/image2.jpg", title: "Card 2", description: "Info about Card 2" },
