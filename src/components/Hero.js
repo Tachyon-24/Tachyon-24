@@ -32,7 +32,11 @@ const Hero = () => {
         <div className="horizontal-line"></div>
         <div className="scrolling-text">
           <div className="scrolling-text-item">Techyon!</div>
+          <div className="scrolling-text-item">Techyon!</div>{" "}
           <div className="scrolling-text-item">Techyon!</div>
+          <div className="scrolling-text-item">Techyon!</div>{" "}
+          <div className="scrolling-text-item">Techyon!</div>
+          <div className="scrolling-text-item">Techyon!</div>{" "}
           <div className="scrolling-text-item">Techyon!</div>
           <div className="scrolling-text-item">Techyon!</div>
         </div>
