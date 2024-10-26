@@ -1,69 +1,74 @@
 .hamburger-container {
-    position: relative;
-  }
-  
-  /* Hamburger button styles */
-  .hamburger-icon {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-  }
-  
-  .bar {
-    width: 100%;
-    height: 3px;
-    background-color: #333;
-    transition: all 0.3s ease;
-  }
-  
-  /* Rotate bars when menu is open */
-  .hamburger-icon.open .bar:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-  
-  .hamburger-icon.open .bar:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .hamburger-icon.open .bar:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-  
-  /* Side menu styles */
-  .side-menu {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 0;
-    background-color: #333;
-    overflow-x: hidden;
-    transition: 0.5s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .side-menu ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .side-menu ul li {
-    margin: 20px 0;
-  }
-  
-  .side-menu ul li a {
-    color: white;
-    font-size: 1.5rem;
-    text-decoration: none;
-  }
-  
-  /* When the menu is open */
-  .side-menu.open {
-    width: 250px;
-  }
-  
+  position: relative;
+}
+
+/* Hamburger button styles */
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  background-color: #fff; /* Change to white for better visibility */
+  transition: all 0.3s ease;
+}
+
+/* Rotate bars when menu is open */
+.hamburger-icon.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-icon.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Side menu styles */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 0;
+  background-color: rgba(51, 51, 51, 0.95); /* Slight transparency */
+  overflow-x: hidden;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px); /* Blur background */
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.side-menu ul li {
+  margin: 20px 0;
+}
+
+.side-menu ul li a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.side-menu ul li a:hover {
+  color: #ff5733;
+}
+
+/* When the menu is open */
+.side-menu.open {
+  width: 250px;
+}
