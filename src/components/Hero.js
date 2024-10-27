@@ -53,15 +53,15 @@ const Hero = () => {
                     className="icon-play-button"
                   />
                 </div>
-                <div className="play-text text-light">WATCH THE TRAILER</div>
+                <div className="play-text text-light">WATCH PREVIOUS EVENT</div>
               </div>
             </a>
           </div>
           <h1 className="hero-title">Welcome!</h1>
           <p className="hero-subtitle">
-            This is a fan website with the purpose to inform about Demon Slayer
-            characters, sectioned for protagonists, pillars, and upper moons.
-            Continue exploring this amazing experience.
+            Tachyon is Central India's largest technical fest. It is an endeavor
+            to provide an outstanding platform for students to showcase their
+            talent and skill sets in the fiercest of competitions.
           </p>
         </div>
         <Modal
@@ -74,7 +74,7 @@ const Hero = () => {
             className="video-iframe"
             width="940"
             height="528"
-            src="https://www.youtube.com/embed/VQGCKyvzIM4?autoplay=1"
+            src="https://www.youtube.com/embed/jkM9uayDQfE?autoplay=1"
             title="YouTube video player"
             frameBorder="0"
             allow="autoplay; fullscreen"
@@ -89,14 +89,14 @@ const Hero = () => {
       <section className="scrolling-text-container">
         <div className="horizontal-line"></div>
         <div className="scrolling-text">
-          <div className="scrolling-text-item">Techyon!</div>
-          <div className="scrolling-text-item">Techyon!</div>{" "}
-          <div className="scrolling-text-item">Techyon!</div>
-          <div className="scrolling-text-item">Techyon!</div>{" "}
-          <div className="scrolling-text-item">Techyon!</div>
-          <div className="scrolling-text-item">Techyon!</div>{" "}
-          <div className="scrolling-text-item">Techyon!</div>
-          <div className="scrolling-text-item">Techyon!</div>
+          <div className="scrolling-text-item">Tachyon!</div>
+          <div className="scrolling-text-item">Tachyon!</div>{" "}
+          <div className="scrolling-text-item">Tachyon!</div>
+          <div className="scrolling-text-item">Tachyon!</div>{" "}
+          <div className="scrolling-text-item">Tachyon!</div>
+          <div className="scrolling-text-item">Tachyon!</div>{" "}
+          <div className="scrolling-text-item">Tachyon!</div>
+          <div className="scrolling-text-item">Tachyon!</div>
         </div>
         <div className="icon-show">
           <div className="icon-background">
