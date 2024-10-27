@@ -5,7 +5,7 @@ const cardHeader = () => {
     return (
         <>
              <header className="cardheadersponsor">
-                <div className="logo"><img id="logo-img" src= "/logo.png"  alt="logo" /></div>
+                <div className="logo"><img id="logo-img" src= "./header-logo.png"  alt="logo" /></div>
                 <nav>
                     <ul>
                     <li>
