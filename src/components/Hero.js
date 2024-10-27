@@ -1,12 +1,29 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import Modal from "react-modal";
 import "./Hero.css";
+import playButton from "../assests/playButton.svg";
+import temple from "../assests/japanese-temple.png";
+
+Modal.setAppElement("#root");
 
 const Hero = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openModal = () => {
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const logo = document.querySelector(".icon-center");
       const scrollPosition = window.scrollY;
-      logo.style.transform = `translateX(-50%) rotate(${scrollPosition}deg)`;
+      logo.style.transform = `translateX(-50%) rotate(${
+        scrollPosition / 10
+      }deg)`;
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -81,8 +98,10 @@ const Hero = () => {
           <div className="scrolling-text-item">Tachyon!</div>
           <div className="scrolling-text-item">Tachyon!</div>
         </div>
-        <div className="horizontal-line">
-          <img src="/icon.jpg" alt="Icon" className="icon-center" />
+        <div className="icon-show">
+          <div className="icon-background">
+            <img src={temple} alt="Icon" className="icon-center" />
+          </div>
         </div>
       </section>
     </>
