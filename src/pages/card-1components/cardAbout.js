@@ -4,7 +4,7 @@ import "./cardAbout.css"
 const cardAbout = () => {
     return (
         <>
-            <section>
+            <section className="CardPage">
                 <div className="HeroInfo">
                     <div className="AboutHero">
                         <span className="HeroSkilltxt">Skilled Hand-To-Hand</span>
@@ -18,13 +18,13 @@ const cardAbout = () => {
                             <li><img className="abilities-background" src="https://cdn.prod.website-files.com/6215709a2879ceb5988bb02e/62157e8579a5732e7f2b2b70_strength.svg" alt=""></img>Ability2</li>
                             <li><img className="abilities-background" src="https://cdn.prod.website-files.com/6215709a2879ceb5988bb02e/62157eada31431926cee6417_size.svg" alt=""></img>Ability3</li>
                             <li><img className="abilities-background" src="https://cdn.prod.website-files.com/6215709a2879ceb5988bb02e/62157eb2051086343d5ce938_blood.svg" alt=""></img>Ability4</li>
-                            <li><a href="https://kimetsu-no-yaiba.fandom.com/wiki/Nezuko_Kamado#Abilities"><img style={{border:"1px solid white", "border-radius" : "500px", padding : "2px", "margin-right" : "20px"}} src="https://cdn.prod.website-files.com/6215709a2879ceb5988bb02e/6215779be20f8ca838d9d591_more.svg" alt=""></img>View More</a></li>
+                            <li><a href="https://kimetsu-no-yaiba.fandom.com/wiki/Nezuko_Kamado#Abilities"><img style={{border:"4px solid white", "border-radius" : "500px", padding : "0px", "margin-right" : "20px","margin-left" : "40px", width : "60px", height : "60px"}} src="https://cdn.prod.website-files.com/6215709a2879ceb5988bb02e/6215779be20f8ca838d9d591_more.svg" alt=""></img>View More</a></li>
                         </ul>
                     </div>
                     <div className="animepic">
                         <div className="wrapper-div">
                             
-                            <img id="animepic" src="/hero-background.jpg" alt="heroimage"></img>
+                            <img id="animepic" src="https://cdn.prod.website-files.com/6215709a2879ceb5988bb02e/622427f647118072f58dcd4a_Nezuko.png" alt="heroimage"></img>
                             <img id="background-animepic" src="https://cdn.prod.website-files.com/62091a8c8bac4e5727559c42/621bd39c1a15cc9a7755f9cc_Isologo.svg" alt="backgorund"></img>
                         
                         </div>

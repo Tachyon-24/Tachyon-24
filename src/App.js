@@ -7,6 +7,7 @@ import EventsSection from "./components/EventsSection";
 import AboutSection from "./components/AboutSection";
 import Footer from "./components/Footer";
 import Card1 from "./pages/card-1";   //adding the card's page
+import Sponsorspage from "./pages/sponsors";
 
 
 
@@ -32,6 +33,7 @@ function App() {
           
           {/* This will load the card-1 page */}
           <Route path="/card-1" element={<Card1 />} />
+          <Route path="/sponsors" element={<Sponsorspage />} />
         </Routes>
       </div>
     </Router>
