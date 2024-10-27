@@ -4,15 +4,15 @@ import "./EventsSection.css";
 const EventsSection = () => {
   return (
     <section className="events" id="events">
-      <h2>Our Events</h2>
+      <h1>Our Events</h1>
       <div className="events-grid">
         <div className="event-card">
-          <h3>Hackathon</h3>
-          <p>Compete in a 24-hour hackathon.</p>
+          <h3>Games</h3>
+          <p>Coming Soon...</p>
         </div>
         <div className="event-card">
           <h3>Workshops</h3>
-          <p>Attend sessions by industry leaders.</p>
+          <p>Coming Soon...</p>
         </div>
       </div>
     </section>
