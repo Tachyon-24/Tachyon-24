@@ -1,17 +1,15 @@
 .header {
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 0;
-  background: rgba(17, 17, 17, 0.9); /* Slight transparency */
-  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0); /* Slight transparency */
+  padding: 1rem 2rem 0rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: white;
   z-index: 1000; /* Ensure the header is above other elements */
   box-sizing: border-box;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow */
-  backdrop-filter: blur(10px); /* Blur background */
 }
 
 .logo {
