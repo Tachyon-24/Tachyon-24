@@ -2,8 +2,8 @@
   position: fixed;
   width: 100%;
   top: 0;
-  background: rgba(17, 17, 17, 0.9); /* Slight transparency */
-  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0); /* Slight transparency */
+  padding: 1rem 2rem 0rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,12 +11,35 @@
   z-index: 1000; /* Ensure the header is above other elements */
   box-sizing: border-box;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow */
-  backdrop-filter: blur(10px); /* Blur background */
+  backdrop-filter: blur(2px); /* Blur background */
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+.logo img {
+  width: 200px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out scale(0.7);
+}
+
+@keyframes fireEffect {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.9) rotate(10deg);
+  }
+  50% {
+    transform: scale(0.7) rotate(-10deg);
+  }
+  75% {
+    transform: scale(0.9) rotate(10deg);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.fire-animation {
+  animation: fireEffect 2.5s ease-in-out;
 }
 
 nav ul {
