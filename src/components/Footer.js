@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import './Footer.css';
+import footerLogo from '../assests/footer-logo.png'
 
 const Footer = () => {
     useEffect(() => {
@@ -74,8 +75,8 @@ const Footer = () => {
                     <div className="divider_footer"></div>
                     <a href="/" className="link-logo-footer">
                         <img 
-                            src="https://cdn.prod.website-files.com/62091a8c8bac4e5727559c42/620c6b4bbe1cdc4fa1d81a7d_Logo.svg"
-                            alt="Demon Slayer Logo" 
+                            src={footerLogo}
+                            alt="Tachyon Logo" 
                             className="logo_footer"
                         />
                     </a>
@@ -87,15 +88,15 @@ const Footer = () => {
                             rel="noopener noreferrer" 
                             className="link_paragraph_1"
                         >
-                            KOYOHARU GOTOUGE
+                            tachyon team
                         </a>{' '}
-                        <span className="text-dim">THE WRITER AND</span><br />
-                        <span className="text-dim">ILLUSTRATOR OF DEMON SLAYER: KIMETSU NO YAIBA - MANGA</span>
+                        {/* <span className="text-dim">THE WRITER AND</span><br />
+                        <span className="text-dim">ILLUSTRATOR OF DEMON SLAYER: KIMETSU NO YAIBA - MANGA</span> */}
                     </div>
                     <div className="paragraph_1 paragraph_1_align_center paragraph_1_medium">
                         <span className="text-dim">WEBSITE DEVELOPED AND DESIGNED BY</span>{' '}
                         <span className="link_paragraph_1">
-                            TECHFEST TEAM
+                            Tachyon Development Team
                         </span>
                     </div>
                 </div>
