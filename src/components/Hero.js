@@ -59,7 +59,7 @@ const Hero = () => {
           </div>
           <h1 className="hero-title">Welcome!</h1>
           <p className="hero-subtitle">
-            Welcome to the TachFest 2024 - The Techyon!
+            Welcome to the TechFest 2024 - The Tachyon!
           </p>
         </div>
         <Modal
