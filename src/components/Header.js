@@ -1,52 +1,93 @@
-import React, { useState, useEffect } from "react";
-import "./Header.css";
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import headerLogo from "../assests/header-logo.png";
+import './Header.css';
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [fireActive, setFireActive] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+      if (window.innerWidth <= 768) {
+        setIsOpen(false);
+      }
+    };
+
     const fireTriggered = sessionStorage.getItem("fireTriggered");
     if (fireTriggered) {
-      setFireActive(false); // Reset if already triggered in session
+      setFireActive(false);
     }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location]);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   const handleDoubleClick = () => {
     if (!fireActive) {
-      setFireActive(true); // Activate the fire effect
+      setFireActive(true);
       sessionStorage.setItem("fireTriggered", "true");
       setTimeout(() => {
-        setFireActive(false); // Stop the effect after 3 seconds
+        setFireActive(false);
       }, 3000);
     }
   };
 
+  const navItems = [
+    { path: '/', label: 'Home' },
+    { path: '/events', label: 'Events' },
+    { path: '/about', label: 'About' },
+    { path: '/team', label: 'Team' }
+  ];
+
   return (
     <header className="header">
-      <div className="logo" onDoubleClick={handleDoubleClick}>
-        <img
-          src={headerLogo}
-          alt="Tachyon24"
-          className={fireActive ? "fire-animation" : ""}
+      <Link to="/" className="logo">
+        <img 
+          src={headerLogo} 
+          alt="Tech Fest 2024" 
+          className={fireActive ? 'fire-animation' : ''}
+          onDoubleClick={handleDoubleClick}
         />
-      </div>
-      <nav>
-        <ul>
-          <li>
-            <a href="#hero">Home</a>
-          </li>
-          <li>
-            <a href="#events">Events</a>
-          </li>
-          <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
-      </nav>
+      </Link>
+
+      {!isMobile && (
+        <>
+          <div 
+            className={`hamburger-icon ${isOpen ? 'open' : ''}`} 
+            onClick={toggleMenu}
+          >
+            <div className="bar"></div>
+            <div className="bar"></div>
+            <div className="bar"></div>
+          </div>
+
+          <div className={`slide-menu ${isOpen ? 'open' : ''}`}>
+            <nav>
+              <ul>
+                {navItems.map(({ path, label }) => (
+                  path !== location.pathname && (
+                    <li key={path}>
+                      <Link to={path}>{label}</Link>
+                    </li>
+                  )
+                ))}
+              </ul>
+            </nav>
+          </div>
+        </>
+      )}
     </header>
   );
 };
