@@ -1,6 +1,5 @@
-
 .CardPage{
-    margin-top: 25px;
+    margin-top: 120px;
     margin-right: 70px;
     margin-left: 70px;
     display: flex;
@@ -254,7 +253,7 @@ a{
 /*For your average Phone*/
 @media (max-width : 825px) {
     .CardPage{
-        margin-top:20px;
+        margin-top:200px;
     }
     .Abilitiestxt, .ulAbilites, .border{
         display: None;
@@ -339,7 +338,7 @@ a{
 /*For width greater than 825px and lower than 1000px*/
 @media (max-width : 1200px) {
     .CardPage{
-        margin-top:20px;
+        margin-top:140px;
     }
     .Abilitiestxt, .ulAbilites, .border{
         display: None;
@@ -427,7 +426,7 @@ a{
 /*width of less than 400px*/
 @media (max-width : 450px){
     .CardPage{
-        margin-top:20px;
+        margin-top:150px;
     }
 
     .Abilitiestxt, .ulAbilites, .border{
