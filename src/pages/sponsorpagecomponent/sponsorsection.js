@@ -4,8 +4,6 @@ import "./sponsorsection.css";
 const SponsorsSection = () => {
   useEffect(() => {
     const scrollers = document.querySelectorAll(".scroller");
-
-    // Check if prefers-reduced-motion is enabled
     if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       addAnimation(scrollers);
     }
@@ -27,7 +25,8 @@ const SponsorsSection = () => {
 
   return (
     <section className="sponsorsection">
-      <div className="scroller" data-speed="fast" data-direction = "left">
+      <h1 style = {{fontSize : "50px", "marginBottom" : "60px"}}>Comming Soon..</h1>  {/*Remove this and uncomment the below part to see the sponsors page */}
+      {/* <div className="scroller" data-speed="fast" data-direction = "left">
         <ul className="tag-list scroller__inner">
           <li><img src="/logo192.png" alt="companylogo"></img></li>
           <li><img src="/devfoliologo.png" alt="companylogo"></img></li>
@@ -54,7 +53,7 @@ const SponsorsSection = () => {
           <li><img src="/devfoliologo.png" alt="companylogo"></img></li>
         </ul>
       </div>
-      
+       */}
     </section>
   );
 };

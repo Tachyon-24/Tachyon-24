@@ -1,11 +1,12 @@
 import React from "react";
 import "./cardHeaderSponsor.css";
+import HeaderLogo from "../../assests/header-logo.png";
 
 const cardHeader = () => {
     return (
         <>
              <header className="cardheadersponsor">
-                <div className="logo"><img id="logo-img" src= "./header-logo.png"  alt="logo" /></div>
+                <div className="logo"><img id="logo-img" src= {HeaderLogo}  alt="logo" /></div>
                 <nav>
                     <ul>
                     <li>

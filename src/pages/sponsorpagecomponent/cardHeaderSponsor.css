@@ -45,7 +45,7 @@ nav::-webkit-scrollbar-thumb {
     color: black;
     z-index: 1000; /* Ensure the header is above other elements */
     box-sizing: border-box;
-    background: linear-gradient(to bottom, #01b6b6, transparent);
+    background: linear-gradient(to bottom,#d78e3a, transparent);
     
   }
 
@@ -53,6 +53,7 @@ nav::-webkit-scrollbar-thumb {
   .logo {
     margin-top: 40px;
     margin-left: 40px;
+    margin-bottom: 20px;
   }
 
   #logo-img{

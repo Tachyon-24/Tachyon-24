@@ -24,7 +24,7 @@ const cardAbout = () => {
                     <div className="animepic">
                         <div className="wrapper-div">
                             
-                            <img id="animepic" src="https://cdn.prod.website-files.com/6215709a2879ceb5988bb02e/622427f647118072f58dcd4a_Nezuko.png" alt="heroimage"></img>
+                            <img id="animepic" src="/nezuko.png" alt="heroimage"></img>
                             <img id="background-animepic" src="https://cdn.prod.website-files.com/62091a8c8bac4e5727559c42/621bd39c1a15cc9a7755f9cc_Isologo.svg" alt="backgorund"></img>
                         
                         </div>
