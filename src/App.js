@@ -14,8 +14,6 @@ import FAB from "./components/FAB";
 import TeamPage from "./pages/TeamPage";
 import EventsPage from "./pages/EventsPage";
 import AboutPage from "./pages/AboutPage";
-//import Contactpage from "./pages/contactpage/contactpage";
-import ContactPage from "./pages/contactpage/contactpage";
 
 // Scroll to top functionality
 function ScrollToTop() {
@@ -54,7 +52,6 @@ function App() {
           <Route path="/team" element={<TeamPage />} />
           <Route path="/events" element={<EventsPage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage/>}/>
         </Routes>
         <FAB />
       </div>
