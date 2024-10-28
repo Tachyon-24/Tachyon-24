@@ -19,35 +19,20 @@ const EventsPage = () => {
             <h2 className="events-title">Our Events</h2>
             <div className="title-underline"></div>
           </div>
-          
-          <div className="events-grid">
-            <div className="event-detail-card">
-              <div className="event-icon">🚀</div>
-              <h3>Hackathon</h3>
-              <p>24-hour coding challenge to build innovative solutions.</p>
-              <div className="event-meta">
-                <span>Date: Coming Soon</span>
-                <span>Prize Pool: $5000</span>
-              </div>
-            </div>
 
-            <div className="event-detail-card">
-              <div className="event-icon">💡</div>
-              <h3>Tech Talks</h3>
-              <p>Industry leaders sharing insights and experiences.</p>
-              <div className="event-meta">
-                <span>Date: Coming Soon</span>
-                <span>Multiple Sessions</span>
-              </div>
-            </div>
-
-            <div className="event-detail-card">
-              <div className="event-icon">🎨</div>
-              <h3>UI/UX Workshop</h3>
-              <p>Learn design principles and tools from experts.</p>
-              <div className="event-meta">
-                <span>Date: Coming Soon</span>
-                <span>Hands-on Training</span>
+          <div className="coming-soon-container">
+            <div className="coming-soon-card">
+              <div className="pulse-circle"></div>
+              <h3 className="coming-soon-text">Coming Soon</h3>
+              <p className="coming-soon-subtext">
+                Exciting events are on the way!
+                <br /> Stay tuned for more information.
+              </p>
+              <div className="decorative-line"></div>
+              <div className="tech-icons">
+                <span className="tech-dot"></span>
+                <span className="tech-dot"></span>
+                <span className="tech-dot"></span>
               </div>
             </div>
           </div>
