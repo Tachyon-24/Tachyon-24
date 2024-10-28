@@ -59,9 +59,7 @@ const Hero = () => {
           </div>
           <h1 className="hero-title">Welcome!</h1>
           <p className="hero-subtitle">
-            This is a fan website with the purpose to inform about Demon Slayer
-            characters, sectioned for protagonists, pillars, and upper moons.
-            Continue exploring this amazing experience.
+            Welcome to the TechFest 2024 - The Techyon!
           </p>
         </div>
         <Modal
