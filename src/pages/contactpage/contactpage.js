@@ -1,7 +1,7 @@
 
   /* React Component */
   import React, { useState } from 'react';
-
+  import { Mail, MapPin, Phone, Globe, } from 'lucide-react';
   import emailjs from '@emailjs/browser'
 import "./contact.css"
 import Footer from '../../components/Footer';
