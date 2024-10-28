@@ -69,6 +69,18 @@
   align-items: center;
 }
 
+.lightbox-trailer {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
 .wrap-play-button {
   display: flex;
   position: relative;
@@ -222,7 +234,7 @@
   position: absolute;
   top: -42.5px; /* Center vertically */
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) rotate(var(--rotation-angle));
   padding: 20px;
   width: 85px;
   height: 85px;

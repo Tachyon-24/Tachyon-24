@@ -19,11 +19,12 @@ const Hero = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const logo = document.querySelector(".icon-center");
       const scrollPosition = window.scrollY;
-      logo.style.transform = `translateX(-50%) rotate(${
-        scrollPosition / 10
-      }deg)`;
+      const rotation = scrollPosition * 0.1; // Adjust the multiplier to control rotation speed
+      document.documentElement.style.setProperty(
+        "--rotation-angle",
+        `${rotation}deg`
+      );
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -38,8 +39,7 @@ const Hero = () => {
       <section className="hero" id="hero">
         <div className="hero-content">
           <div className="hero-buttons">
-            <a
-              href="#"
+            <button
               className="lightbox-trailer"
               onClick={openModal}
               aria-label="open lightbox"
@@ -55,7 +55,7 @@ const Hero = () => {
                 </div>
                 <div className="play-text text-light">WATCH THE TRAILER</div>
               </div>
-            </a>
+            </button>
           </div>
           <h1 className="hero-title">Welcome!</h1>
           <p className="hero-subtitle">
@@ -90,11 +90,11 @@ const Hero = () => {
         <div className="horizontal-line"></div>
         <div className="scrolling-text">
           <div className="scrolling-text-item">Techyon!</div>
-          <div className="scrolling-text-item">Techyon!</div>{" "}
           <div className="scrolling-text-item">Techyon!</div>
-          <div className="scrolling-text-item">Techyon!</div>{" "}
           <div className="scrolling-text-item">Techyon!</div>
-          <div className="scrolling-text-item">Techyon!</div>{" "}
+          <div className="scrolling-text-item">Techyon!</div>
+          <div className="scrolling-text-item">Techyon!</div>
+          <div className="scrolling-text-item">Techyon!</div>
           <div className="scrolling-text-item">Techyon!</div>
           <div className="scrolling-text-item">Techyon!</div>
         </div>
