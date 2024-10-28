@@ -53,7 +53,7 @@ const Hero = () => {
                     className="icon-play-button"
                   />
                 </div>
-                <div className="play-text text-light">WATCH THE TRAILER</div>
+                <div className="play-text text-light">WATCH PREVIOUS EVENT</div>
               </div>
             </button>
           </div>
@@ -72,7 +72,7 @@ const Hero = () => {
             className="video-iframe"
             width="940"
             height="528"
-            src="https://www.youtube.com/embed/VQGCKyvzIM4?autoplay=1"
+            src="https://www.youtube.com/embed/jkM9uayDQfE?autoplay=1"
             title="YouTube video player"
             frameBorder="0"
             allow="autoplay; fullscreen"

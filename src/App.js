@@ -8,10 +8,11 @@ import Hero from "./components/Hero";
 import EventsSection from "./components/EventsSection";
 import AboutSection from "./components/AboutSection";
 import Footer from "./components/Footer";
+import Card1 from "./pages/card-1";   // Adding the card's page
+import Sponsorspage from "./pages/sponsors";
 import FAB from "./components/FAB";
 
 // Page imports
-import Card1 from "./pages/card-1";
 import TeamPage from "./pages/TeamPage";
 import EventsPage from "./pages/EventsPage";
 import AboutPage from "./pages/AboutPage";
@@ -49,6 +50,7 @@ function App() {
           
           {/* Individual page routes */}
           <Route path="/card-1" element={<Card1 />} />
+          <Route path="/sponsors" element={<Sponsorspage />} />
           <Route path="/team" element={<TeamPage />} />
           <Route path="/events" element={<EventsPage />} />
           <Route path="/about" element={<AboutPage />} />

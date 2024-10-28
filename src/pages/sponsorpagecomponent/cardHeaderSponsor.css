@@ -35,7 +35,7 @@ nav::-webkit-scrollbar-thumb {
 }
 
 
-.cardheader {
+.cardheadersponsor {
     width: 100%;
     top: 0;
     padding: 1rem 2rem;
@@ -45,7 +45,7 @@ nav::-webkit-scrollbar-thumb {
     color: black;
     z-index: 1000; /* Ensure the header is above other elements */
     box-sizing: border-box;
-    background: linear-gradient(to bottom, #b5227b, transparent);
+    background: linear-gradient(to bottom,#d78e3a, transparent);
     
   }
 
