@@ -59,7 +59,7 @@ const Hero = () => {
           </div>
           <h1 className="hero-title">Welcome!</h1>
           <p className="hero-subtitle">
-            Welcome to the TechFest 2024 - The Techyon!
+            Welcome to the TechFest 2024 - The Tachyon!
           </p>
         </div>
         <Modal
@@ -87,14 +87,14 @@ const Hero = () => {
       <section className="scrolling-text-container">
         <div className="horizontal-line"></div>
         <div className="scrolling-text">
-          <div className="scrolling-text-item">Techyon!</div>
-          <div className="scrolling-text-item">Techyon!</div>
-          <div className="scrolling-text-item">Techyon!</div>
-          <div className="scrolling-text-item">Techyon!</div>
-          <div className="scrolling-text-item">Techyon!</div>
-          <div className="scrolling-text-item">Techyon!</div>
-          <div className="scrolling-text-item">Techyon!</div>
-          <div className="scrolling-text-item">Techyon!</div>
+          <div className="scrolling-text-item">Tachyon!</div>
+          <div className="scrolling-text-item">Tachyon!</div>
+          <div className="scrolling-text-item">Tachyon!</div>
+          <div className="scrolling-text-item">Tachyon!</div>
+          <div className="scrolling-text-item">Tachyon!</div>
+          <div className="scrolling-text-item">Tachyon!</div>
+          <div className="scrolling-text-item">Tachyon!</div>
+          <div className="scrolling-text-item">Tachyon!</div>
         </div>
         <div className="icon-show">
           <div className="icon-background">
