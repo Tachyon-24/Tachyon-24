@@ -2,7 +2,7 @@
   position: absolute;
   width: 100%;
   top: 0;
-  background: rgba(255, 255, 255, 0); /* Slight transparency */
+  background: rgba(255, 255, 255, 0);
   padding: 1rem 2rem 0rem;
   display: flex;
   justify-content: space-between;
@@ -10,8 +10,8 @@
   color: white;
   z-index: 1000;
   box-sizing: border-box;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(2px);
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); */
+  /* backdrop-filter: blur(2px); */
 }
 
 /* Logo Styles */
@@ -29,11 +29,21 @@
 
 /* Fire Animation */
 @keyframes fireEffect {
-  0% { transform: scale(1); }
-  25% { transform: scale(0.9) rotate(10deg); }
-  50% { transform: scale(0.7) rotate(-10deg); }
-  75% { transform: scale(0.9) rotate(10deg); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.9) rotate(10deg);
+  }
+  50% {
+    transform: scale(0.7) rotate(-10deg);
+  }
+  75% {
+    transform: scale(0.9) rotate(10deg);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .fire-animation {
@@ -117,7 +127,7 @@
     padding: 1rem;
     justify-content: center;
   }
-  
+
   .hamburger-icon {
     display: none;
   }
