@@ -96,6 +96,7 @@ const Hero = () => {
           <div className="scrolling-text-item">Tachyon!</div>
           <div className="scrolling-text-item">Tachyon!</div>
         </div>
+        <div className="horizontal-line"></div>
         <div className="icon-show">
           <div className="icon-background">
             <img src={temple} alt="Icon" className="icon-center" />
