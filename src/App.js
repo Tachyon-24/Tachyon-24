@@ -16,6 +16,8 @@ import EventsPage from "./pages/EventsPage";
 import AboutPage from "./pages/AboutPage";
 //import Contactpage from "./pages/contactpage/contactpage";
 import ContactPage from "./pages/contactpage/contactpage";
+import FlipCard2 from "./components/FlipCard2";
+import LoadingPage from "./components/LoadingPage";
 
 // Scroll to top functionality
 function ScrollToTop() {
@@ -40,7 +42,9 @@ function App() {
             path="/" 
             element={
               <>
+                <LoadingPage/>
                 <Hero />
+                <FlipCard2/>
                 <EventsSection />
                 <AboutSection />
                 <Footer />
