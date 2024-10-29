@@ -20,7 +20,7 @@ const Hero = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const rotation = scrollPosition * 0.1; // Adjust the multiplier to control rotation speed
+      const rotation = scrollPosition * 0.5; // Adjust the multiplier to control rotation speed
       document.documentElement.style.setProperty(
         "--rotation-angle",
         `${rotation}deg`
@@ -96,6 +96,7 @@ const Hero = () => {
           <div className="scrolling-text-item">Tachyon!</div>
           <div className="scrolling-text-item">Tachyon!</div>
         </div>
+        <div className="horizontal-line"></div>
         <div className="icon-show">
           <div className="icon-background">
             <img src={temple} alt="Icon" className="icon-center" />
