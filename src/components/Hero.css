@@ -236,6 +236,7 @@
   );
   box-sizing: border-box;
   position: relative;
+  top:2.4vw;
 }
 
 .icon-show {

@@ -98,7 +98,7 @@ const Hero = () => {
         </div>
         <div className="horizontal-line"></div>
         <div className="icon-show">
-          <div className="icon-background">
+          <div className="icon-background" style={{marginBottom:'8vw'}}>
             <img src={temple} alt="Icon" className="icon-center" />
           </div>
         </div>
