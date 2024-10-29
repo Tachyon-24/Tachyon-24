@@ -43,8 +43,7 @@ function App() {
               <>
                 <Hero />
                 <FlipCard2/>
-                <EventsSection />
-                <AboutSection />
+              
                 <Footer />
               </>
             } 
