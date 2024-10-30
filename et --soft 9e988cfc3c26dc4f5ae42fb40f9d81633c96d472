@@ -1,0 +1,262 @@
+[33mcommit 9e988cfc3c26dc4f5ae42fb40f9d81633c96d472[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Adi <adityavyas670@gmail.com>
+Date:   Wed Oct 30 11:26:20 2024 +0530
+
+    flipcard improved
+
+[33mcommit c571635c88c02954522fa93b7c589e14e39252f0[m
+Author: Vansh Verma <vvansh739@gmail.com>
+Date:   Wed Oct 30 00:21:58 2024 +0530
+
+    pushing hr fix
+
+[33mcommit c781d1e13ddb48f3df449083b6e4ab10d5f99068[m
+Author: Vansh Verma <vvansh739@gmail.com>
+Date:   Tue Oct 29 23:51:33 2024 +0530
+
+    Removing unused imports
+
+[33mcommit 6e64160477588ef71ac13b464763c55f73181029[m
+Author: Vansh Verma <vvansh739@gmail.com>
+Date:   Tue Oct 29 23:47:35 2024 +0530
+
+    removing about and event from landing page
+
+[33mcommit 6aaba51b5a8cad0d2acbb698b3a9f033a3729407[m
+Merge: 65fa987 5837e99
+Author: Adi <adityavyas670@gmail.com>
+Date:   Tue Oct 29 23:39:14 2024 +0530
+
+    Merge branch 'main' of https://github.com/Tachyon-24/Tachyon-24
+
+[33mcommit 65fa98716a1910ba860b4ce1f8ff892f68c9845f[m
+Author: Adi <adityavyas670@gmail.com>
+Date:   Tue Oct 29 23:39:09 2024 +0530
+
+    hr width changed
+
+[33mcommit 5837e99dede7b47056ddfd8dead6116d834f7887[m
+Author: Vansh Verma <vvansh739@gmail.com>
+Date:   Tue Oct 29 23:37:45 2024 +0530
+
+    Update index.html
+
+[33mcommit 5fcf24627219442274cd553bfd897d56b6984e3a[m
+Merge: c0dc48b e59ed92
+Author: Adi <adityavyas670@gmail.com>
+Date:   Tue Oct 29 23:27:01 2024 +0530
+
+    Merge branch 'main' of https://github.com/Tachyon-24/Tachyon-24
+
+[33mcommit c0dc48b9b772791c39a4c693e0ee00d7b56972fa[m
+Author: Adi <adityavyas670@gmail.com>
+Date:   Tue Oct 29 23:26:56 2024 +0530
+
+    removed the blur background
+
+[33mcommit e59ed920b04d71ca9c0d544f0de613d42128e55c[m
+Merge: 5471319 1829863
+Author: Vansh Verma <vvansh739@gmail.com>
+Date:   Tue Oct 29 23:26:05 2024 +0530
+
+    Merge pull request #12 from Tachyon-24/FlipCard
+    
+    changes in flipcard and add loading page
+
+[33mcommit 18298637805c1b4f0b5cd8d74c368b6a7f4914e4[m[33m ([m[1;31morigin/FlipCard[m[33m)[m
+Author: t-suraj21 <surajyadav2121115@gmail.com>
+Date:   Tue Oct 29 23:25:27 2024 +0530
+
+    remove loading page
+
+[33mcommit 745bac723af968438125fa93c538e060c8ed15d1[m
+Merge: 1fcb2a3 5471319
+Author: t-suraj21 <surajyadav2121115@gmail.com>
+Date:   Tue Oct 29 23:23:50 2024 +0530
+
+    Merge branch 'main' of https://github.com/Tachyon-24/Tachyon-24 into FlipCard
+
+[33mcommit 5471319c8510b6183c1f11bedad2fbc43c9d9864[m
+Author: Adi <adityavyas670@gmail.com>
+Date:   Tue Oct 29 23:21:04 2024 +0530
+
+    added 2nd hr
+
+[33mcommit 48b3b295944a3c84eab199c993447cc56f9326fb[m
+Author: Adi <adityavyas670@gmail.com>
+Date:   Tue Oct 29 21:37:32 2024 +0530
+
+    icon spin speed corrected
+
+[33mcommit 1fcb2a338b4d528ee6304672ac00038bc0c3de8a[m
+Author: t-suraj21 <surajyadav2121115@gmail.com>
+Date:   Tue Oct 29 07:50:33 2024 +0530
+
+    changes in flipcard and add loading page
+
+[33mcommit eaa9d298c15f634f763d4ec963e0a593b50b8ca9[m
+Author: Vansh Verma <vvansh739@gmail.com>
+Date:   Mon Oct 28 19:54:41 2024 +0530
+
+    Update contactpage.js
+
+[33mcommit 1209da2c66f4958b1f4b16040f865b5693167732[m
+Author: Vansh Verma <vvansh739@gmail.com>
+Date:   Mon Oct 28 19:51:45 2024 +0530
+
+    Update contactpage.js
+
+[33mcommit 02d50b7a535bc1fe9793c9f945c6d5820d8b2100[m
+Merge: 8bd2977 2124a92
+Author: Vansh Verma <vvansh739@gmail.com>
+Date:   Mon Oct 28 19:44:23 2024 +0530
+
+    Merge pull request #10 from Tachyon-24/contactus
+    
+    pushing contactus with the form working and sending emails
+
+[33mcommit 2124a92ed06073e175438b58e2de8d7209725bcf[m[33m ([m[1;31morigin/contactus[m[33m)[m
+Author: Vansh Verma <vvansh739@gmail.com>
+Date:   Mon Oct 28 19:43:02 2024 +0530
+
+    pushing contactus with the form working and sending emails
+
+[33mcommit 8bd29776d37e1ee07702b8dd0f45711e92a8f0a4[m
+Merge: 2345248 8592a6d
+Author: Vansh Verma <vvansh739@gmail.com>
+Date:   Mon Oct 28 17:39:52 2024 +0530
+
+    Merge pull request #9 from Tachyon-24/card-1
+    
+    Fixed the Header in Card and Sponsors page.
+
+[33mcommit 8592a6d29f2ae97d5fb55866410221024244cf0c[m[33m ([m[1;31morigin/card-1[m[33m)[m
+Merge: e7f2607 2345248
+Author: PushkarOM <pushkarchaturvedi42@gmail.com>
+Date:   Mon Oct 28 17:30:33 2024 +0530
+
+    Merge branch 'main' of https://github.com/Tachyon-24/Tachyon-24 into card-1
+
+[33mcommit e7f26077d9f3d37922ee0c90162823f17824712b[m
+Author: PushkarOM <pushkarchaturvedi42@gmail.com>
+Date:   Mon Oct 28 17:28:21 2024 +0530
+
+    fixed the header for card and sponsors page.
+
+[33mcommit 2345248ab81538771517576dd9b136adc764e21b[m
+Merge: df4cfca 3f2f8bd
+Author: Vansh Verma <vvansh739@gmail.com>
+Date:   Mon Oct 28 17:07:46 2024 +0530
+
+    Merge pull request #5 from Tachyon-24/card-1
+    
+    Completed the sponsors Page. can be acessed using /sponsors
+
+[33mcommit 3f2f8bdc01993e2bf81de13fe342b05ca31338f7[m
+Merge: d1608ff df4cfca
+Author: Vansh Verma <vvansh739@gmail.com>
+Date:   Mon Oct 28 17:07:30 2024 +0530
+
+    Merge branch 'main' into card-1
+
+[33mcommit e86f60a94577dd3396a8c2edd4282d6ab9195d7c[m
+Merge: d1608ff df4cfca
+Author: PushkarOM <pushkarchaturvedi42@gmail.com>
+Date:   Mon Oct 28 17:02:35 2024 +0530
+
+    Merge branch 'main' of https://github.com/Tachyon-24/Tachyon-24 into card-1
+
+[33mcommit df4cfca25848b10b0e9afe62a064a5de4ff3a137[m
+Merge: e2849e0 67752bf
+Author: Vansh Verma <vvansh739@gmail.com>
+Date:   Mon Oct 28 16:59:19 2024 +0530
+
+    Merge pull request #8 from Tachyon-24/fab_button
+    
+    Fab button, team page, event page about page
+
+[33mcommit e2849e01afabe2bd4c4d995886c442c20de80af4[m
+Author: Adi <adityavyas670@gmail.com>
+Date:   Mon Oct 28 16:28:47 2024 +0530
+
+    .
+
+[33mcommit c823b2dc5cb1274424772dbae7a8d84c731cf965[m
+Author: Adi <adityavyas670@gmail.com>
+Date:   Mon Oct 28 16:23:55 2024 +0530
+
+    corrected spelling mistakes
+
+[33mcommit 67752bfefc8f19515294f440025cae8f03c46a27[m[33m ([m[1;31morigin/fab_button[m[33m)[m
+Author: LLawliet2028 <ranjanmishra2028@gmail.com>
+Date:   Mon Oct 28 15:27:02 2024 +0530
+
+    adding the fab button, and the about, event, team page
+
+[33mcommit 7b8bfd624a8ccd33255cff8e5de693d1f2fae0d4[m
+Author: LLawliet2028 <ranjanmishra2028@gmail.com>
+Date:   Mon Oct 28 15:19:14 2024 +0530
+
+    adding the fab button, and the about, event, team page
+
+[33mcommit d1608ffdfdb259b4de0737d73a5fb9db1c0e0c39[m
+Merge: 1b2afcd a4c139d
+Author: PushkarOM <pushkarchaturvedi42@gmail.com>
+Date:   Mon Oct 28 12:58:37 2024 +0530
+
+    Merge branch 'main' of https://github.com/Tachyon-24/Tachyon-24 into card-1
+
+[33mcommit 1b2afcdb0396f5fea47845026ec8b72d853fbd2c[m
+Author: PushkarOM <pushkarchaturvedi42@gmail.com>
+Date:   Mon Oct 28 12:56:08 2024 +0530
+
+    Placed the nezuko.png inside public folder.
+
+[33mcommit a4c139d2465d05bfbb49121cd72dba845196116d[m
+Author: Adi <adityavyas670@gmail.com>
+Date:   Mon Oct 28 12:22:56 2024 +0530
+
+    testing routes
+
+[33mcommit 35c599c0edca2fa4ae95ff7c70d26ff977722bf8[m
+Author: Adi <adityavyas670@gmail.com>
+Date:   Mon Oct 28 11:13:15 2024 +0530
+
+    testing deployment
+
+[33mcommit 850d9d108bb86d01ccfa9bfb1466c0dc04f88a66[m
+Author: Adi <adityavyas670@gmail.com>
+Date:   Mon Oct 28 10:02:52 2024 +0530
+
+    resolved build issues
+
+[33mcommit 799ffdedd27cf8a4c0d63758583425e475b4f11c[m
+Author: Adi <adityavyas670@gmail.com>
+Date:   Mon Oct 28 09:06:42 2024 +0530
+
+    added gradient to home page
+
+[33mcommit 3a49c90cc66cb736c92efa7b3a70dcd1970ab0d4[m
+Merge: 635f89c f440645
+Author: PushkarOM <pushkarchaturvedi42@gmail.com>
+Date:   Sun Oct 27 23:16:22 2024 +0530
+
+    Merge branch 'main' of https://github.com/Tachyon-24/Tachyon-24 into card-1
+
+[33mcommit f4406450773d6f00105ea31a3d540eebd7ddbe22[m
+Merge: 217eac1 c8fd804
+Author: Himanshu Kumar Mahto <93067059+HimanshuMahto@users.noreply.github.com>
+Date:   Sun Oct 27 23:14:02 2024 +0530
+
+    Merge pull request #7 from Tachyon-24/update-content
+    
+    Changed the content of main page
+
+[33mcommit c8fd804e3e17ccce6e79c95b047fd2c2fcbee617[m[33m ([m[1;31morigin/update-content[m[33m)[m
+Merge: e36170c 217eac1
+Author: HimanshuMahto <k.himanshu2002@gmail.com>
+Date:   Sun Oct 27 23:13:55 2024 +0530
+
+    resolve conflict
+
+[33mcommit e36170c66d68d56cc91a3a41255b4a73dedf30a8[m
