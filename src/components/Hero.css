@@ -1,6 +1,6 @@
 .hero {
   margin: 0px 0px !important;
-  height: 100vh;
+  padding: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -61,8 +61,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  backdrop-filter: blur(5px); /* Add blur effect */
-  background: rgba(0, 0, 0, 0.1); /* Add semi-transparent background */
+   /* Add semi-transparent background */
   border-radius: 5px; /* Add border radius for rounded corners */
   z-index: -1;
 }
@@ -215,7 +214,7 @@
 }
 
 .scrolling-text-container {
-  height: 100vh;
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -226,6 +225,7 @@
 }
 
 .horizontal-line {
+  margin-top: 50px;
   width: 650px;
   height: 2px;
   background-image: linear-gradient(
@@ -236,17 +236,19 @@
   );
   box-sizing: border-box;
   position: relative;
-  top:2.4vw;
+  
 }
 
 .icon-show {
   box-sizing: border-box;
   position: relative;
+  padding-bottom: 100px;
+  margin-bottom: 100px;
 }
 
 .icon-background {
   background: red;
-  margin-top: -41px;
+
   border-radius: 50%;
   padding: 20px;
   width: 85px;
@@ -255,7 +257,7 @@
 
 .icon-center {
   position: absolute;
-  top: -42.5px; /* Center vertically */
+  top: -52.5px; /* Center vertically */
   left: 50%;
   transform: translateX(-50%) rotate(var(--rotation-angle));
   padding: 20px;
@@ -316,6 +318,10 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    background-position: 90% center;
+    padding: 50px;
+  }
   .hero-title {
     font-size: 2rem; /* Slightly reduce font size */
   }
@@ -359,6 +365,7 @@
 
 @media (max-width: 480px) {
   .hero {
+    background-position: 90% center;
     padding: 15px;
   }
 
@@ -390,7 +397,23 @@
 }
 
 @media (max-width: 380px) {
+  
+  .hero h1 {
+    font-size: 50px;
+  }
+  .hero p {
+    width: 90%;
+    font-size: 18px; /* Decrease font size for small screens */
+    line-height: 1.4; /* Adjust line height for better readability */
+  }
+  .horizontal-line{
+    width: 75vw;
+    height: 1px;
+  }
+}
+@media (max-width: 1024px) {
   .hero {
+    background-position: 80% center;
     padding-bottom: 50px;
   }
   .hero h1 {

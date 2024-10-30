@@ -5,7 +5,8 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from "react-route
 // Component imports
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-
+import AboutSection from "./components/EventsSection"
+import EventsSection from "./components/AboutSection"
 import Footer from "./components/Footer";
 import Card1 from "./pages/card-1";   //adding the card's page
 import Sponsorspage from "./pages/sponsors";
@@ -15,7 +16,7 @@ import EventsPage from "./pages/EventsPage";
 import AboutPage from "./pages/AboutPage";
 //import Contactpage from "./pages/contactpage/contactpage";
 import ContactPage from "./pages/contactpage/contactpage";
-import FlipCard2 from "./components/FlipCard2";
+//import FlipCard2 from "./components/FlipCard2";
 
 // Scroll to top functionality
 function ScrollToTop() {
@@ -41,8 +42,9 @@ function App() {
             element={
               <>
                 <Hero />
-                <FlipCard2/>
-              
+                
+                <AboutSection />
+                <EventsSection />
                 <Footer />
               </>
             } 
