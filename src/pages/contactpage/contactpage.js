@@ -19,8 +19,8 @@ import Footer from '../../components/Footer';
     
         // Send form data using EmailJS
         emailjs.send(
-          'service_3jbq3ie',
-          'template_hfk0mc8',
+          'service_520si6k',
+          'template_9lppxc9',
           {
             from_name: `${formData.firstName} ${formData.lastName}`,
             reply_to: formData.email,  // Add this - will allow you to reply to the user's email
