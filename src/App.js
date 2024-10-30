@@ -41,7 +41,7 @@ function App() {
             element={
               <>
                 <Hero />
-                <FlipCard2/>
+              
               
                 <Footer />
               </>
