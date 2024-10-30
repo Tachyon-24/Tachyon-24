@@ -5,7 +5,8 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from "react-route
 // Component imports
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-
+import AboutSection from "./components/EventsSection"
+import EventsSection from "./components/AboutSection"
 import Footer from "./components/Footer";
 import Card1 from "./pages/card-1";   //adding the card's page
 import Sponsorspage from "./pages/sponsors";
@@ -41,8 +42,9 @@ function App() {
             element={
               <>
                 <Hero />
-              
-              
+                
+                <AboutSection />
+                <EventsSection />
                 <Footer />
               </>
             } 

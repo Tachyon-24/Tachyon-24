@@ -214,7 +214,7 @@
 }
 
 .scrolling-text-container {
-  height: 100vh;
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -225,6 +225,7 @@
 }
 
 .horizontal-line {
+  margin-top: 50px;
   width: 650px;
   height: 2px;
   background-image: linear-gradient(
@@ -235,17 +236,19 @@
   );
   box-sizing: border-box;
   position: relative;
-  top:2.4vw;
+  
 }
 
 .icon-show {
   box-sizing: border-box;
   position: relative;
+  padding-bottom: 100px;
+  margin-bottom: 100px;
 }
 
 .icon-background {
   background: red;
-  margin-top: -41px;
+
   border-radius: 50%;
   padding: 20px;
   width: 85px;
@@ -254,7 +257,7 @@
 
 .icon-center {
   position: absolute;
-  top: -42.5px; /* Center vertically */
+  top: -52.5px; /* Center vertically */
   left: 50%;
   transform: translateX(-50%) rotate(var(--rotation-angle));
   padding: 20px;
