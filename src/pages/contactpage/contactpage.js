@@ -28,7 +28,7 @@ import Footer from '../../components/Footer';
             phone: formData.phone,
             message: formData.message,
           },
-          'WV50wayA-xqvN8Ygk'
+          'visIKWjtyyVcU-36J'
         )
         .then((result) => {
           console.log('Email sent successfully:', result.text);
