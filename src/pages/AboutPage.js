@@ -35,14 +35,14 @@ const AboutPage = () => {
             <span>About Tachyon24</span>
             <p>
               JUET's annual techfest, running from March 25th to 28th, invites bright minds and future leaders to explore this year's theme, "Future Frontiers." 
-              <span className="dots">{readMoreState.detailsBox1 ? '' : '...'}</span>
+              {/* <span className="dots">{readMoreState.detailsBox1 ? '' : '...'}</span>
               <span className="more-text" style={{ display: readMoreState.detailsBox1 ? 'inline' : 'none' }}>
                 {' '}The festival will feature hands-on workshops, exhibitions, and talks by industry leaders, focusing on innovations in AI, sustainable tech, and more. Whether you're a student, innovator, or enthusiast, join us to push boundaries, connect with others, and shape the future together!
-              </span>
+              </span> */}
             </p>
-            <button onClick={() => toggleReadMore("detailsBox1")} id="read-more-btn">
+            {/* <button onClick={() => toggleReadMore("detailsBox1")} id="read-more-btn">
               {readMoreState.detailsBox1 ? "Read Less" : "Read More"}
-            </button>
+            </button> */}
           </div>
           <div className='details-box-1-img'>
             <img id="details-box-1-img" src={groupImg} alt="Group from last techfest" />
@@ -67,42 +67,22 @@ const AboutPage = () => {
           <div className='details-box-2-txt'>
             <span>Further Details</span>
             <p>
-            - Open For All, Registor now !!<br></br> 
-            - Main Highlights : <br></br>
-              &nbsp;&nbsp;&nbsp;- XYZ Speaker at Tagor Hall on 15th October <br></br>
-              &nbsp;&nbsp;&nbsp;- Robot Creation at AB Coridor on 16th October <br></br>
-              <span className="dots">{readMoreState.detailsBox2 ? '' : '...'}</span>
+            &#x2022; Open For All, Registor now !!<br></br> 
+            &#x2022; Main Highlights : <br></br>
+              &nbsp;&nbsp;&nbsp; &#x2022; XYZ Speaker at Tagor Hall on 15th October <br></br>
+              &nbsp;&nbsp;&nbsp; &#x2022; Robot Creation at AB Coridor on 16th October <br></br>
+              {/* <span className="dots">{readMoreState.detailsBox2 ? '' : '...'}</span>
               <span className="more-text" style={{ display: readMoreState.detailsBox2 ? 'inline' : 'none' }}>
                 {' '}The festival will feature hands-on workshops, exhibitions, and talks by industry leaders, focusing on innovations in AI, sustainable tech, and more. Whether you're a student, innovator, or enthusiast, join us to push boundaries, connect with others, and shape the future together!
-              </span>
+              </span> */}
             </p>
-            <button onClick={() => toggleReadMore("detailsBox2")} id="read-more-btn">
+            {/* <button onClick={() => toggleReadMore("detailsBox2")} id="read-more-btn">
               {readMoreState.detailsBox2 ? "Read Less" : "Read More"}
-            </button>
+            </button> */}
           </div>
         </div>
         
         <div className='details-box-3'>
-          <div className="details-box-3-txt">
-            <span>Timings</span>
-            <p>
-              - 15th October :<br></br> 
-              &nbsp;&nbsp;&nbsp;- introduction at LT-5 <br></br>
-              &nbsp;&nbsp;&nbsp;- Speakers at LT-5 <br></br>
-              &nbsp;&nbsp;&nbsp;- Speakers at LT-5 <br></br>
-              <span className="dots">{readMoreState.detailsBox3 ? '' : '...'}</span>
-              <span className="more-text" style={{ display: readMoreState.detailsBox3 ? 'inline' : 'none' }}>
-                {' '}
-                - 16th October :<br></br> 
-              &nbsp;&nbsp;&nbsp;- Events at LTs <br></br>
-              &nbsp;&nbsp;&nbsp;- Speakers at TagorHall <br></br>
-              &nbsp;&nbsp;&nbsp;- Speakers at LT-5 <br></br>
-             </span>
-            </p>
-            <button onClick={() => toggleReadMore("detailsBox3")} id="read-more-btn">
-              {readMoreState.detailsBox3 ? "Read Less" : "Read More"}
-            </button>
-          </div>
           <div className='details-box-3-image-slider'>
             <span>Memories</span>
             <div className="containerStyles">
