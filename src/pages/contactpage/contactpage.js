@@ -74,7 +74,7 @@ import Footer from '../../components/Footer';
             <div className="contact-form-container"  style={{backgroundColor:'black'}}>
               <h2>Get in touch!</h2>
               <p>For specific enquiries, kindly email us at{' '}
-                <a href="mailto:cse@juetguna.in">cse@juetguna.in</a>
+                <a href="mailto:cse@juetguna.in">tachyon24juet@gmail.com</a>
               </p>
   
               <form onSubmit={handleSubmit}>
