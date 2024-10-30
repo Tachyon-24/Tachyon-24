@@ -15,7 +15,7 @@ import EventsPage from "./pages/EventsPage";
 import AboutPage from "./pages/AboutPage";
 //import Contactpage from "./pages/contactpage/contactpage";
 import ContactPage from "./pages/contactpage/contactpage";
-import FlipCard2 from "./components/FlipCard2";
+//import FlipCard2 from "./components/FlipCard2";
 
 // Scroll to top functionality
 function ScrollToTop() {
