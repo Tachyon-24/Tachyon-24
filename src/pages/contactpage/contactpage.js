@@ -19,8 +19,8 @@ import Footer from '../../components/Footer';
     
         // Send form data using EmailJS
         emailjs.send(
-          'service_3jbq3ie',
-          'template_hfk0mc8',
+          'service_520si6k',
+          'template_9lppxc9',
           {
             from_name: `${formData.firstName} ${formData.lastName}`,
             reply_to: formData.email,  // Add this - will allow you to reply to the user's email
@@ -28,7 +28,7 @@ import Footer from '../../components/Footer';
             phone: formData.phone,
             message: formData.message,
           },
-          'WV50wayA-xqvN8Ygk'
+          'visIKWjtyyVcU-36J'
         )
         .then((result) => {
           console.log('Email sent successfully:', result.text);
@@ -74,7 +74,7 @@ import Footer from '../../components/Footer';
             <div className="contact-form-container"  style={{backgroundColor:'black'}}>
               <h2>Get in touch!</h2>
               <p>For specific enquiries, kindly email us at{' '}
-                <a href="mailto:cse@juetguna.in">cse@juetguna.in</a>
+                <a href="mailto:cse@juetguna.in">tachyon24juet@gmail.com</a>
               </p>
   
               <form onSubmit={handleSubmit}>
