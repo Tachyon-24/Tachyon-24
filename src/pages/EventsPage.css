@@ -1,207 +1,274 @@
+/* Page Layout */
 .events-page {
-    min-height: 100vh;
-    background-color: #f5f5f5;
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #000000 0%,
+    #1a1a2e 50%,
+    #16213e 100%
+  );
+  position: relative;
+  padding: 10rem 2rem 2rem;
+  color: white;
+}
+
+/* Content wrapper */
+.content-wrapper {
+  position: relative;
+  z-index: 2;
+  padding-top: 2rem;
+}
+
+/* Shared Card Base Styles */
+.branch-card,
+.event-card,
+.club-card {
+  position: relative;
+  border-radius: 20px;
+  padding: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Shared Background Overlay */
+.branch-card::before,
+.event-card::before,
+.club-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+  z-index: 1;
+  transform-origin: center bottom;
+}
+
+/* Shared Gradient Overlay */
+.branch-card::after,
+.event-card::after,
+.club-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg, 
+    rgba(0,0,0,0.2) 0%,
+    rgba(0,0,0,0.4) 50%,
+    rgba(0,0,0,0.8) 100%
+  );
+  z-index: 2;
+}
+
+/* Shared Hover Effects */
+.branch-card:hover,
+.event-card:hover,
+.club-card:hover {
+  transform: scale(0.98);
+  opacity: 1;
+}
+
+.branch-card:hover::before,
+.event-card:hover::before,
+.club-card:hover::before {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Content Positioning */
+.branch-content,
+.event-content,
+.club-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+}
+
+/* Grid Layouts */
+.branches-container,
+.events-grid,
+.clubs-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Branch-specific Styles */
+.branch-card[data-branch="CSE"] {
+  background: linear-gradient(135deg, rgba(255, 185, 56, 0.15) 0%, rgba(253, 112, 20, 0.15) 100%);
+}
+.branch-card[data-branch="CSE"]::before {
+  background-image: url('/public/ayanokoji.png');
+}
+
+.branch-card[data-branch="CHEMICAL"] {
+  background: linear-gradient(135deg, rgba(238, 9, 121, 0.15) 0%, rgba(255, 106, 0, 0.15) 100%);
+}
+.branch-card[data-branch="CHEMICAL"]::before {
+  background-image: url('/public/senku.png');
+}
+
+.branch-card[data-branch="ECE"] {
+  background: linear-gradient(135deg, rgba(54, 209, 220, 0.15) 0%, rgba(91, 134, 229, 0.15) 100%);
+}
+.branch-card[data-branch="ECE"]::before {
+  background-image: url('/public/L.jpg');
+}
+
+.branch-card[data-branch="MECHANICAL"] {
+  background: linear-gradient(135deg, rgba(75, 121, 161, 0.15) 0%, rgba(40, 62, 81, 0.15) 100%);
+}
+.branch-card[data-branch="MECHANICAL"]::before {
+  background-image: url('/public/rintaro.jpg');
+}
+
+.branch-card[data-branch="CIVIL"] {
+  background: linear-gradient(135deg, rgba(17, 153, 142, 0.15) 0%, rgba(56, 239, 125, 0.15) 100%);
+}
+.branch-card[data-branch="CIVIL"]::before {
+  background-image: url('/public/levi.jpg');
+}
+
+/* Branch Header Styles */
+.branch-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.branch-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.5px;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.branch-icon {
+  font-size: 2.5rem;
+  opacity: 0.9;
+}
+
+.branch-count {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 0.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Event Card Specific Styles */
+.event-content h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.event-content p {
+  margin: 0.5rem 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.event-details {
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1rem;
+}
+
+/* Club Card Specific Styles */
+.club-card h2 {
+  margin: 0 0 1rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.club-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation */
+.navigation {
+  margin-bottom: 2rem;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.back-button:hover {
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .branches-container,
+  .events-grid,
+  .clubs-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .events-page {
+    padding: 4rem 1rem 1rem;
   }
   
-  .page-nav {
-    background: white;
-    padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  .branches-container,
+  .events-grid,
+  .clubs-container {
+    grid-template-columns: 1fr;
   }
   
-  .back-button {
-    color: #ff5733;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
+  .branch-card,
+  .event-card,
+  .club-card {
+    min-height: 350px;
   }
   
-  .back-arrow {
-    margin-right: 0.5rem;
+  .branch-title {
+    font-size: 2rem;
   }
   
-  .nav-title {
-    font-size: 1.5rem;
-    color: #333;
+  .branch-icon {
+    font-size: 2rem;
   }
-  
-  .events-detail-section {
-    padding: 4rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .events-header {
-    text-align: center;
-    margin-bottom: 3rem;
-  }
-  
-  .events-title {
-    font-size: 2.5rem;
-    color: #333;
-  }
-  
-  .title-underline {
-    height: 4px;
-    width: 60px;
-    background: #ff5733;
-    margin: 1rem auto;
-    border-radius: 2px;
-  }
-  
-  .coming-soon-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 400px;
-  }
-  
-  .coming-soon-card {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 3rem;
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  
-  .pulse-circle {
-    width: 150px;
-    height: 150px;
-    background: rgba(255, 87, 51, 0.1);
-    border-radius: 50%;
-    margin: 0 auto 2rem;
-    position: relative;
-    animation: pulse 2s infinite;
-  }
-  
-  .pulse-circle::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 87, 51, 0.2);
-    border-radius: 50%;
-    animation: pulse 2s infinite 0.5s;
-  }
-  
-  @keyframes pulse {
-    0% {
-      transform: scale(0.95);
-      opacity: 0.7;
-    }
-    50% {
-      transform: scale(1.05);
-      opacity: 0.3;
-    }
-    100% {
-      transform: scale(0.95);
-      opacity: 0.7;
-    }
-  }
-  
-  .coming-soon-text {
-    font-size: 2.5rem;
-    color: #ff5733;
-    margin-bottom: 1.5rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-  }
-  
-  .coming-soon-subtext {
-    color: #666;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-  }
-  
-  .decorative-line {
-    width: 80%;
-    height: 1px;
-    background: linear-gradient(to right, transparent, rgba(255, 87, 51, 0.5), transparent);
-    margin: 2rem auto;
-  }
-  
-  .tech-icons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-  
-  .tech-dot {
-    width: 12px;
-    height: 12px;
-    background: #ff5733;
-    border-radius: 50%;
-    animation: glow 1.5s infinite alternate;
-  }
-  
-  .tech-dot:nth-child(2) {
-    animation-delay: 0.5s;
-  }
-  
-  .tech-dot:nth-child(3) {
-    animation-delay: 1s;
-  }
-  
-  @keyframes glow {
-    from {
-      transform: scale(1);
-      opacity: 1;
-    }
-    to {
-      transform: scale(1.5);
-      opacity: 0.5;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .events-detail-section {
-      padding: 2rem 1rem;
-    }
-  
-    .nav-title {
-      font-size: 1.2rem;
-    }
-  
-    .events-title {
-      font-size: 2rem;
-    }
-  
-    .coming-soon-card {
-      padding: 2rem 1rem;
-      margin: 0 1rem;
-    }
-  
-    .coming-soon-text {
-      font-size: 2rem;
-    }
-  
-    .pulse-circle {
-      width: 120px;
-      height: 120px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .coming-soon-text {
-      font-size: 1.8rem;
-    }
-  
-    .coming-soon-subtext {
-      font-size: 1rem;
-    }
-  }
-  
+}
