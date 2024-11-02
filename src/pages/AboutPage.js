@@ -26,21 +26,20 @@ const AboutPage = () => {
       [section]: !prevState[section]
     }));
   };
-  
+
   return (
     <>
       <section className='aboutpage'>
-        
+
         <div className='details-box-1'>
-        <div className='details-box-1-img'>
+          <div className='details-box-1-img'>
             <img id="details-box-1-img" src={groupImg} alt="Group from last techfest" />
           </div>
           <div className='details-box-1-txt'>
             <span>About <img src={logo}></img></span>
-            <p>
-              Tachyon is Central India's Largest Technical Fest. It is an endeavor to Provide am  Outstanding Platform for students to showcase their talent and skill sets in the Fiercest of the competitions. <br></br>
+            <p>Tachyon is Central India's Largest Technical Fest. It is an endeavor to provide an outstanding platform for students to showcase their talent and skill sets in the fiercest of competitions. <br></br>
               <br></br>
-              To bring out the best of the youth is what we aim for, and an extermely overwhelming and vivacious display of know-how is what we get. The huge rewards and recognition are just another feather in our cap, displaying the heights we have scaled over the years.
+              To bring out the best of the youth is what we aim for, and an extremely overwhelming and vivacious display of know-how is what we get. The huge rewards and recognition are just another feather in our cap, displaying the heights we have scaled over the years.
               {/* <span className="dots">{readMoreState.detailsBox1 ? '' : '...'}</span>
               <span className="more-text" style={{ display: readMoreState.detailsBox1 ? 'inline' : 'none' }}>
                 {' '}The festival will feature hands-on workshops, exhibitions, and talks by industry leaders, focusing on innovations in AI, sustainable tech, and more. Whether you're a student, innovator, or enthusiast, join us to push boundaries, connect with others, and shape the future together!
@@ -51,7 +50,7 @@ const AboutPage = () => {
             </button> */}
           </div>
         </div>
-        
+
         <div className='details-box-2'>
           <div className='details-box-2-bubbles'>
             <div className='bubbles-top'>
@@ -70,8 +69,10 @@ const AboutPage = () => {
           <div className='details-box-2-txt'>
             <span>Our Major Events</span>
             <p>
-              These Events span a wide spectrum of disciplines, from cutting <br></br>edge technology to strategic management, ensuring a platform <br></br>for every passionate mind to shine.
+              These events span a wide spectrum of disciplines, from cutting-edge technology to strategic management, ensuring a platform for every passionate mind to shine.
+           
             <br></br><br></br>
+
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. WAR FOR TREZOR<br></br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. GLITCH E-SPORTS<br></br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. ROBO WARS<br></br>
@@ -82,22 +83,22 @@ const AboutPage = () => {
               <span className="more-text" style={{ display: readMoreState.detailsBox2 ? 'inline' : 'none' }}>
                 {' '}The festival will feature hands-on workshops, exhibitions, and talks by industry leaders, focusing on innovations in AI, sustainable tech, and more. Whether you're a student, innovator, or enthusiast, join us to push boundaries, connect with others, and shape the future together!
               </span> */}
-            </p>
-            {/* <button onClick={() => toggleReadMore("detailsBox2")} id="read-more-btn">
+          </p>
+          {/* <button onClick={() => toggleReadMore("detailsBox2")} id="read-more-btn">
               {readMoreState.detailsBox2 ? "Read Less" : "Read More"}
             </button> */}
+        </div>
+      </div>
+
+      <div className='details-box-3'>
+        <div className='details-box-3-image-slider'>
+          <span>Memories</span>
+          <div className="containerStyles">
+            <ImageSlider slides={slides} />
           </div>
         </div>
-        
-        <div className='details-box-3'>
-          <div className='details-box-3-image-slider'>
-            <span>Memories</span>
-            <div className="containerStyles">
-              <ImageSlider slides={slides} />
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
+    </section >
       <Footer />
     </>
   );
