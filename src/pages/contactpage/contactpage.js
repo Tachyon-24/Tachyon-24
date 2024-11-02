@@ -118,6 +118,7 @@ import Footer from '../../components/Footer';
                   />
                 </div>
                 <textarea
+                  id='message-box'
                   name="message"
                   placeholder="Message"
                   value={formData.message}

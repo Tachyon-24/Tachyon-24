@@ -122,6 +122,11 @@
     grid-template-columns: 1fr;
     gap: 1rem;
     margin-bottom: 1rem;
+    width: 90%;
+  }
+
+  #message-box{
+    width: 90%;
   }
   
   @media (min-width: 768px) {

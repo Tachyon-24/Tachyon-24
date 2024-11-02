@@ -1,54 +1,107 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+// import { Link } from 'react-router-dom';
 import './AboutPage.css';
+import Footer from "../components/Footer";
+import groupImg from "../assests/last-techfest-group.jpeg";
+import ImageSlider from "./AboutPagecomponents/ImageSlider";
+import logo from "../assests/header-logo.png";
 
 const AboutPage = () => {
+  const slides = [
+    { url: "http://localhost:3000/image1.jpeg", title: "last-techfest-1" },
+    { url: "http://localhost:3000/image2.jpeg", title: "last-techfest-2" },
+    { url: "http://localhost:3000/image3.jpeg", title: "last-techfest-3" },
+  ];
+
+  // // State to toggle Read More for each section
+  // const [readMoreState, setReadMoreState] = useState({
+  //   detailsBox1: false,
+  //   detailsBox2: false,
+  //   detailsBox3: false
+  // });
+
+  // // Function to toggle Read More for a specific section
+  // const toggleReadMore = (section) => {
+  //   setReadMoreState((prevState) => ({
+  //     ...prevState,
+  //     [section]: !prevState[section]
+  //   }));
+  // };
+
   return (
-    <div className="about-page">
-      <nav className="page-nav">
-        <Link to="/" className="back-button">
-          <span className="back-arrow">←</span>
-          Back to Home
-        </Link>
-        <h1 className="nav-title">Tech Fest 2024</h1>
-      </nav>
+    <>
+      <section className='aboutpage'>
 
-      <section className="about-detail-section">
-        <div className="about-container">
-          <div className="about-header">
-            <h2 className="about-title">About Tech Fest</h2>
-            <div className="title-underline"></div>
+        <div className='details-box-1'>
+          <div className='details-box-1-img'>
+            <img id="details-box-1-img" src={groupImg} alt="Group from last techfest" />
           </div>
-          
-          <div className="about-content">
-            <div className="about-card">
-              <h3>Our Vision</h3>
-              <p>To create a platform that brings together tech enthusiasts, innovators, and industry leaders to shape the future of technology.</p>
-            </div>
-
-            <div className="about-card">
-              <h3>Our Mission</h3>
-              <p>Fostering innovation, collaboration, and learning through engaging tech events and workshops that inspire the next generation of technologists.</p>
-            </div>
-
-            <div className="about-stats">
-              <div className="stat-item">
-                <span className="stat-number">1000+</span>
-                <span className="stat-label">Expected Participants</span>
-              </div>
-              <div className="stat-item">
-                <span className="stat-number">20+</span>
-                <span className="stat-label">Events Planned</span>
-              </div>
-              <div className="stat-item">
-                <span className="stat-number">50+</span>
-                <span className="stat-label">Industry Speakers</span>
-              </div>
-            </div>
+          <div className='details-box-1-txt'>
+            <span>About <img src={logo} alt="logo"></img></span>
+            <p>Tachyon is Central India's Largest Technical Fest. It is an endeavor to provide an outstanding platform for students to showcase their talent and skill sets in the fiercest of competitions. <br></br>
+              <br></br>
+              To bring out the best of the youth is what we aim for, and an extremely overwhelming and vivacious display of know-how is what we get. The huge rewards and recognition are just another feather in our cap, displaying the heights we have scaled over the years.
+              {/* <span className="dots">{readMoreState.detailsBox1 ? '' : '...'}</span>
+              <span className="more-text" style={{ display: readMoreState.detailsBox1 ? 'inline' : 'none' }}>
+                {' '}The festival will feature hands-on workshops, exhibitions, and talks by industry leaders, focusing on innovations in AI, sustainable tech, and more. Whether you're a student, innovator, or enthusiast, join us to push boundaries, connect with others, and shape the future together!
+              </span> */}
+            </p>
+            {/* <button onClick={() => toggleReadMore("detailsBox1")} id="read-more-btn">
+              {readMoreState.detailsBox1 ? "Read Less" : "Read More"}
+            </button> */}
           </div>
         </div>
-      </section>
-    </div>
+
+        <div className='details-box-2'>
+          <div className='details-box-2-bubbles'>
+            <div className='bubbles-top'>
+              <div className='num-txt'>50+</div>
+              <div className='type-txt'>Events</div>
+            </div>
+            <div className='bubbles-middle'>
+              <div className='num-txt'>100+</div>
+              <div className='type-txt'>Speakers</div>
+            </div>
+            <div className='bubbles-bottom'>
+              <div className='num-txt'>10,000+</div>
+              <div className='type-txt'>Participants</div>
+            </div>
+          </div>
+          <div className='details-box-2-txt'>
+            <span>Our Major Events</span>
+            <p>
+              These events span a wide spectrum of disciplines, from cutting-edge technology to strategic management, ensuring a platform for every passionate mind to shine.
+           
+            <br></br><br></br>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. WAR FOR TREZOR<br></br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. GLITCH E-SPORTS<br></br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. ROBO WARS<br></br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. CODE MANIA<br></br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5. CRYPTIC HUNT<br></br>
+
+            {/* <span className="dots">{readMoreState.detailsBox2 ? '' : '...'}</span>
+              <span className="more-text" style={{ display: readMoreState.detailsBox2 ? 'inline' : 'none' }}>
+                {' '}The festival will feature hands-on workshops, exhibitions, and talks by industry leaders, focusing on innovations in AI, sustainable tech, and more. Whether you're a student, innovator, or enthusiast, join us to push boundaries, connect with others, and shape the future together!
+              </span> */}
+          </p>
+          {/* <button onClick={() => toggleReadMore("detailsBox2")} id="read-more-btn">
+              {readMoreState.detailsBox2 ? "Read Less" : "Read More"}
+            </button> */}
+        </div>
+      </div>
+
+      <div className='details-box-3'>
+        <div className='details-box-3-image-slider'>
+          <span>Memories</span>
+          <div className="containerStyles">
+            <ImageSlider slides={slides} />
+          </div>
+        </div>
+      </div>
+    </section >
+      <Footer />
+    </>
   );
 };
 
