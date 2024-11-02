@@ -1,10 +1,11 @@
-import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+import React from "react";
+// import { Link } from 'react-router-dom';
 import './AboutPage.css';
 import Footer from "../components/Footer";
 import groupImg from "../assests/last-techfest-group.jpeg";
 import ImageSlider from "./AboutPagecomponents/ImageSlider";
 import logo from "../assests/header-logo.png";
+
 const AboutPage = () => {
   const slides = [
     { url: "http://localhost:3000/image1.jpeg", title: "last-techfest-1" },
@@ -12,20 +13,20 @@ const AboutPage = () => {
     { url: "http://localhost:3000/image3.jpeg", title: "last-techfest-3" },
   ];
 
-  // State to toggle Read More for each section
-  const [readMoreState, setReadMoreState] = useState({
-    detailsBox1: false,
-    detailsBox2: false,
-    detailsBox3: false
-  });
+  // // State to toggle Read More for each section
+  // const [readMoreState, setReadMoreState] = useState({
+  //   detailsBox1: false,
+  //   detailsBox2: false,
+  //   detailsBox3: false
+  // });
 
-  // Function to toggle Read More for a specific section
-  const toggleReadMore = (section) => {
-    setReadMoreState((prevState) => ({
-      ...prevState,
-      [section]: !prevState[section]
-    }));
-  };
+  // // Function to toggle Read More for a specific section
+  // const toggleReadMore = (section) => {
+  //   setReadMoreState((prevState) => ({
+  //     ...prevState,
+  //     [section]: !prevState[section]
+  //   }));
+  // };
 
   return (
     <>
@@ -36,7 +37,7 @@ const AboutPage = () => {
             <img id="details-box-1-img" src={groupImg} alt="Group from last techfest" />
           </div>
           <div className='details-box-1-txt'>
-            <span>About <img src={logo}></img></span>
+            <span>About <img src={logo} alt="logo"></img></span>
             <p>Tachyon is Central India's Largest Technical Fest. It is an endeavor to provide an outstanding platform for students to showcase their talent and skill sets in the fiercest of competitions. <br></br>
               <br></br>
               To bring out the best of the youth is what we aim for, and an extremely overwhelming and vivacious display of know-how is what we get. The huge rewards and recognition are just another feather in our cap, displaying the heights we have scaled over the years.
