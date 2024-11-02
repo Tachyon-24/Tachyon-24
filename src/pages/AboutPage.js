@@ -7,12 +7,18 @@ import ImageSlider from "./AboutPagecomponents/ImageSlider";
 import logo from "../assests/header-logo.png";
 
 const AboutPage = () => {
-  const slides = [
-    { url: "http://localhost:3000/image1.jpeg", title: "last-techfest-1" },
-    { url: "http://localhost:3000/image2.jpeg", title: "last-techfest-2" },
-    { url: "http://localhost:3000/image3.jpeg", title: "last-techfest-3" },
-  ];
+  // const slides = [
+  //   { url: "http://localhost:3000/image1.jpeg", title: "last-techfest-1" },
+  //   { url: "http://localhost:3000/image2.jpeg", title: "last-techfest-2" },
+  //   { url: "http://localhost:3000/image3.jpeg", title: "last-techfest-3" },
+  // ];
 
+
+  const slides = [
+    { url: "https://tachyon24.com/image1.jpeg", title: "last-techfest-1" },
+    { url: "https://tachyon24.com/image2.jpeg", title: "last-techfest-2" },
+    { url: "https://tachyon24.com/image3.jpeg", title: "last-techfest-3" },
+  ];
   // // State to toggle Read More for each section
   // const [readMoreState, setReadMoreState] = useState({
   //   detailsBox1: false,
