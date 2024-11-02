@@ -4,7 +4,7 @@ import './AboutPage.css';
 import Footer from "../components/Footer";
 import groupImg from "../assests/last-techfest-group.jpeg";
 import ImageSlider from "./AboutPagecomponents/ImageSlider";
-
+import logo from "../assests/header-logo.png";
 const AboutPage = () => {
   const slides = [
     { url: "http://localhost:3000/image1.jpeg", title: "last-techfest-1" },
@@ -26,15 +26,21 @@ const AboutPage = () => {
       [section]: !prevState[section]
     }));
   };
-
+  
   return (
     <>
       <section className='aboutpage'>
+        
         <div className='details-box-1'>
+        <div className='details-box-1-img'>
+            <img id="details-box-1-img" src={groupImg} alt="Group from last techfest" />
+          </div>
           <div className='details-box-1-txt'>
-            <span>About Tachyon24</span>
+            <span>About <img src={logo}></img></span>
             <p>
-              JUET's annual techfest, running from March 25th to 28th, invites bright minds and future leaders to explore this year's theme, "Future Frontiers." 
+              Tachyon is Central India's Largest Technical Fest. It is an endeavor to Provide am  Outstanding Platform for students to showcase their talent and skill sets in the Fiercest of the competitions. <br></br>
+              <br></br>
+              To bring out the best of the youth is what we aim for, and an extermely overwhelming and vivacious display of know-how is what we get. The huge rewards and recognition are just another feather in our cap, displaying the heights we have scaled over the years.
               {/* <span className="dots">{readMoreState.detailsBox1 ? '' : '...'}</span>
               <span className="more-text" style={{ display: readMoreState.detailsBox1 ? 'inline' : 'none' }}>
                 {' '}The festival will feature hands-on workshops, exhibitions, and talks by industry leaders, focusing on innovations in AI, sustainable tech, and more. Whether you're a student, innovator, or enthusiast, join us to push boundaries, connect with others, and shape the future together!
@@ -43,9 +49,6 @@ const AboutPage = () => {
             {/* <button onClick={() => toggleReadMore("detailsBox1")} id="read-more-btn">
               {readMoreState.detailsBox1 ? "Read Less" : "Read More"}
             </button> */}
-          </div>
-          <div className='details-box-1-img'>
-            <img id="details-box-1-img" src={groupImg} alt="Group from last techfest" />
           </div>
         </div>
         
@@ -65,13 +68,17 @@ const AboutPage = () => {
             </div>
           </div>
           <div className='details-box-2-txt'>
-            <span>Further Details</span>
+            <span>Our Major Events</span>
             <p>
-            &#x2022; Open For All, Registor now !!<br></br> 
-            &#x2022; Main Highlights : <br></br>
-              &nbsp;&nbsp;&nbsp; &#x2022; XYZ Speaker at Tagor Hall on 15th October <br></br>
-              &nbsp;&nbsp;&nbsp; &#x2022; Robot Creation at AB Coridor on 16th October <br></br>
-              {/* <span className="dots">{readMoreState.detailsBox2 ? '' : '...'}</span>
+              These Events span a wide spectrum of disciplines, from cutting <br></br>edge technology to strategic management, ensuring a platform <br></br>for every passionate mind to shine.
+            <br></br><br></br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. WAR FOR TREZOR<br></br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. GLITCH E-SPORTS<br></br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. ROBO WARS<br></br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. CODE MANIA<br></br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5. CRYPTIC HUNT<br></br>
+
+            {/* <span className="dots">{readMoreState.detailsBox2 ? '' : '...'}</span>
               <span className="more-text" style={{ display: readMoreState.detailsBox2 ? 'inline' : 'none' }}>
                 {' '}The festival will feature hands-on workshops, exhibitions, and talks by industry leaders, focusing on innovations in AI, sustainable tech, and more. Whether you're a student, innovator, or enthusiast, join us to push boundaries, connect with others, and shape the future together!
               </span> */}
