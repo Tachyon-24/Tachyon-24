@@ -8,6 +8,7 @@ Modal.setAppElement("#root");
 
 const Hero = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [particles, setParticles] = useState([]);
 
   const openModal = () => {
     setIsOpen(true);
@@ -20,7 +21,7 @@ const Hero = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const rotation = scrollPosition * 0.5; // Adjust the multiplier to control rotation speed
+      const rotation = scrollPosition * 0.5;
       document.documentElement.style.setProperty(
         "--rotation-angle",
         `${rotation}deg`
@@ -32,6 +33,27 @@ const Hero = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
+  }, []);
+
+  useEffect(() => {
+    const generateParticles = () => {
+      const particleCount = 20;
+      const newParticles = [];
+
+      for (let i = 0; i < particleCount; i++) {
+        newParticles.push({
+          id: i,
+          x: Math.random() * 100, // Percentage within the scrolling text container
+          y: Math.random() * 100, // Percentage within the scrolling text container
+          size: Math.random() * 40 + 10,
+          speed: Math.random() * 2 + 0.5,
+          delay: Math.random() * 2,
+          className: `particle particle${(i % 6) + 1}`
+        });
+      }
+      setParticles(newParticles);
+    };
+    generateParticles();
   }, []);
 
   return (
@@ -87,23 +109,28 @@ const Hero = () => {
       <section className="scrolling-text-container">
         <div className="horizontal-line"></div>
         <div className="scrolling-text">
-          <div className="scrolling-text-item">Tachyon!</div>
-          <div className="scrolling-text-item">Tachyon!</div>
-          <div className="scrolling-text-item">Tachyon!</div>
-          <div className="scrolling-text-item">Tachyon!</div>
-          <div className="scrolling-text-item">Tachyon!</div>
-          <div className="scrolling-text-item">Tachyon!</div>
-          <div className="scrolling-text-item">Tachyon!</div>
-          <div className="scrolling-text-item">Tachyon!</div>
+          {Array(8).fill(<div className="scrolling-text-item">Tachyon!</div>)}
         </div>
         <div className="horizontal-line"></div>
         <div className="icon-show">
-        
-            <img src={temple} alt="Icon" className="icon-center" />
-          
-        
+          <img src={temple} alt="Icon" className="icon-center" />
         </div>
-       
+        <div className="particle-container">
+          {particles.map((particle) => (
+            <div
+              key={particle.id}
+              className={particle.className}
+              style={{
+                left: `${particle.x}%`,
+                top: `${particle.y}%`,
+                width: `${particle.size}px`,
+                height: `${particle.size}px`,
+                animationDelay: `${particle.delay}s`,
+                transform: `translateY(${particle.speed * 100}%)`
+              }}
+            />
+          ))}
+        </div>
       </section>
     </>
   );
