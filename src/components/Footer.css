@@ -1,6 +1,5 @@
 .footer_section {
   background-color: black;
-  
   position: relative;
   overflow: hidden;
   display: flex;
@@ -8,32 +7,32 @@
   justify-content: center;
   padding: 40px 20px;
   color: white;
-  
 }
 
 /* Red line at the top */
 .red-line {
   width: 90%;
-  height: 12px; /* Restored original height */
+  height: 12px;
   margin-bottom: 140px;
-  border: 9px dashed #000; /* Matched original border width */
+  border: 9px dashed #000;
   background-image: -webkit-gradient(
     linear,
     left top,
     right top,
     from(rgba(1, 0, 0, 0)),
     color-stop(53%, #ee1c25),
-    /* Single color stop at 53% */ to(rgba(1, 0, 0, 0))
+    to(rgba(1, 0, 0, 0))
   );
   background-image: linear-gradient(
     90deg,
     rgba(1, 0, 0, 0),
     #ee1c25 53%,
-    /* Matched the webkit gradient */ rgba(1, 0, 0, 0)
+    rgba(1, 0, 0, 0)
   );
   position: absolute;
   top: 0;
 }
+
 /* Sparkle animation */
 .sparkle {
   position: absolute;
@@ -123,30 +122,36 @@
   color: #cccccc;
 }
 
-/* Spark positioning and animations */
-.spark {
+/* Base spark styles */
+.spark,
+.spark-1,
+.spark-2,
+.spark-4 {
   position: absolute;
+  width: 25px;
+  height: 25px;
+  transition: transform 0.3s ease;
+}
+
+.spark {
   top: 15%;
   right: 20%;
   animation: sparkFloat 4s ease-in-out infinite;
 }
 
 .spark-1 {
-  position: absolute;
   right: 35%;
   bottom: 25%;
   animation: sparkFloat 4s ease-in-out infinite 1s;
 }
 
 .spark-2 {
-  position: absolute;
   left: 35%;
   top: 20%;
   animation: sparkFloat 4s ease-in-out infinite 2s;
 }
 
 .spark-4 {
-  position: absolute;
   left: 20%;
   bottom: 30%;
   animation: sparkFloat 4s ease-in-out infinite 3s;
@@ -177,7 +182,8 @@
   .spark-1,
   .spark-2,
   .spark-4 {
-    transform: scale(0.8);
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -202,7 +208,8 @@
   .spark-1,
   .spark-2,
   .spark-4 {
-    transform: scale(0.6);
+    width: 15px;
+    height: 15px;
   }
 }
 
@@ -236,6 +243,26 @@
   .spark-1,
   .spark-2,
   .spark-4 {
-    transform: scale(0.5);
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* Extra small devices */
+@media screen and (max-width: 360px) {
+  .spark,
+  .spark-1,
+  .spark-2,
+  .spark-4 {
+    width: 8px;
+    height: 8px;
+  }
+
+  .logo_footer {
+    height: 70px;
+  }
+
+  .paragraph_1 {
+    font-size: 12px;
   }
 }

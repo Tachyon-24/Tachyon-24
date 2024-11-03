@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import './EventsPage.css';
+import Footer from "../components/Footer";
+
+
 
 const eventsData = {
   "CSE": {
@@ -216,6 +219,7 @@ const Events = () => {
   return (
     <div className="events-page">
       {renderContent()}
+      <Footer />
     </div>
   );
 };
