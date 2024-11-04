@@ -102,7 +102,6 @@
 
 /* Grid Layouts */
 .branches-container,
-.events-grid,
 .clubs-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

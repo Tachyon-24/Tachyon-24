@@ -44,6 +44,7 @@ const AboutPage = () => {
               About <img src={logo} alt="logo"></img>
             </span>
             <p>
+              <br></br>
               Tachyon is Central India's Largest Technical Fest. It is an
               endeavor to provide an outstanding platform for students to
               showcase their talent and skill sets in the fiercest of
@@ -82,9 +83,11 @@ const AboutPage = () => {
           <div className="details-box-2-txt">
             <span>Our Major Events</span>
             <p>
-              These events span a wide spectrum of disciplines, from
-              cutting-edge technology to strategic management, ensuring a
-              platform for every passionate mind to shine.
+              <br></br>
+              These events span a wide spectrum of 
+              disciplines, from cutting-edge technology to  
+              strategic management, ensuring a platform for 
+              every passionate mind to shine.
               <br></br>
               <br></br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.
