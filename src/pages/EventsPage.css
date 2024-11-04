@@ -1,12 +1,12 @@
 /* Page Layout */
 .events-page {
   min-height: 100vh;
-  background: linear-gradient(
-    135deg,
-    #000000 0%,
-    #1a1a2e 50%,
-    #16213e 100%
-  );
+  background: 
+    radial-gradient(circle at right, #222449, transparent 55%),
+    linear-gradient(to bottom, #222449 0px, transparent 130px);
+  background-size: 360px 720px, 100% 100%, 100% 100%;
+  background-position: right, center, top;
+  background-repeat: no-repeat, no-repeat;
   position: relative;
   padding: 10rem 2rem 2rem;
   color: white;
@@ -107,6 +107,8 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   padding: 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 /* Branch-specific Styles */
@@ -244,17 +246,44 @@
   .clubs-container {
     grid-template-columns: repeat(2, 1fr);
   }
+  
+  .event-card {
+    min-height: 350px;
+  }
+  
+  .event-content h3 {
+    font-size: 1.3rem;
+  }
+  
+  .event-content p {
+    font-size: 0.95rem;
+  }
+  
+  .event-details {
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 768px) {
   .events-page {
-    padding: 4rem 1rem 1rem;
+    background: 
+      radial-gradient(circle at right, #222449, transparent 55%),
+      linear-gradient(to bottom, #222449 0px, transparent 130px);
+    background-size: 360px 720px, 100% 100%, 100% 100%;
+    background-position: right, center, top;
+    background-repeat: no-repeat, no-repeat;
   }
   
   .branches-container,
-  .events-grid,
   .clubs-container {
     grid-template-columns: 1fr;
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr; /* Makes items take full width in one column */
+    justify-items: center;      /* Centers the grid items */
+    padding: 20;                 /* Removes extra padding */
+    margin: 0 auto;             /* Centers the grid container itself */
   }
   
   .branch-card,
@@ -263,11 +292,53 @@
     min-height: 350px;
   }
   
+  .event-card {
+    min-height: 300px;
+    padding: 1.5rem;
+  }
+  
+  .event-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .event-content p {
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+  }
+  
+  .event-details {
+    font-size: 0.85rem;
+    margin-top: 0.8rem;
+    padding-top: 0.8rem;
+  }
+  
   .branch-title {
     font-size: 2rem;
   }
   
   .branch-icon {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-card {
+    min-height: 250px;
+    padding: 1.25rem;
+  }
+  
+  .event-content h3 {
+    font-size: 1.1rem;
+  }
+  
+  .event-content p {
+    font-size: 0.85rem;
+  }
+  
+  .event-details {
+    font-size: 0.8rem;
+    margin-top: 0.6rem;
+    padding-top: 0.6rem;
   }
 }
