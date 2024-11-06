@@ -215,3 +215,94 @@
         left: 100%;
     }
 }
+/* Form Container */
+.merchandise-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #000;
+    color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+/* General Form Group */
+.form-group {
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+}
+
+/* Heading Style */
+.form-heading {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    box-sizing: border-box;
+}
+
+/* Select Style */
+.form-select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+    font-size: 1rem;
+}
+
+/* Input Field Style */
+.form-input {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.form-input::placeholder {
+    color: #aaa;
+}
+
+/* Button Style */
+.form-button {
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-sizing: border-box;
+}
+
+.form-button:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+.form-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .merchandise-form {
+        padding: 1.5rem;
+    }
+
+    .form-input, .form-select {
+        padding: 0.8rem;
+    }
+
+    .form-button {
+        padding: 0.8rem 1.5rem;
+    }
+}
+

@@ -20,7 +20,6 @@ import Payment from "./pages/payment/payment";
 import Checkout from "./pages/checkout/checkout";
 import Merchandise from "./pages/merchandise/merchandise";
 //import FlipCard2 from "./components/FlipCard2";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Scroll to top functionality
 function ScrollToTop() {

@@ -1,5 +1,4 @@
-import React from "react";
-import Carousel from "react-bootstrap/Carousel";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useMerchandise } from "../../MerchandiseContext.js";
 import "./merchandise.css";
@@ -8,10 +7,11 @@ import BackImage from '../../assests/Back.png';
 
 const images = [FrontImage, BackImage];
 
-
 function Merchandise() {
     const navigate = useNavigate();
     const { product, selectedSize, updateSize, userInfo, updateUserInfo } = useMerchandise();
+
+    const [currentIndex, setCurrentIndex] = useState(0);
 
     const handleSizeChange = (e) => {
         updateSize(e.target.value);
@@ -25,65 +25,87 @@ function Merchandise() {
         navigate("/payment");
     };
 
+    // Automatically switch images every 3 seconds
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+        }, 3000);
+
+        return () => clearInterval(interval); // Clean up interval on unmount
+    }, []);
+
     return (
-        <div className="merchandise" >
+        <div className="merchandise">
             <h1>{product.name}</h1>
-           
-           <div className="merchimg">
-           <Carousel>
-                {images.map((image, index) => (
-                    <Carousel.Item key={index}>
-                        <img className="d-block w-100" src={image} alt={`Slide ${index + 1}`} />
-                    </Carousel.Item>
-                ))}
-            </Carousel>
-           </div>
-          
-            <div>
-                <h3>Select Size:</h3>
-                <select value={selectedSize} onChange={handleSizeChange}>
-                    <option value="">Select size</option>
-                    <option value="S">S</option>
-                    <option value="M">M</option>
-                    <option value="L">L</option>
-                    <option value="XL">XL</option>
-                </select>
+
+            <div className="merchimg">
+                <div className="carousel-item">
+                    <img className="d-block w-100" src={images[currentIndex]} alt={`Image ${currentIndex + 1}`} />
+                </div>
             </div>
 
-            <div>
-                <h3>User Information:</h3>
-                <input
-                    type="text"
-                    name="name"
-                    placeholder="Name"
-                    value={userInfo.name}
-                    onChange={handleInputChange}
-                />
-                <input
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                    value={userInfo.email}
-                    onChange={handleInputChange}
-                />
-                <input
-                    type="tel"
-                    name="contact"
-                    placeholder="Contact"
-                    value={userInfo.contact}
-                    onChange={handleInputChange}
-                />
-                <input
-                    type="text"
-                    name="location"
-                    placeholder="Location"
-                    value={userInfo.location}
-                    onChange={handleInputChange}
-                />
-            </div>
-            <button onClick={handleCheckout} disabled={!selectedSize || !userInfo.name || !userInfo.email || !userInfo.contact || !userInfo.location}>
-                Proceed to Checkout
-            </button>
+            <div className="merchandise-form">
+    {/* Size Selector */}
+    <div className="form-group">
+        <h3 className="form-heading">Select Size:</h3>
+        <select 
+            value={selectedSize} 
+            onChange={handleSizeChange} 
+            className="form-select">
+            <option value="">Select size</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+        </select>
+    </div>
+
+    {/* User Information */}
+    <div className="form-group">
+        <h3 className="form-heading">User Information:</h3>
+        <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            value={userInfo.name}
+            onChange={handleInputChange}
+            className="form-input"
+        />
+        <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={userInfo.email}
+            onChange={handleInputChange}
+            className="form-input"
+        />
+        <input
+            type="tel"
+            name="contact"
+            placeholder="Contact"
+            value={userInfo.contact}
+            onChange={handleInputChange}
+            className="form-input"
+        />
+        <input
+            type="text"
+            name="location"
+            placeholder="Location"
+            value={userInfo.location}
+            onChange={handleInputChange}
+            className="form-input"
+        />
+    </div>
+
+    {/* Checkout Button */}
+    <button 
+        onClick={handleCheckout} 
+        disabled={!selectedSize || !userInfo.name || !userInfo.email || !userInfo.contact || !userInfo.location}
+        className="form-button">
+        Proceed to Checkout
+    </button>
+</div>
+
         </div>
     );
 }
