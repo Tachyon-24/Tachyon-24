@@ -50,6 +50,7 @@ const Header = () => {
     { path: '/about', label: 'About' },
     { path: '/team', label: 'Team' },
     {path: '/contact',label:'Contact'},
+    {path:'/merchandise',label:'Merchandise'}
   ];
 
   return (

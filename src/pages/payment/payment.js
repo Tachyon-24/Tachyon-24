@@ -6,7 +6,7 @@ import "./payment.css"
 function Payment() {
     const navigate = useNavigate();
     const { product, selectedSize, userInfo } = useMerchandise();
-    const [paymentSuccess, setPaymentSuccess] = useState(false);
+    const [, setPaymentSuccess] = useState(false);
 
     async function loadScript(src) {
         return new Promise((resolve) => {
