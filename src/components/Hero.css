@@ -16,13 +16,7 @@
 .hero {
   margin: 0 !important;
   padding: 50px;
-  background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.1) 0%,
-      rgba(0, 0, 0, 0.2) 90%,
-      rgba(0, 0, 0, 0.5) 100%
-    ),
-    url("../../public/background.jpg") center/cover;
+  background: url("../../public/background.jpg") center/cover;
   color: var(--text-color);
   position: relative;
   display: flex;
@@ -32,18 +26,44 @@
   min-height: 100vh;
 }
 
+/* Modified main overlay with reduced opacity at top */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.5) 90%,
-    #000000 100%
+    rgba(0, 0, 0, 0) 0%,      /* Completely transparent */
+    rgba(0, 0, 0, 0) 20%,     /* Still completely transparent */
+    rgba(0, 0, 0, 0) 40%,     /* Still completely transparent */
+    rgba(0, 0, 0, 0.3) 60%,   /* Start darkening here */
+    rgba(0, 0, 0, 0.6) 75%,   /* Darker */
+    rgba(0, 0, 0, 0.8) 85%,   /* Very dark */
+    rgb(0, 0, 0) 100%         /* Complete black */
   );
   z-index: 0;
 }
+
+/* Adjusted bottom blend */
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 300px;  /* Increased height for smoother transition */
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.5) 40%,   /* Reduced middle opacity */
+    rgba(0, 0, 0, 0.8) 70%,   /* Added intermediate step */
+    rgb(0, 0, 0) 100%
+  );
+  z-index: 1;
+}
+
+
+/* Rest of the styles remain unchanged */
 .hero-content {
   position: relative;
   z-index: 2;
@@ -52,14 +72,13 @@
   margin: 0 10vw;
 }
 
-/* Text Elements */
 .hero-title,
 .hero-subtitle {
   position: relative;
   display: inline-block;
   padding: 10px;
   border-radius: 5px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Reduced shadow opacity */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   color: #ffffff;
 }
 
@@ -95,7 +114,6 @@
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-/* Button Styles */
 .hero-buttons {
   margin-top: 50vh;
   display: flex;
@@ -217,14 +235,42 @@
   align-items: center;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(
-      0deg,
-      #000000 0%,
-      rgba(0, 0, 0, 0.5) 10%,
-      rgba(0, 0, 0, 0.5) 100%
-    )
-    fixed;
+  background: 
+    /* Top dark gradient */
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(0, 0, 0, 0.7) 15%,
+      transparent 30%
+    ),
+    /* Left C-shaped curve */
+    radial-gradient(
+      circle at -20% 50%,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.8) 30%,
+      rgba(0, 0, 0, 0.4) 60%,
+      transparent 80%
+    ),
+    /* Bottom dark gradient */
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(0, 0, 0, 0.7) 15%,
+      transparent 30%
+    ),
+    /* Overall maroon tint */
+    radial-gradient(
+      circle at 75% 50%,
+      rgba(80, 0, 0, 0.3) 0%,
+      rgba(40, 0, 0, 0.4) 50%,
+      rgba(20, 0, 0, 0.5) 100%
+    );
   color: var(--text-color);
+  margin-top: -100px;
+  padding-top: 100px;
+  z-index: 2;
+  min-height: 100vh;
+  transition: background 0.5s ease;
 }
 
 .scrolling-text-container::before {
@@ -232,10 +278,10 @@
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(10px);
+  background: rgba(20, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  transition: backdrop-filter 0.5s ease;
 }
-
 .scrolling-text-container h1 {
   z-index: 3;
   font-size: 8vw;
