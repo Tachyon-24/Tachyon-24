@@ -1,6 +1,8 @@
 .App {
   font-family: "Arial", sans-serif;
   overflow-x: hidden;
+  background-color: black;
+  
 }
 
 .section {
@@ -13,4 +15,7 @@
   .section {
     padding: 3rem 1rem;
   }
+}
+body{
+  background-color: black;
 }
