@@ -68,9 +68,10 @@
 
 
 .details-box-2-txt {
-  width: 50%;
+  width: 30%;
   text-align: justify;
   font-size: 21px;
+  margin-right: 100px;
 }
 
 .details-box-1-txt>span,
@@ -245,7 +246,9 @@
 
 @media (max-width : 1200px) {
   
-
+  .aboutpage{
+    background-position: right 57%, center, top;
+  }
   .details-box-1,
   .details-box-2,
   .details-box-3 {
@@ -257,6 +260,11 @@
   .details-box-3-txt {
     width: 100%;
   }
+
+  .details-box-2-txt{
+    margin-right: 0px;
+  }
+
 
   .containerStyles {
     width: 400px;
@@ -293,7 +301,7 @@
     radial-gradient(circle at right,#222449, transparent 55%),
     linear-gradient(to bottom, #222449  0px, transparent 130px); /* Your background image */
     background-size:   360px 720px,100% 100%, 100% 100%; /* Set sizes for each layer */
-    background-position:  right , center, top ; /* Position the gradient in the center and the image to the right */
+    background-position:  right 57%, center, top ; /* Position the gradient in the center and the image to the right */
     background-repeat: no-repeat, no-repeat;
   }
 }
