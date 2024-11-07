@@ -4,7 +4,7 @@ import "./AboutPage.css";
 import Footer from "../components/Footer";
 import groupImg from "../assests/last-techfest-group.jpeg";
 import ImageSlider from "./AboutPagecomponents/ImageSlider";
-import logo from "../assests/header-logo.png";
+
 
 const AboutPage = () => {
   const slides = [
