@@ -68,8 +68,6 @@ function Payment() {
                         if (verificationResponse.data.msg === "Payment data saved successfully!") {
                             setPaymentSuccess(true);
                             navigate("/checkout"); // Redirect to Checkout if payment and data saving succeed
-                        } else {
-                            alert("Payment verification failed. Please try again.");
                         }
                     } catch (error) {
                         navigate("/checkout");   
