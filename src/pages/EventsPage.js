@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './EventsPage.css';
 import Footer from "../components/Footer";
+
 
 
 
@@ -99,23 +101,87 @@ const branchIcons = {
 
 
 const Events = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [selectedBranch, setSelectedBranch] = useState(null);
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [selectedClub, setSelectedClub] = useState(null);
 
-  const handleBranchClick = (branch) => {
-    setSelectedBranch(branch === selectedBranch ? null : branch);
-    setSelectedEvent(null);
-    setSelectedClub(null);
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const branch = params.get('branch');
+    const club = params.get('club');
+    const eventId = params.get('event');
+
+    if (branch) {
+      setSelectedBranch(branch);
+      if (club) {
+        setSelectedClub(club);
+        if (eventId) {
+          const branchData = eventsData[branch];
+          let event;
+          if (club && branchData[club]) {
+            event = branchData[club].find(e => e.id === parseInt(eventId));
+          } else if (Array.isArray(branchData)) {
+            event = branchData.find(e => e.id === parseInt(eventId));
+          }
+          setSelectedEvent(event || null);
+        } else {
+          setSelectedEvent(null);
+        }
+      } else {
+        setSelectedClub(null);
+        setSelectedEvent(null);
+      }
+    } else {
+      setSelectedBranch(null);
+      setSelectedClub(null);
+      setSelectedEvent(null);
+    }
+  }, [location.search]);
+
+  const updateHistory = (branch, club = null, event = null) => {
+    const params = new URLSearchParams();
+    if (branch) params.set('branch', branch);
+    if (club) params.set('club', club);
+    if (event) params.set('event', event.id.toString());
+    navigate(`?${params.toString()}`, { replace: false }); // Changed to false to maintain history
   };
 
-  const handleEventClick = (event) => {
-    setSelectedEvent(event === selectedEvent ? null : event);
+  const handleBranchClick = (branch) => {
+    if (branch === selectedBranch) {
+      setSelectedBranch(null);
+      setSelectedClub(null);
+      setSelectedEvent(null);
+      navigate('', { replace: false });
+    } else {
+      setSelectedBranch(branch);
+      setSelectedClub(null);
+      setSelectedEvent(null);
+      updateHistory(branch);
+    }
   };
 
   const handleClubClick = (club) => {
-    setSelectedClub(club === selectedClub ? null : club);
-    setSelectedEvent(null);
+    if (club === selectedClub) {
+      setSelectedClub(null);
+      setSelectedEvent(null);
+      updateHistory(selectedBranch);
+    } else {
+      setSelectedClub(club);
+      setSelectedEvent(null);
+      updateHistory(selectedBranch, club);
+    }
+  };
+
+  const handleEventClick = (event) => {
+    if (event === selectedEvent) {
+      setSelectedEvent(null);
+      updateHistory(selectedBranch, selectedClub);
+    } else {
+      setSelectedEvent(event);
+      updateHistory(selectedBranch, selectedClub, event);
+    }
   };
 
   const renderBranches = () => (
@@ -143,23 +209,6 @@ const Events = () => {
 
   const renderEvents = (events) => (
     <div className="events-container">
-      {/* 
-      <div className="navigation">
-        <button className="back-button" onClick={() => setSelectedBranch(null)}>
-          ← Back to Branches
-        </button>
-        {selectedEvent && (
-          <button className="back-button" onClick={() => setSelectedEvent(null)}>
-            ← Back to Events
-          </button>
-        )}
-        {selectedClub && (
-          <button className="back-button" onClick={() => setSelectedClub(null)}>
-            ← Back to Clubs
-          </button>
-        )}
-      </div>
-      */}
       <h2>
         {selectedEvent
           ? `Event: ${selectedEvent.name}`
