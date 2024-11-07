@@ -11,17 +11,19 @@
   
   url("../../public/deku.png"),
   radial-gradient(circle at right,#222449, transparent 55%),
-  linear-gradient(to bottom, #222449  0px, transparent 130px); /* Your background image */
-  background-size:   360px 720px,100% 100%, 100% 100%; /* Set sizes for each layer */
-  background-position:  right , center, top ; /* Position the gradient in the center and the image to the right */
+  linear-gradient(to bottom, #222449  0px, transparent 130px),
+  radial-gradient(circle at left,#222449, transparent 35%); /* Your background image */
+  background-size:   360px 720px,100% 100%, 100% 100%, 100% 100%; /* Set sizes for each layer */
+  background-position:  95%  45%, center, top, center ; /* Position the gradient in the center and the image to the right */
   background-repeat: no-repeat, no-repeat;
 }
 
 
 
 .details-box-1{
-  margin-top: 130px;
+  margin-top: 150px;
 }
+
 .details-box-1,
 .details-box-2,
 .details-box-3 {
@@ -29,11 +31,12 @@
   height: 25%;
   color: white;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  gap: 24px;
+  gap: 12px;
   margin-left: 100px;
   margin-right: 100px;
+  margin-bottom: 100px;
 }
 
 .details-box-3{
@@ -46,6 +49,7 @@
   width: 50%;
   display: flex;
   justify-content: center;
+  margin-left: 60px;
 }
 
 #details-box-1-img {
@@ -60,10 +64,11 @@
 }
 
 .details-box-1-txt,
-.details-box-3-txt {
+.details-box-2-txt {
   width: 30%;
   text-align: justify;
   font-size: 21px;
+
 }
 
 
@@ -71,7 +76,7 @@
   width: 30%;
   text-align: justify;
   font-size: 21px;
-  margin-right: 100px;
+  margin-right: 250px;
 }
 
 .details-box-1-txt>span,
@@ -82,17 +87,25 @@
   font-weight: 700;
   color: #6bc1eb;
   text-align: justify;
+  font-family: Poppins;
 
 }
 
+.details-box-1-txt > p,
+.details-box-2-txt > p,
+.details-box-3-txt > p{
+  opacity: 75%;
+  font-size: 18px;
+}
+
 .details-box-1-txt>span{
+
   font-size: 42px;
   font-weight: 700;
   color: #6bc1eb;
   text-align: justify;
-  font-family: Poppins;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   gap: 18px;
   margin-left: 4px;
@@ -118,12 +131,16 @@
 
 .details-box-2-bubbles {
   width: 50%;
+  /* background: 
+  radial-gradient(circle at center,#222449,transparent 60%); */
+  /* radial-gradient(circle at 25% 25%,#151639,transparent 16%); */
+  
 }
 
 .bubbles-top,
 .bubbles-bottom,
 .bubbles-middle {
-  border: 2px solid #6bc1eb;
+  border: 3px solid #6bc1eb;
   border-radius: 50%;
   width: 100px;
   height: 100px;
@@ -142,23 +159,25 @@
 .bubbles-top,
 .bubbles-bottom {
   margin-left: auto;
-  right: 80px;
+
   width: 170px;
   height: 170px;
 }
 
 
 .bubbles-top {
-  top: 50px;
+  top: 60px;
+  right: 160px;
 }
 
 .bubbles-bottom {
   bottom: 80px;
+  right: 200px;
 }
 
 .bubbles-middle {
-  bottom: 10px;
-  margin-left: 30%;
+  bottom: 35px;
+  margin-left: 5%;
   width: 200px;
   height: 200px;
 }
@@ -175,6 +194,8 @@
 .bubbles-bottom:hover,
 .bubbles-middle:hover {
   transform: scale(1.2);
+  box-shadow: 0 0 10px 1px white;
+
 }
 
 .details-box-3-image-slider {
@@ -301,9 +322,19 @@
     radial-gradient(circle at right,#222449, transparent 55%),
     linear-gradient(to bottom, #222449  0px, transparent 130px); /* Your background image */
     background-size:   360px 720px,100% 100%, 100% 100%; /* Set sizes for each layer */
-    background-position:  right 57%, center, top ; /* Position the gradient in the center and the image to the right */
+    background-position:  95% 57%, center, top ; /* Position the gradient in the center and the image to the right */
     background-repeat: no-repeat, no-repeat;
   }
+  .details-box-2-bubbles {
+    width: 50%;
+    background: none;
+    /* radial-gradient(circle at 25% 25%,#151639,transparent 16%); */
+  }
+
+  .details-box-1-img{
+    margin: 0px;
+  }
+  
 }
 
 
@@ -321,7 +352,7 @@
     radial-gradient(circle at right,#222449, transparent 55%),
     linear-gradient(to bottom, #222449  0px, transparent 130px); /* Your background image */
     background-size:   240px 520px,100% 100%, 100% 100%; /* Set sizes for each layer */
-    background-position:  right , center, top ; /* Position the gradient in the center and the image to the right */
+    background-position:  90% 55%, 55%, top ; /* Position the gradient in the center and the image to the right */
     background-repeat: no-repeat, no-repeat;
   }
 
@@ -380,7 +411,7 @@
     radial-gradient(circle at right,#222449, transparent 55%),
     linear-gradient(to bottom, #222449  0px, transparent 130px); /* Your background image */
     background-size:   210px 380px,100% 100%, 100% 100%; /* Set sizes for each layer */
-    background-position:  right , center, top ; /* Position the gradient in the center and the image to the right */
+    background-position:  90% , center, top ; /* Position the gradient in the center and the image to the right */
     background-repeat: no-repeat, no-repeat;
   }
 
