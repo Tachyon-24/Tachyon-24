@@ -1,3 +1,17 @@
+@font-face {
+  font-family: "Lemon-Milk";
+  src: url("../../public/Fonts/LEMONMILK-Bold.otf") format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.content-about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .aboutpage {
   margin-bottom: 80px;
   width: auto;
@@ -81,13 +95,13 @@
 
 .details-box-1-txt>span,
 .details-box-2-txt>span,
-.details-box-3-txt>span
+.details-box-3-txt>span,
+.details-box-3-image-slider>span
 {
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 28px;
   color: #6bc1eb;
   text-align: justify;
-  font-family: Poppins;
+  font-family: Lemon-Milk;
 
 }
 
@@ -100,8 +114,6 @@
 
 .details-box-1-txt>span{
 
-  font-size: 42px;
-  font-weight: 700;
   color: #6bc1eb;
   text-align: justify;
   display: flex;

@@ -14,6 +14,7 @@ import TeamPage from "./pages/TeamPage";
 import EventsPage from "./pages/EventsPage";
 import AboutPage from "./pages/AboutPage";
 import SpeakerPage from "./pages/speakerspage";
+import MerchSection from "./components/merchsection";
 //import Contactpage from "./pages/contactpage/contactpage";
 import ContactPage from "./pages/contactpage/contactpage";
 
@@ -49,6 +50,7 @@ function App() {
             element={
               <>
                 <Hero />
+                <MerchSection />
                 <FlipCard2/>
                 <EventsSection />
                 <Footer />

@@ -31,6 +31,7 @@ const AboutPage = () => {
   return (
     <>
       <section className="aboutpage">
+        <div className="content-about"> 
         <div className="details-box-1">
           
           <div className="details-box-1-txt">
@@ -119,6 +120,7 @@ const AboutPage = () => {
               <ImageSlider slides={slides} />
             </div>
           </div>
+        </div>
         </div>
       </section>
       <Footer />
