@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useMerchandise } from "../../MerchandiseContext";
-import "./payment.css"
+import "./payment.css";
+
 function Payment() {
     const navigate = useNavigate();
     const { product, selectedSize, userInfo } = useMerchandise();
     const [, setPaymentSuccess] = useState(false);
 
+    // Function to load the Razorpay script dynamically
     async function loadScript(src) {
         return new Promise((resolve) => {
             const script = document.createElement("script");
@@ -18,6 +20,7 @@ function Payment() {
         });
     }
 
+    // Function to display Razorpay and handle payment
     async function displayRazorpay() {
         const res = await loadScript("https://checkout.razorpay.com/v1/checkout.js");
 
@@ -27,7 +30,6 @@ function Payment() {
         }
 
         try {
-            // Send dynamic data from product, selectedSize, and userInfo
             const orderData = {
                 amount: product.price * 100, // Convert to smallest currency unit (e.g., INR paisa)
                 currency: "INR", // You can dynamically set the currency if needed
@@ -44,7 +46,7 @@ function Payment() {
             const { amount, id: order_id, currency } = result.data;
 
             const options = {
-                key: "rzp_live_x1qqJ1VcBegICm", // Your Razorpay key here
+                key: "rzp_live_99JEU41KVf4UDW", // Your Razorpay key here
                 amount: amount.toString(),
                 currency: currency,
                 name: "Tachyon",
@@ -61,17 +63,19 @@ function Payment() {
                     };
 
                     try {
-                        const verificationResponse = await axios.post("http://localhost:5000/payment/success", data);
-                        if (verificationResponse.data.msg === "success") {
+                        // Send payment details to the backend and database
+                        const verificationResponse = await axios.post("http://localhost:5000/send-to-db", data);
+                        if (verificationResponse.data.msg === "Payment data saved successfully!") {
                             setPaymentSuccess(true);
-                            navigate("/checkout"); // Redirect to Checkout only if payment is successful
+                            navigate("/checkout"); // Redirect to Checkout if payment and data saving succeed
                         } else {
                             alert("Payment verification failed. Please try again.");
                         }
                     } catch (error) {
-                        alert("Payment verification failed. Please try again.");
+                        alert("Error saving payment data. Please try again.");
                     }
                 },
+
                 prefill: {
                     name: userInfo.name,
                     email: userInfo.email,
