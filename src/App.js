@@ -19,7 +19,7 @@ import ContactPage from "./pages/contactpage/contactpage";
 import Payment from "./pages/payment/payment";
 import Checkout from "./pages/checkout/checkout";
 import Merchandise from "./pages/merchandise/merchandise";
-//import FlipCard2 from "./components/FlipCard2";
+import FlipCard2 from "./components/FlipCard2";
 
 // Scroll to top functionality
 function ScrollToTop() {
@@ -45,7 +45,7 @@ function App() {
             element={
               <>
                 <Hero />
-                
+                <FlipCard2 />
                 <AboutSection />
                 <EventsSection />
                 <Footer />
