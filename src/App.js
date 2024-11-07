@@ -16,7 +16,14 @@ import EventsPage from "./pages/EventsPage";
 import AboutPage from "./pages/AboutPage";
 //import Contactpage from "./pages/contactpage/contactpage";
 import ContactPage from "./pages/contactpage/contactpage";
+
 import FlipCard2 from "./components/FlipCard2";
+
+import Payment from "./pages/payment/payment";
+import Checkout from "./pages/checkout/checkout";
+import Merchandise from "./pages/merchandise/merchandise";
+//import FlipCard2 from "./components/FlipCard2";
+
 
 // Scroll to top functionality
 function ScrollToTop() {
@@ -57,6 +64,9 @@ function App() {
           <Route path="/events" element={<EventsPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage/>}/>
+          <Route path="/merchandise" element={<Merchandise/>}/>
+          <Route path="/checkout" element={<Checkout/>}/>
+          <Route path="/payment" element={<Payment/>}/>
         </Routes>
         <FAB />
       </div>
