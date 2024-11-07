@@ -131,11 +131,11 @@
   position: relative;
   overflow: hidden;
 }
-/* img{
+img {
   height: 73vh;
   width: 54vh;
   object-fit: cover;
-} */
+}
 /* Card Image Container and Hover Effect */
 .card-image-container {
   position: absolute;
@@ -314,11 +314,11 @@
     width: fit-content; /* Adjust the width of the line to match the title text */
   }
 
-  /* img {
+  img {
     height: 67vh;
     width: 54vh;
     object-fit: cover;
-  } */
+  }
 
   .wrap_image_character_tabs {
     display: flex;
@@ -359,11 +359,11 @@
   .item_tabs_characters_home.active::after {
     width: fit-content; /* Adjust the width of the line to match the title text */
   }
-  /* img {
+  img {
     height: 86vh;
     width: 48vh;
     object-fit: cover;
-  } */
+  }
   .wrap_image_character_tabs {
     display: flex;
     flex-direction: column;
@@ -416,11 +416,11 @@
     width: fit-content; /* Adjust the width of the line to match the title text */
   }
 
-  /* img {
+  img {
     height: 67vh;
     width: 54vh;
     object-fit: cover;
-  } */
+  }
 
   .wrap_image_character_tabs {
     display: flex;
