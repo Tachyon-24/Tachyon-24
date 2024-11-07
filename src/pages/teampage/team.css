@@ -1,0 +1,66 @@
+
+.container {
+    margin-top: 10vw;
+}
+.hostsection{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.organizer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 4vw;
+}
+.organizer-section img{
+    width:22vw;
+}
+.coorganizer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 4vw;
+}
+.coorganizer-section img{
+    width:22vw;
+}
+.core-team-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
+    gap: 20px; /* Adjusts spacing between grid items */
+  }
+  
+  .team-member {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  @media (max-width: 768px) {
+    .core-team-section {
+      grid-template-columns: repeat(2, 1fr); /* Changes to 2 columns on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .core-team-section {
+      grid-template-columns: 1fr; /* Changes to 1 column on very small screens */
+    }
+  }
+  .container {
+    margin-top: 10vw;
+    padding: 0 5vw; /* Adds horizontal padding */
+  }
+  
+  .hostsection {
+    margin-top: 2vw;
+    gap: 2vw; /* Adjusts spacing between flex items */
+  }
+  

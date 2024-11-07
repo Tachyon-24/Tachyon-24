@@ -155,7 +155,7 @@ import Footer from '../../components/Footer';
                 <div className="contact-icon">
                   <Phone size={32} />
                 </div>
-                <p>+91-7544-267051</p>
+                <p>+91-9799444332</p>
               </div>
   
               {/* Email */}
