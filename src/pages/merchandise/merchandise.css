@@ -23,14 +23,18 @@
     font-family: Lemon-Milk;
     background:    
     linear-gradient(to bottom, black 5%, transparent 35%, black 63%),
+    linear-gradient(to bottom, transparent 5%, rgba(83, 83, 83, 0.455)  10%,rgba(83, 83, 83, 0.756) 65%, transparent 63%),
+    
     url("../../../public/mangapanel3.jpg"),
     linear-gradient(to bottom, #fc5f3c, transparent 70%);
     background-position: center 15%;
-    background-size: 100% 100%, 100% 55%,  100% 100%;
+    background-size: 100% 100%,100% 100%, 100% 55%,  100% 100%;
     background-repeat: no-repeat;
 }
 
-
+.merchandise::before{
+    filter: blur(5px);
+}
 .merchandise h1{
     margin-top: 50px;
 }
@@ -363,10 +367,11 @@
     .merchandise{
         background: 
         linear-gradient(to bottom, black 5%, transparent 50%, black 55%),
+        linear-gradient(to bottom, transparent 5%, rgba(83, 83, 83, 0.455)  10%,rgba(83, 83, 83, 0.756) 65%, transparent 63%),
         url("../../../public/mangapanel4.jpg"),
         linear-gradient(to bottom, #fc5f3c, transparent 70%);
         background-position: center 12%;
-        background-size: 100% 100%, 100% 50%,  100% 100%;
+        background-size: 100% 100%, 100% 100%, 100% 50%,  100% 100%;
         background-repeat: no-repeat;
     }
 
