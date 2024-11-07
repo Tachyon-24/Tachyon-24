@@ -36,7 +36,7 @@ function Payment() {
                 receipt: `receipt_${Date.now()}`, // Generate a unique receipt ID
             };
 
-            const result = await axios.post("http://localhost:5000/payment/orders", orderData);
+            const result = await axios.post("https://razorpay-gateway-cju7.onrender.com/payment/orders", orderData);
 
             if (!result) {
                 alert("Server error. Are you online?");
@@ -64,7 +64,7 @@ function Payment() {
 
                     try {
                         // Send payment details to the backend and database
-                        const verificationResponse = await axios.post("http://localhost:5000/send-to-db", data);
+                        const verificationResponse = await axios.post("https://razorpay-gateway-cju7.onrender.com/send-to-db", data);
                         if (verificationResponse.data.msg === "Payment data saved successfully!") {
                             setPaymentSuccess(true);
                             navigate("/checkout"); // Redirect to Checkout if payment and data saving succeed
