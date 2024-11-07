@@ -134,11 +134,13 @@
   position: relative;
   overflow: hidden;
 }
+
 .image_character_tabs {
   height: 100vh;
   width: 75vh;
   object-fit: cover;
 }
+
 /* Card Image Container and Hover Effect */
 .card-image-container {
   position: absolute;
@@ -419,11 +421,10 @@
     width: fit-content; /* Adjust the width of the line to match the title text */
   }
 
+
   .image_character_tabs {
     height: 65vh;
-    width: 48vh;
-    object-fit: cover;
-  }
+    width: 48vh; }
 
   .wrap_image_character_tabs {
     display: flex;
