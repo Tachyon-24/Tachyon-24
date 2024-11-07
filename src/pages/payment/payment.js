@@ -72,7 +72,7 @@ function Payment() {
                             alert("Payment verification failed. Please try again.");
                         }
                     } catch (error) {
-                        alert("Error saving payment data. Please try again.");
+                        navigate("/checkout");   
                     }
                 },
 
