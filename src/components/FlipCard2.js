@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
-import './Slider.css';
+import './FlipCard.css';
 
-const Slider = () => {
+const FlipSlider = () => {
   const [activeTab, setActiveTab] = useState('CSE'); // Default active tab
   const marqueeRef = useRef(null); // Reference for the CSE card container
 
@@ -9,31 +9,34 @@ const Slider = () => {
     {
       name: 'CSE',
       content: [
-        { href: "/characters/tanjiro", imgSrc: "/image13.png", logoSrc: "dev.png", title: "Tanjiro Kamado" },
-        { href: "/characters/tanjiro2", imgSrc: "/image14.png", logoSrc: "CIVIL LOGO.png", title: "Tanjiro Kamado" },
-        { href: "/characters/tanjiro3", imgSrc: "/image15.png", logoSrc: "csi-logo-white.png", title: "Tanjiro Kamado" },
-        { href: "/characters/tanjiro4", imgSrc: "/image16.png", logoSrc: "arvrmr.png", title: "Tanjiro Kamado" },
-        { href: "/characters/tanjiro5", imgSrc: "/image14.png", logoSrc: "MOZILLA.png", title: "Tanjiro Kamado" },
-        { href: "/characters/tanjiro6", imgSrc: "/image13.png", logoSrc: "rospinot_logo.png", title: "Tanjiro Kamado" },
-        { href: "/characters/tanjiro7", imgSrc: "/image12.png", logoSrc: "gdsc.png",title: "Tanjiro Kamado" },
-        { href: "/characters/tanjiro", imgSrc: "/image13.png", logoSrc: "dev.png", title: "Tanjiro Kamado" },
-        { href: "/characters/tanjiro2", imgSrc: "/image14.png", logoSrc: "CIVIL LOGO.png", title: "Tanjiro Kamado" },
-        { href: "/characters/tanjiro3", imgSrc: "/image15.png", logoSrc: "csi-logo-white.png", title: "Tanjiro Kamado" },
-        { href: "/characters/tanjiro4", imgSrc: "/image16.png", logoSrc: "arvrmr.png", title: "Tanjiro Kamado" },
-        { href: "/characters/tanjiro5", imgSrc: "/image14.png", logoSrc: "MOZILLA.png", title: "Tanjiro Kamado" },
-        { href: "/characters/tanjiro6", imgSrc: "/image13.png", logoSrc: "rospinot_logo.png", title: "Tanjiro Kamado" },
-        { href: "/characters/tanjiro7", imgSrc: "/image12.png", logoSrc: "gdsc.png", title: "Tanjiro Kamado" },
+        { href: "/characters/tanjiro", imgSrc: "/1.jpeg", logoSrc: "dev.png", title: "CSI DEVELOPMENT" },
+        { href: "/characters/tanjiro2", imgSrc: "/2.jpeg", logoSrc: "bitwise.png", title: "CSI BITWISE" },
+        { href: "/characters/tanjiro3", imgSrc: "/3.jpeg", logoSrc: "botnet.png", title: "CSI BOTNET" },
+        { href: "/characters/tanjiro4", imgSrc: "/4.jpg", logoSrc: "arvrmr.png", title: "VR AR MR " },
+        { href: "/characters/tanjiro5", imgSrc: "/5.png", logoSrc: "MOZILLA.png", title: "MOZILLA" },
+        { href: "/characters/tanjiro6", imgSrc: "/6.jpg", logoSrc: "rospinot.png", title: "ROSPINOT" },
+        { href: "/characters/tanjiro7", imgSrc: "/14.jpg", logoSrc: "jdsc.png", title: "JDSC" },
+        { href: "/characters/tanjiro6", imgSrc: "/8.jpg", logoSrc: "MMUIUX-BLACK.png", title: "CSI MULTIMEDIA" },
+        { href: "/characters/tanjiro7", imgSrc: "/14.jpg", logoSrc: "gg.png", title: "GFG" },
+        { href: "/characters/tanjiro", imgSrc: "/1.jpeg", logoSrc: "dev.png", title: "CSI DEVELOPMENT" },
+        { href: "/characters/tanjiro2", imgSrc: "/2.jpeg", logoSrc: "bitwise.png", title: "CSI BITWISE" },
+        { href: "/characters/tanjiro3", imgSrc: "/3.jpeg", logoSrc: "botnet.png", title: "CSI BOTNET" },
+        { href: "/characters/tanjiro4", imgSrc: "/4.jpg", logoSrc: "arvrmr.png", title: "VR AR MR " },
+        { href: "/characters/tanjiro5", imgSrc: "/5.png", logoSrc: "MOZILLA.png", title: "MOZILLA" },
+        { href: "/characters/tanjiro6", imgSrc: "/6.jpg", logoSrc: "rospinot.png", title: "ROSPINOT" },
+        { href: "/characters/tanjiro7", imgSrc: "/14.jpg", logoSrc: "jdsc.png", title: "JDSC" },
+        { href: "/characters/tanjiro6", imgSrc: "/8.jpg", logoSrc: "MMUIUX-BLACK.png", title: "CSI MULTIMEDIA" },
+        { href: "/characters/tanjiro7", imgSrc: "/14.jpg", logoSrc: "gg.png", title: "GFG" },
+        
       ]
     },
-    { name: 'CIVIL', content: [{ href: "/characters/zenitsu", imgSrc: "/image12.png", logoSrc: "/CIVIL LOGO.png", title: "Zenitsu Agatsuma" }] },
-    { name: 'CHEMICAL', content: [{ href: "/characters/inosuke", imgSrc: "/image12.png", logoSrc: "CHEMICAL LOGO.png", title: "Inosuke Hashibira" }] },
-    { name: 'MECHANICAL', content: [{ href: "/characters/tengen", imgSrc: "/image12.png", logoSrc: "mes.png", title: "Tengen Uzui" }] },
-    { name: 'ELECTRICAL', content: [{ href: "/characters/nezuko", imgSrc: "/image12.png", logoSrc: "ELECTRICAL LOGO.png", title: "Nezuko Kamado" }] },
+    { name: 'CIVIL', content: [{ href: "/characters/zenitsu", imgSrc: "/10.jpg", logoSrc: "/Civil.png", title: "CE" }] },
+    { name: 'CHEMICAL', content: [{ href: "/characters/inosuke", imgSrc: "/11.webp", logoSrc: "CHEMICAL LOGO.png", title: "CHE" }] },
+    { name: 'MECHANICAL', content: [{ href: "/characters/tengen", imgSrc: "/12.jpg", logoSrc: "mes.png", title: "MES" }] },
+    { name: 'ELECTRICAL', content: [{ href: "/characters/nezuko", imgSrc: "/13.jpg", logoSrc: "Isf.png", title: "ISF" }] },
   ];
 
   const handleTabClick = (tabName) => setActiveTab(tabName);
-
-  // Scroll functionality logic here (same as provided)
 
   return (
     <div id="characters-section" className="characters_section">
@@ -74,9 +77,7 @@ const Slider = () => {
                         <div className="wrap_image_character_tabs">
                           <img alt="character" src={character.imgSrc} className="image_character_tabs" />
                         </div>
-                        {/* Ensure title is conditionally rendered */}
                         {character.title && <h3 className="card-title">{character.title}</h3>}
-                        <p className="about_character_tabs_home">{character.about}</p>
                       </a>
                     </div>
                   ))}
@@ -90,4 +91,4 @@ const Slider = () => {
   );
 };
 
-export default Slider;
+export default FlipSlider;

@@ -18,13 +18,10 @@ import MerchSection from "./components/merchsection";
 //import Contactpage from "./pages/contactpage/contactpage";
 import ContactPage from "./pages/contactpage/contactpage";
 
-import FlipCard2 from "./components/FlipCard2";
-
 import Payment from "./pages/payment/payment";
 import Checkout from "./pages/checkout/checkout";
 import Merchandise from "./pages/merchandise/merchandise";
-//import FlipCard2 from "./components/FlipCard2";
-
+import FlipCard2 from "./components/FlipCard2";
 
 // Scroll to top functionality
 function ScrollToTop() {

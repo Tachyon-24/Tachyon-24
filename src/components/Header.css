@@ -125,7 +125,7 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .logo  img{
+  .logo img {
     margin-left: 0;
   }
   .header {
