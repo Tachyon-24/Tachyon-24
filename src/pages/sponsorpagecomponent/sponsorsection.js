@@ -54,7 +54,7 @@ const SponsorsSection = () => {
         </ul>
       </div>
        */}
-    </section>
+    </section>  
   );
 };
 
