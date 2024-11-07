@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# Tachyon - JUET's Largest Technical Fest
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to **Tachyon**, Central India's largest and most exciting technical fest, organized annually by **Jaypee University of Engineering and Technology guna (JUET GUNA)**. Tachyon serves as a premier platform for students to showcase their technical prowess and innovations through a series of fierce competitions and collaborative learning experiences.
 
-## Available Scripts
+Tachyon's objective is simple: **to provide students with an unparalleled platform to shine in various technical and innovative domains**, while building a tech community and gaining recognition for their skills. The fest has grown bigger every year, offering students numerous opportunities to learn, compete, and grow.
 
-In the project directory, you can run:
+## 🚀 Table of Contents
 
-### `npm start`
+- [About Tachyon](#about-tachyon)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Run the Project](#run-the-project)
+- [Contributing](#contributing)
+- [Contact](#contact)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## About Tachyon
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Tachyon** is an annual technical festival hosted by **JUET**, designed to bring together the brightest minds and create an environment for learning, networking, and showcasing technological innovations. It offers various competitions and activities in multiple fields like coding, robotics, app development, entrepreneurship, and much more. 
 
-### `npm test`
+Since its inception, Tachyon has witnessed participation from thousands of students across India, making it one of the largest and most competitive fests in Central India.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `npm run build`
+Tachyon’s website and platform are built with cutting-edge technologies to ensure an excellent user experience. Here's an overview of the main technologies used:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Frontend**: React, HTML, CSS, JavaScript, Bootstrap
+- **Backend**: Node.js, Express.js (for APIs)
+- **Hosting**: GitHub Pages 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Follow these instructions to get the project up and running on your local machine for development or testing.
 
-### `npm run eject`
+### Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Before you begin, ensure you have the following installed:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Node.js** (v14 or above)
+- **npm** (Node Package Manager)
+- **Git** (for cloning the repository)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Installation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. **Clone the Repository**:
+   First, clone the repository to your local machine using the following command:
 
-## Learn More
+   ```bash
+   git clone https://github.com/Tachyon-24
+2. **Navigate to the Project Folder**:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   cd Tachyon-24
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. **Install Dependencies**:
+    
+    Install the necessary dependencies using 
+    ```bash
+    npm install
+4. **Run the Project**:
+    #### Start the Development Server:
 
-### Code Splitting
+    Start the development server to view the website locally:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   ```bash
+    npm start
+   ```
 
-### Analyzing the Bundle Size
+    #### Open the application:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    Open your browser and navigate to http://localhost:3000 to view the Tachyon website locally.
 
-### Making a Progressive Web App
+   ### 5.**Contact**
+    For inquiries, partnerships, or more information about Tachyon, please feel free to reach out:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   Email: tachyon24juet@gmail.com <br>
+Website: [tachyon24.com](https://www.tachyon24.com)
+<br>
+Social Media:
+Instagram: [juet.tachyon](https://www.instagram.com/juet.tachyon/)

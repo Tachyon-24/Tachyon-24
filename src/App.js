@@ -16,6 +16,7 @@ import EventsPage from "./pages/EventsPage";
 import AboutPage from "./pages/AboutPage";
 //import Contactpage from "./pages/contactpage/contactpage";
 import ContactPage from "./pages/contactpage/contactpage";
+
 import Payment from "./pages/payment/payment";
 import Checkout from "./pages/checkout/checkout";
 import Merchandise from "./pages/merchandise/merchandise";
@@ -45,7 +46,7 @@ function App() {
             element={
               <>
                 <Hero />
-                <FlipCard2 />
+                <FlipCard2/>
                 <AboutSection />
                 <EventsSection />
                 <Footer />
