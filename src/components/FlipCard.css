@@ -131,7 +131,7 @@
   position: relative;
   overflow: hidden;
 }
-img {
+.image_character_tabs {
   height: 73vh;
   width: 54vh;
   object-fit: cover;
