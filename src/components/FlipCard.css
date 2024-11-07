@@ -131,11 +131,13 @@
   position: relative;
   overflow: hidden;
 }
-img {
+
+.image_character_tabs {
   height: 73vh;
   width: 54vh;
   object-fit: cover;
 }
+
 /* Card Image Container and Hover Effect */
 .card-image-container {
   position: absolute;
@@ -314,7 +316,7 @@ img {
     width: fit-content; /* Adjust the width of the line to match the title text */
   }
 
-  img {
+  .image_character_tabs{
     height: 67vh;
     width: 54vh;
     object-fit: cover;
@@ -359,7 +361,7 @@ img {
   .item_tabs_characters_home.active::after {
     width: fit-content; /* Adjust the width of the line to match the title text */
   }
-  img {
+  .image_character_tabs{
     height: 86vh;
     width: 48vh;
     object-fit: cover;
@@ -416,7 +418,7 @@ img {
     width: fit-content; /* Adjust the width of the line to match the title text */
   }
 
-  img {
+  .image_character_tabs{
     height: 67vh;
     width: 54vh;
     object-fit: cover;
