@@ -1,18 +1,43 @@
+@font-face {
+    font-family: "Lemon-Milk";
+    src: url("../../../public/Fonts/LEMONMILK-Bold.otf") format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
 /* Container styles */
 .merchandise {
-    width: min(90%, 800px);
+    width: auto;
     min-height: 100vh;
     margin: 0 auto;
     padding: 2rem;
     padding-top: 15vh;
     background-color: #000000;
     color: white;
-    border-radius: 12px;
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    font-family: Lemon-Milk;
+    background:    
+    linear-gradient(to bottom, black 5%, transparent 35%, black 63%),
+    linear-gradient(to bottom, transparent 5%, rgba(83, 83, 83, 0.455)  10%,rgba(83, 83, 83, 0.756) 65%, transparent 63%),
+    
+    url("../../../public/mangapanel3.jpg"),
+    linear-gradient(to bottom, #fc5f3c, transparent 70%);
+    background-position: center 15%;
+    background-size: 100% 100%,100% 100%, 100% 55%,  100% 100%;
+    background-repeat: no-repeat;
 }
 
+.merchandise::before{
+    filter: blur(5px);
+}
+.merchandise h1{
+    margin-top: 50px;
+}
 /* Carousel container */
 .merchimg {
     width: 100%;
@@ -21,6 +46,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 /* Bootstrap Carousel overrides */
@@ -65,9 +91,11 @@
         padding: 1.5rem;
         padding-top: max(3rem, 8vh);
     }
-   
+    .merchandise-form{
+        flex-wrap: wrap;
+    }
     .merchimg {
-        height: 70vh; /* Adjusted for mobile */
+        height: 40vh; /* Adjusted for mobile */
     }
 
     .carousel-item {
@@ -95,8 +123,8 @@
 }
 /* Typography */
 .merchandise h1 {
-    font-size: clamp(1.5rem, 5vw, 2.5rem);
-    color:#ff5733;
+    font-size: 3rem;
+    color:#fc5f3c;
     text-align: center;
     margin-bottom: 1.5rem;
     margin-top: 10vh;
@@ -104,7 +132,7 @@
 
 .merchandise h3 {
     font-size: clamp(1rem, 3vw, 1.2rem);
-    color: #eee;
+    color: white;
     margin-bottom: 0.75rem;
 }
 
@@ -124,7 +152,7 @@
 
 .merchandise select:hover,
 .merchandise input:hover {
-    background-color: #2f2f31;
+    background-color: black;
 }
 
 .merchandise select:focus,
@@ -176,7 +204,7 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .merchandise {
-        width: 95%;
+        width: auto;
         padding: 1.5rem;
         padding-top: max(3rem, 8vh);
     }
@@ -218,24 +246,49 @@
 /* Form Container */
 .merchandise-form {
     width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
     padding: 2rem;
-    background-color: #000;
-    color: #fff;
+    background-color: transparent;
+    color: white;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 200px;
 }
+
+.user-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.user-select-size{
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    flex-direction: column;
+    width: 25%;
+}
+
 
 /* General Form Group */
 .form-group {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     box-sizing: border-box;
+}
+
+.select-form-group {
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 8px;
 }
 
 /* Heading Style */
 .form-heading {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
@@ -250,6 +303,7 @@
     border-radius: 8px;
     background-color: #f8f8f8;
     font-size: 1rem;
+    margin-top: 8px;
 }
 
 /* Input Field Style */
@@ -265,7 +319,7 @@
 }
 
 .form-input::placeholder {
-    color: #aaa;
+    color: #ffffff;
 }
 
 /* Button Style */
@@ -280,6 +334,7 @@
     cursor: pointer;
     transition: background-color 0.3s;
     box-sizing: border-box;
+    margin-bottom: 70%;
 }
 
 .form-button:disabled {
@@ -295,14 +350,38 @@
 @media (max-width: 768px) {
     .merchandise-form {
         padding: 1.5rem;
+        flex-wrap: wrap;
     }
 
+    .user-info, .user-select-size{
+        width: 100%;
+        margin: 12px;
+    }
     .form-input, .form-select {
         padding: 0.8rem;
     }
 
     .form-button {
         padding: 0.8rem 1.5rem;
+    }
+    .merchandise{
+        background: 
+        linear-gradient(to bottom, black 5%, transparent 50%, black 55%),
+        linear-gradient(to bottom, transparent 5%, rgba(83, 83, 83, 0.455)  10%,rgba(83, 83, 83, 0.756) 65%, transparent 63%),
+        url("../../../public/mangapanel4.jpg"),
+        linear-gradient(to bottom, #fc5f3c, transparent 70%);
+        background-position: center 12%;
+        background-size: 100% 100%, 100% 100%, 100% 50%,  100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .merchandise h1{
+        font-size: 1.5rem;
+    }
+
+    .merchandise-form{
+        margin-top: 20px;
+        background : linear-gradient(to bottom, rgb(21, 21, 21), rgb(21, 21, 21) 45%, transparent 70%)
     }
 }
 

@@ -1,0 +1,437 @@
+/* General Styling */
+.characters_section {
+  padding: 20px;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-bottom: 10vh;
+}
+
+.wrap_tabs_characters_home {
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
+  margin-bottom: 33vh;
+}
+
+/* Tabs Menu Styling */
+.tabs_menu_characters_home {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.item_tabs_characters_home {
+  position: relative;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-left: 2vh;
+  font-size: 30px;
+  background-color: black;
+  color: white;
+  border: none;
+  transition: color 0.3s ease;
+}
+
+.item_tabs_characters_home.active,
+.item_tabs_characters_home:hover {
+  color: #ee4e1c;
+}
+
+.item_tabs_characters_home::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0; /* Initial width of the underline */
+  height: 3px;
+  background-color: #ee4e1c;
+  transition: width 0.3s ease;
+}
+
+.item_tabs_characters_home:hover::after,
+.item_tabs_characters_home.active::after {
+  width: 100%; /* Expands to match text width on hover */
+}
+
+/* Tab Content Styling */
+.tabs_content_characters_home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tab-title {
+  text-align: center;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 77vh;
+  margin-right: 10px;
+}
+
+/* Card Container Styling */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+  overflow: visible;
+}
+
+.card-container.cse-marquee {
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow: visible;
+  width: auto;
+  justify-content: flex-start;
+  animation: scroll-horizontal 25s linear infinite;
+  animation-play-state: running;
+}
+
+.card-container.cse-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Horizontal Scroll Animation */
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Card Styling with Gradient Background */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 30px;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  width: 400px;
+  height: 600px;
+  margin-right: 8vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.image_character_tabs {
+  height: 100vh;
+  width: 75vh;
+  object-fit: cover;
+}
+
+/* Card Image Container and Hover Effect */
+.card-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+}
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.7;
+}
+.card:hover .card-image {
+  transform: scale(1.1);
+  opacity: 1;
+  z-index: 2;
+}
+.card-image-container,
+.card-image {
+  margin: 0;
+  padding: 0;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Card Title */
+.card-title {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  position: absolute;
+  left: 24px; /* Position it to the left of the card */
+  top: 89%; /* Vertically center the title */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+  margin: 0; /* Remove any additional spacing */
+  white-space: nowrap; /* Prevent text from wrapping */
+  z-index: 3;
+}
+
+/* Card Title Underline */
+.card-title::before {
+  content: "";
+  position: absolute;
+  left: -10px; /* Position it closer to the title */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 80%; /* Stretch the line height */
+  background-color: #ee4e1c; /* Color matching the card */
+  border-radius: 2px;
+}
+
+/* Gradient Backgrounds for Individual Cards */
+.card1 {
+  background: linear-gradient(to bottom, #e5a3a3 20%, #6a2020 70%);
+}
+.card2 {
+  background: linear-gradient(to bottom, #e0e0b3 20%, #5a5a13 70%);
+}
+.card3 {
+  background: linear-gradient(to bottom, #a1c2f0 20%, #2b4678 70%);
+}
+.card4 {
+  background: linear-gradient(to bottom, #a3d6b1 20%, #2d8b4b 70%);
+}
+.card5 {
+  background: linear-gradient(to bottom, #d3a8e3 20%, #4e2380 70%);
+}
+.card6 {
+  background: linear-gradient(to bottom, #f2b0b0 20%, #972626 70%);
+}
+.card7 {
+  background: linear-gradient(to bottom, #e5a3a3 20%, #6a2020 70%);
+}
+.card8 {
+  background: linear-gradient(to bottom, #e0e0b3 20%, #5a5a13 70%);
+}
+.card9 {
+  background: linear-gradient(to bottom, #a1c2f0 20%, #2b4678 70%);
+}
+.card10 {
+  background: linear-gradient(to bottom, #a3d6b1 20%, #2d8b4b 70%);
+}
+.card11 {
+  background: linear-gradient(to bottom, #d3a8e3 20%, #4e2380 70%);
+}
+.card12 {
+  background: linear-gradient(to bottom, #f2b0b0 20%, #972626 70%);
+}
+.card13 {
+  background: linear-gradient(to bottom, #d3a8e3 20%, #4e2380 70%);
+}
+.card14 {
+  background: linear-gradient(to bottom, #f2b0b0 20%, #972626 70%);
+}
+
+.wrap_image_character_tabs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 94%;
+}
+
+/* Card Logo */
+.logo-image {
+  position: absolute;
+  background-color: rgba(58, 53, 53, 0.844);
+  bottom: 51px;
+  right: 10px;
+  width: 105px;
+  height: 105px;
+  opacity: 0.9;
+  border-radius: 50%;
+  z-index: 3;
+}
+
+.card:hover .logo-image {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* Responsive Adjustments */
+/* Media Query for max-width 768px */
+@media (max-width: 768px) {
+  .card {
+    width: 41vh;
+    height: 64vh;
+    border-radius: 3vh;
+    margin-left: 9vh;
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  .card:hover {
+    transform: scale(1.03);
+  }
+
+  .tabs_menu_characters_home {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .item_tabs_characters_home {
+    font-size: 24px;
+    padding: 8px 18px;
+  }
+
+  .item_tabs_characters_home::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0; /* Initial width of the underline */
+    height: 3px;
+    background-color: #ee4e1c;
+    transition: width 0.3s ease;
+  }
+
+  .item_tabs_characters_home:hover::after,
+  .item_tabs_characters_home.active::after {
+    width: fit-content; /* Adjust the width of the line to match the title text */
+  }
+
+  .image_character_tabs{
+    height: 67vh;
+    width: 54vh;
+    object-fit: cover;
+  }
+
+  .wrap_image_character_tabs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 94%;
+  }
+}
+
+/* Media Query for max-width 420px */
+@media (max-width: 420px) {
+  .card {
+    width: 345px;
+    height: 600px;
+    border-radius: 3vh;
+    margin-left: 8vh;
+  }
+
+  .item_tabs_characters_home {
+    font-size: 35px;
+    padding: 6px 15px;
+  }
+
+  .item_tabs_characters_home::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0; /* Initial width of the underline */
+    height: 3px;
+    background-color: #d83b1a;
+    transition: width 0.3s ease;
+  }
+
+  .item_tabs_characters_home:hover::after,
+  .item_tabs_characters_home.active::after {
+    width: fit-content; /* Adjust the width of the line to match the title text */
+  }
+  .image_character_tabs{
+    height: 86vh;
+    width: 48vh;
+    object-fit: cover;
+  }
+  .wrap_image_character_tabs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 94%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .card {
+    width: 37vh;
+    height: 64vh;
+    border-radius: 3vh;
+    margin-left: 7vh;
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  .card:hover {
+    transform: scale(1.03);
+  }
+
+  .tabs_menu_characters_home {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .item_tabs_characters_home {
+    font-size: 44px;
+    padding: 8px 18px;
+  }
+
+  .item_tabs_characters_home::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0; /* Initial width of the underline */
+    height: 3px;
+    background-color: #ee4e1c;
+    transition: width 0.3s ease;
+  }
+
+  .item_tabs_characters_home:hover::after,
+  .item_tabs_characters_home.active::after {
+    width: fit-content; /* Adjust the width of the line to match the title text */
+  }
+
+
+  .image_character_tabs {
+    height: 65vh;
+    width: 48vh; }
+
+  .wrap_image_character_tabs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 95%;
+  }
+}

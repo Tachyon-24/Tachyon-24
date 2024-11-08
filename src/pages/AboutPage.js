@@ -4,7 +4,7 @@ import "./AboutPage.css";
 import Footer from "../components/Footer";
 import groupImg from "../assests/last-techfest-group.jpeg";
 import ImageSlider from "./AboutPagecomponents/ImageSlider";
-import logo from "../assests/header-logo.png";
+
 
 const AboutPage = () => {
   const slides = [
@@ -31,20 +31,15 @@ const AboutPage = () => {
   return (
     <>
       <section className="aboutpage">
+        <div className="content-about"> 
         <div className="details-box-1">
-          <div className="details-box-1-img">
-            <img
-              id="details-box-1-img"
-              src={groupImg}
-              alt="Group from last techfest"
-            />
-          </div>
+          
           <div className="details-box-1-txt">
-            <span>
-              About <img src={logo} alt="logo"></img>
+            <span >
+              About Tachyon 
+              {/* <img src={logo} alt="logo"></img> */}
             </span>
             <p>
-              <br></br>
               Tachyon is Central India's Largest Technical Fest. It is an
               endeavor to provide an outstanding platform for students to
               showcase their talent and skill sets in the fiercest of
@@ -63,21 +58,28 @@ const AboutPage = () => {
               {readMoreState.detailsBox1 ? "Read Less" : "Read More"}
             </button> */}
           </div>
+          <div className="details-box-1-img">
+            <img
+              id="details-box-1-img"
+              src={groupImg}
+              alt="Group from last techfest"
+            />
+          </div>
         </div>
 
         <div className="details-box-2">
           <div className="details-box-2-bubbles">
             <div className="bubbles-top">
-              <div className="num-txt">50+</div>
+              <div className="num-txt">60+</div>
               <div className="type-txt">Events</div>
             </div>
             <div className="bubbles-middle">
-              <div className="num-txt">100+</div>
-              <div className="type-txt">Speakers</div>
+              <div className="num-txt">1000+</div>
+              <div className="type-txt">Participants</div>
             </div>
             <div className="bubbles-bottom">
-              <div className="num-txt">10,000+</div>
-              <div className="type-txt">Participants</div>
+              <div className="num-txt">3</div>
+              <div className="type-txt">Days</div>
             </div>
           </div>
           <div className="details-box-2-txt">
@@ -90,15 +92,15 @@ const AboutPage = () => {
               every passionate mind to shine.
               <br></br>
               <br></br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●
               WAR FOR TREZOR<br></br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●
               GLITCH E-SPORTS<br></br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●
               ROBO WARS<br></br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●
               CODE MANIA<br></br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●
               CRYPTIC HUNT<br></br>
               {/* <span className="dots">{readMoreState.detailsBox2 ? '' : '...'}</span>
               <span className="more-text" style={{ display: readMoreState.detailsBox2 ? 'inline' : 'none' }}>
@@ -118,6 +120,7 @@ const AboutPage = () => {
               <ImageSlider slides={slides} />
             </div>
           </div>
+        </div>
         </div>
       </section>
       <Footer />

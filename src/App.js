@@ -5,8 +5,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from "react-route
 // Component imports
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import AboutSection from "./components/EventsSection"
-import EventsSection from "./components/AboutSection"
+import EventsSection from "./components/EventsSection";
 import Footer from "./components/Footer";
 import Card1 from "./pages/card-1";   //adding the card's page
 import Sponsorspage from "./pages/sponsors";
@@ -14,16 +13,18 @@ import FAB from "./components/FAB";
 //import TeamPage from "./pages/TeamPage";
 import EventsPage from "./pages/EventsPage";
 import AboutPage from "./pages/AboutPage";
+import SpeakerPage from "./pages/speakerspage";
+import MerchSection from "./components/merchsection";
 //import Contactpage from "./pages/contactpage/contactpage";
 import ContactPage from "./pages/contactpage/contactpage";
-
-import FlipCard2 from "./components/FlipCard2";
 
 import Payment from "./pages/payment/payment";
 import Checkout from "./pages/checkout/checkout";
 import Merchandise from "./pages/merchandise/merchandise";
+
 import Team from "./pages/teampage/team";
-//import FlipCard2 from "./components/FlipCard2";
+
+import FlipCard2 from "./components/FlipCard2";
 
 
 // Scroll to top functionality
@@ -50,8 +51,8 @@ function App() {
             element={
               <>
                 <Hero />
+                <MerchSection />
                 <FlipCard2/>
-                <AboutSection />
                 <EventsSection />
                 <Footer />
               </>
@@ -68,7 +69,11 @@ function App() {
           <Route path="/merchandise" element={<Merchandise/>}/>
           <Route path="/checkout" element={<Checkout/>}/>
           <Route path="/payment" element={<Payment/>}/>
+
           <Route path="/team" element={<Team/>}/>
+
+          <Route path="/speakers" element={<SpeakerPage />}/>
+
         </Routes>
         <FAB />
       </div>
