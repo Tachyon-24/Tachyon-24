@@ -173,9 +173,7 @@ const ContactPage = () => {
               </div>
 
   
-              {/* Phone */}
-              <div className="contact-info-card" style={{backgroundColor:'black'}}>
-           
+    
               <p>
                 JUET
                 <br />
@@ -226,7 +224,7 @@ const ContactPage = () => {
 
       {/* Footer */}
 
-    </div>
+   
   );{/* Footer */}
       <Footer />
     </div>
