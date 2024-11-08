@@ -225,6 +225,9 @@ const ContactPage = () => {
       </div>
 
       {/* Footer */}
+
+    </div>
+  );{/* Footer */}
       <Footer />
     </div>
   );
