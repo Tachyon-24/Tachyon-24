@@ -171,6 +171,9 @@ const ContactPage = () => {
               <div className="contact-icon">
                 <MapPin size={32} />
               </div>
+
+  
+    
               <p>
                 JUET
                 <br />
@@ -189,6 +192,7 @@ const ContactPage = () => {
             >
               <div className="contact-icon">
                 <Phone size={32} />
+
               </div>
               <p>+91-9799444332</p>
             </div>
@@ -219,6 +223,9 @@ const ContactPage = () => {
       </div>
 
       {/* Footer */}
+
+   
+  );{/* Footer */}
       <Footer />
     </div>
   );

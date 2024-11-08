@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 import Card1 from "./pages/card-1";   //adding the card's page
 import Sponsorspage from "./pages/sponsors";
 import FAB from "./components/FAB";
-import TeamPage from "./pages/TeamPage";
+//import TeamPage from "./pages/TeamPage";
 import EventsPage from "./pages/EventsPage";
 import AboutPage from "./pages/AboutPage";
 import SpeakerPage from "./pages/speakerspage";
@@ -21,7 +21,11 @@ import ContactPage from "./pages/contactpage/contactpage";
 import Payment from "./pages/payment/payment";
 import Checkout from "./pages/checkout/checkout";
 import Merchandise from "./pages/merchandise/merchandise";
+
+import Team from "./pages/teampage/team";
+
 import FlipCard2 from "./components/FlipCard2";
+
 
 // Scroll to top functionality
 function ScrollToTop() {
@@ -58,14 +62,18 @@ function App() {
           {/* Individual page routes */}
           <Route path="/card-1" element={<Card1 />} />
           <Route path="/sponsors" element={<Sponsorspage />} />
-          <Route path="/team" element={<TeamPage />} />
+         
           <Route path="/events" element={<EventsPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage/>}/>
           <Route path="/merchandise" element={<Merchandise/>}/>
           <Route path="/checkout" element={<Checkout/>}/>
           <Route path="/payment" element={<Payment/>}/>
+
+          <Route path="/team" element={<Team/>}/>
+
           <Route path="/speakers" element={<SpeakerPage />}/>
+
         </Routes>
         <FAB />
       </div>

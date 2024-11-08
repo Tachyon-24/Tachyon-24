@@ -21,6 +21,9 @@
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .item_tabs_characters_home {
@@ -133,8 +136,8 @@
 }
 
 .image_character_tabs {
-  height: 73vh;
-  width: 54vh;
+  height: 100vh;
+  width: 75vh;
   object-fit: cover;
 }
 
@@ -418,11 +421,10 @@
     width: fit-content; /* Adjust the width of the line to match the title text */
   }
 
-  .image_character_tabs{
-    height: 67vh;
-    width: 54vh;
-    object-fit: cover;
-  }
+
+  .image_character_tabs {
+    height: 65vh;
+    width: 48vh; }
 
   .wrap_image_character_tabs {
     display: flex;
@@ -430,6 +432,6 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 94%;
+    height: 95%;
   }
 }
