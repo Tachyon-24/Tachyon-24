@@ -9,31 +9,30 @@ const FlipSlider = () => {
     {
       name: 'CSE',
       content: [
-        { href: "/characters/tanjiro", imgSrc: "/1.jpeg", logoSrc: "dev.png", title: "CSI DEVELOPMENT" },
-        { href: "/characters/tanjiro2", imgSrc: "/2.jpeg", logoSrc: "bitwise.png", title: "CSI BITWISE" },
-        { href: "/characters/tanjiro3", imgSrc: "/3.jpeg", logoSrc: "botnet.png", title: "CSI BOTNET" },
-        { href: "/characters/tanjiro4", imgSrc: "/4.jpg", logoSrc: "arvrmr.png", title: "VR AR MR " },
-        { href: "/characters/tanjiro5", imgSrc: "/5.png", logoSrc: "MOZILLA.png", title: "MOZILLA" },
-        { href: "/characters/tanjiro6", imgSrc: "/6.jpg", logoSrc: "rospinot.png", title: "ROSPINOT" },
-        { href: "/characters/tanjiro7", imgSrc: "/14.jpg", logoSrc: "jdsc.png", title: "JDSC" },
-        { href: "/characters/tanjiro6", imgSrc: "/8.jpg", logoSrc: "MMUIUX-BLACK.png", title: "CSI MULTIMEDIA" },
-        { href: "/characters/tanjiro7", imgSrc: "/14.jpg", logoSrc: "gg.png", title: "GFG" },
-        { href: "/characters/tanjiro", imgSrc: "/1.jpeg", logoSrc: "dev.png", title: "CSI DEVELOPMENT" },
-        { href: "/characters/tanjiro2", imgSrc: "/2.jpeg", logoSrc: "bitwise.png", title: "CSI BITWISE" },
-        { href: "/characters/tanjiro3", imgSrc: "/3.jpeg", logoSrc: "botnet.png", title: "CSI BOTNET" },
-        { href: "/characters/tanjiro4", imgSrc: "/4.jpg", logoSrc: "arvrmr.png", title: "VR AR MR " },
-        { href: "/characters/tanjiro5", imgSrc: "/5.png", logoSrc: "MOZILLA.png", title: "MOZILLA" },
-        { href: "/characters/tanjiro6", imgSrc: "/6.jpg", logoSrc: "rospinot.png", title: "ROSPINOT" },
-        { href: "/characters/tanjiro7", imgSrc: "/14.jpg", logoSrc: "jdsc.png", title: "JDSC" },
-        { href: "/characters/tanjiro6", imgSrc: "/8.jpg", logoSrc: "MMUIUX-BLACK.png", title: "CSI MULTIMEDIA" },
-        { href: "/characters/tanjiro7", imgSrc: "/14.jpg", logoSrc: "gg.png", title: "GFG" },
-        
+        { imgSrc: "/1.jpeg", logoSrc: "dev.png", title: "CSI DEVELOPMENT", club: "CSI-Development" },
+        { imgSrc: "/2.jpeg", logoSrc: "bitwise.png", title: "CSI BITWISE", club: "CSI-Bitwise" },
+        { imgSrc: "/3.jpeg", logoSrc: "botnet.png", title: "CSI BOTNET", club: "CSI-Botnet" },
+        { imgSrc: "/4.jpg", logoSrc: "arvrmr.png", title: "VR AR MR", club: "VR+AR+MR" },
+        { imgSrc: "/5.png", logoSrc: "MOZILLA.png", title: "MOZILLA", club: "Mozilla" },
+        { imgSrc: "/15.jpg", logoSrc: "rospinot.png", title: "ROSPINOT", club: "Rospinot" },
+        { imgSrc: "/6.jpg", logoSrc: "jdsc.png", title: "JDSC", club: "JDSC" },
+        { imgSrc: "/8.jpg", logoSrc: "MMUIUX-BLACK.png", title: "CSI MULTIMEDIA", club: "CSI-MM%26UI%2FUX" },
+        { imgSrc: "/14.jpg", logoSrc: "gg.png", title: "GFG", club: "GFG" },
+        { imgSrc: "/1.jpeg", logoSrc: "dev.png", title: "CSI DEVELOPMENT", club: "CSI-Development" },
+        { imgSrc: "/2.jpeg", logoSrc: "bitwise.png", title: "CSI BITWISE", club: "CSI-Bitwise" },
+        { imgSrc: "/3.jpeg", logoSrc: "botnet.png", title: "CSI BOTNET", club: "CSI-Botnet" },
+        { imgSrc: "/4.jpg", logoSrc: "arvrmr.png", title: "VR AR MR", club: "VR+AR+MR" },
+        { imgSrc: "/5.png", logoSrc: "MOZILLA.png", title: "MOZILLA", club: "Mozilla" },
+        { imgSrc: "/15.jpg", logoSrc: "rospinot.png", title: "ROSPINOT", club: "Rospinot" },
+        { imgSrc: "/6.jpg", logoSrc: "jdsc.png", title: "JDSC", club: "JDSC" },
+        { imgSrc: "/8.jpg", logoSrc: "MMUIUX-BLACK.png", title: "CSI MULTIMEDIA", club: "CSI-MM%26UI%2FUX" },
+        { imgSrc: "/14.jpg", logoSrc: "gg.png", title: "GFG", club: "GFG" },
       ]
     },
-    { name: 'CIVIL', content: [{ href: "/characters/zenitsu", imgSrc: "/10.jpg", logoSrc: "/Civil.png", title: "CE" }] },
-    { name: 'CHEMICAL', content: [{ href: "/characters/inosuke", imgSrc: "/11.webp", logoSrc: "CHEMICAL LOGO.png", title: "CHE" }] },
-    { name: 'MECHANICAL', content: [{ href: "/characters/tengen", imgSrc: "/12.jpg", logoSrc: "mes.png", title: "MES" }] },
-    { name: 'ELECTRICAL', content: [{ href: "/characters/nezuko", imgSrc: "/13.jpg", logoSrc: "Isf.png", title: "ISF" }] },
+    { name: 'CIVIL', content: [{ imgSrc: "/10.jpg", logoSrc: "/Civil.png", title: "CE" }] },
+    { name: 'CHEMICAL', content: [{ imgSrc: "/11.webp", logoSrc: "CHEMICAL LOGO.png", title: "CHE" }] },
+    { name: 'MECHANICAL', content: [{ imgSrc: "/12.jpg", logoSrc: "mes.png", title: "MES" }] },
+    { name: 'ELECTRICAL', content: [{ imgSrc: "/13.jpg", logoSrc: "Isf.png", title: "ISF" }] },
   ];
 
   const handleTabClick = (tabName) => setActiveTab(tabName);
@@ -70,7 +69,7 @@ const FlipSlider = () => {
                 >
                   {tab.content.map((character, index) => (
                     <div key={index} className={`card card${index + 1}`}>
-                      <a href={character.href} className="card-link">
+                      <a href={`/events?branch=${tab.name}&club=${character.club}`} className="card-link">
                         <div className="logo-box">
                           <img src={character.logoSrc} alt="Logo" className="logo-image" />
                         </div>

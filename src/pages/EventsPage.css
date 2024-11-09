@@ -239,6 +239,19 @@
   color: white;
 }
 
+.event-card {
+  margin: 1rem 28px;
+  border-radius: 1.5rem;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.main-event img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
   .branches-container,
