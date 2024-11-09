@@ -1,9 +1,9 @@
-/* React Component */
 import React, { useState } from "react";
 import { Mail, MapPin, Phone, Globe } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import "./contact.css";
 import Footer from "../../components/Footer";
+
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -55,10 +55,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div
-      className="contact-page-container"
-      style={{ width: "100%", background: "black" }}
-    >
+    <div className="contact-page-container" style={{ width: "100%", background: "black" }}>
       {/* Header/Breadcrumb */}
       <div className="contact-header">
         <div className="contact-header-content contact-container">
@@ -67,27 +64,13 @@ const ContactPage = () => {
       </div>
 
       {/* Contact Form Section */}
-      <div
-        className="contact-section contact-container"
-        style={{ background: "black", width: "100%" }}
-      >
+      <div className="contact-section contact-container" style={{ background: "black", width: "100%" }}>
         <div className="contact-grid">
-          <div
-            className="contact-image"
-            style={{
-              width: "100%",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
+          <div className="contact-image" style={{ width: "100%", display: "flex", justifyContent: "center", alignItems: "center" }}>
             <img src="/big3.jpg" alt="Contact" style={{ width: "30vw" }} />
           </div>
 
-          <div
-            className="contact-form-container"
-            style={{ backgroundColor: "black" }}
-          >
+          <div className="contact-form-container" style={{ backgroundColor: "black" }}>
             <h2>Get in touch!</h2>
             <p>
               For specific enquiries, kindly email us at{" "}
@@ -95,10 +78,7 @@ const ContactPage = () => {
             </p>
 
             <form onSubmit={handleSubmit}>
-              <div
-                className="contact-form-row"
-                style={{ backgroundColor: "black" }}
-              >
+              <div className="contact-form-row" style={{ backgroundColor: "black" }}>
                 <input
                   type="text"
                   name="firstName"
@@ -154,26 +134,14 @@ const ContactPage = () => {
       </div>
 
       {/* Contact Info Cards */}
-      <div
-        className="contact-info-section"
-        style={{ backgroundColor: "black" }}
-      >
+      <div className="contact-info-section" style={{ backgroundColor: "black" }}>
         <div className="contact-container" style={{ backgroundColor: "black" }}>
-          <div
-            className="contact-info-grid"
-            style={{ backgroundColor: "black" }}
-          >
+          <div className="contact-info-grid" style={{ backgroundColor: "black" }}>
             {/* Address */}
-            <div
-              className="contact-info-card"
-              style={{ backgroundColor: "black" }}
-            >
+            <div className="contact-info-card" style={{ backgroundColor: "black" }}>
               <div className="contact-icon">
                 <MapPin size={32} />
               </div>
-
-  
-    
               <p>
                 JUET
                 <br />
@@ -186,33 +154,23 @@ const ContactPage = () => {
             </div>
 
             {/* Phone */}
-            <div
-              className="contact-info-card"
-              style={{ backgroundColor: "black" }}
-            >
+            <div className="contact-info-card" style={{ backgroundColor: "black" }}>
               <div className="contact-icon">
                 <Phone size={32} />
-
               </div>
               <p>+91-9799444332</p>
             </div>
 
             {/* Email */}
-            <div
-              className="contact-info-card"
-              style={{ backgroundColor: "black" }}
-            >
+            <div className="contact-info-card" style={{ backgroundColor: "black" }}>
               <div className="contact-icon">
                 <Mail size={32} />
               </div>
-              <a href="mailto:cse@juetguna.in">cse@juetguna.in</a>
+              <a href="mailto:cse@juetguna.in"> tachyon24juet@gmail.com</a>
             </div>
 
             {/* Website */}
-            <div
-              className="contact-info-card"
-              style={{ backgroundColor: "black" }}
-            >
+            <div className="contact-info-card" style={{ backgroundColor: "black" }}>
               <div className="contact-icon">
                 <Globe size={32} />
               </div>
@@ -223,11 +181,9 @@ const ContactPage = () => {
       </div>
 
       {/* Footer */}
-
-   
-  );{/* Footer */}
       <Footer />
     </div>
   );
 };
+
 export default ContactPage;
