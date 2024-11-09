@@ -1,7 +1,7 @@
 .container {
   margin-top: 10vw;
   margin-left: -2vw;
- /* Adds horizontal padding */
+  /* Adds horizontal padding */
 }
 
 .hostsection {
@@ -12,7 +12,6 @@
   gap: 2vw; /* Adjusts spacing between flex items */
   margin-top: 2vw;
   margin-bottom: 5vw;
-
 }
 
 .organizer-section,
@@ -34,9 +33,8 @@
   width: 100%;
   /* Limits the maximum width of the images */
 }
-.organizer-section{
+.organizer-section {
   background-image: url("../../assests/team/main-qimg-e023e6d31c3f1dd8ad673464e1b52c08-lq.jpg");
-  
 }
 .core-team-section {
   display: flex;
@@ -51,7 +49,6 @@
 .team-member {
   background-image: "../../assests/team/c6c2ceb6baa9990646e5466518b470da.png";
   text-align: center;
-  
   border: 1px solid #ccc;
   border-radius: 8px;
   width: calc(33.33% - 100px); /* Three items per row by default */
@@ -85,18 +82,18 @@
 
 @media (max-width: 480px) {
   .organizer-section,
-.coorganizer-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: white;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  .coorganizer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
 
-  /* Allows items to grow/shrink with a minimum width */
-  max-width: 300px;
-  height: 70%; /* Limits the maximum width of each section */
-}
+    /* Allows items to grow/shrink with a minimum width */
+    max-width: 300px;
+    height: 70%; /* Limits the maximum width of each section */
+  }
 
   .container {
     margin-top: 30vw;
@@ -111,7 +108,7 @@
   .organizer-section img,
   .coorganizer-section img {
     width: 60%; /* Larger width for very small screens */
-    
+
     /* Ensure the image doesn’t exceed the container width */
   }
   .team-member {
@@ -139,8 +136,7 @@
     margin-top: 2vw;
     margin-bottom: 5vw;
     margin-left: -7.5vw;
-  
-  }  
+  }
 }
 /* Existing modal styles */
 .modal-overlay {

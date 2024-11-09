@@ -15,7 +15,7 @@ import charlieImage from "../../assests/download (3).jpg";
 import himanshuSir from "../../assests/team/himanshusir.png";
 import himanshuSirBg from "../../assests/team/c6c2ceb6baa9990646e5466518b470da.png";
 import hardikSirBg from "../../assests/team/main-qimg-e023e6d31c3f1dd8ad673464e1b52c08-lq.jpg";
-import alisirbg from "../../assests/team/OIP.jpg";
+import alisirbg from "../../assests/team/OIP.png";
 import sampurn from "../../assests/team/sampurn1 - SAMPURN CHOUKSEY.png";
 import sampurnbg from "../../assests/team/5e0a02131c0567d225ee1b2d5c25232b.jpg";
 import yrichi from "../../assests/team/yorichi.jpg";
@@ -199,7 +199,7 @@ const Team = () => {
     {
       title: "Development Team",
       leadName: "Himanshu Kumar Mahto",
-      leadRole: "Development Team Head",
+      leadRole: "Development Head",
       leadImage: himanshuSir,
       backGroundImage: himanshuSirBg,
       coLead: {
@@ -222,7 +222,7 @@ const Team = () => {
     {
       title: "Sponsorship",
       leadName: "Sampurn Chouksey",
-      leadRole: "Sponsorship Head and Treasurer",
+      leadRole: "Sponsorship Head",
       leadImage: sampurn,
       backGroundImage: sampurnbg,
       members: [
@@ -233,7 +233,7 @@ const Team = () => {
     {
       title: "Management ",
       leadName: "Gaurav Tiwari",
-      leadRole: "Management Lead",
+      leadRole: "Management Head",
       leadImage: gaurav,
       backGroundImage: gauravbg,
       coLead: {
@@ -250,7 +250,7 @@ const Team = () => {
     {
       title: "Designing and Social Media",
       leadName: "Saket Bagdi",
-      leadRole: "Designing & Social Media Head",
+      leadRole: "Designing Head",
       leadImage: Saketsir,
       backGroundImage: saketsirbg,
       coLead: {
@@ -267,7 +267,7 @@ const Team = () => {
     {
       title: "Hospitality ",
       leadName: "Shivani Singh",
-      leadRole: "Hospitality Lead",
+      leadRole: "Hospitality Head",
       leadImage: shivani,
       backGroundImage: yrichi,
       coLead: {
@@ -367,8 +367,8 @@ const Team = () => {
               style={{
                 backgroundColor: "black",
                 Width: "100%",
-                paddingLeft: "40px",
-                paddingRight: "40px",
+                paddingLeft: "120px",
+                paddingRight: "120px",
                 borderRadius: "15px",
               }}
             >
