@@ -172,10 +172,7 @@ const ContactPage = () => {
                 <MapPin size={32} />
               </div>
 
-  
-              {/* Phone */}
-              <div className="contact-info-card" style={{backgroundColor:'black'}}>
-           
+
               <p>
                 JUET
                 <br />
@@ -207,7 +204,7 @@ const ContactPage = () => {
               <div className="contact-icon">
                 <Mail size={32} />
               </div>
-              <a href="mailto:cse@juetguna.in">cse@juetguna.in</a>
+              <a href="mailto:cse@juetguna.in"> tachyon24juet@gmail.com</a>
             </div>
 
             {/* Website */}

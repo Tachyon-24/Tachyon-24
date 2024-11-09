@@ -1,6 +1,7 @@
 .container {
   margin-top: 10vw;
-  padding: 0 5vw; /* Adds horizontal padding */
+  margin-left: -2vw;
+ /* Adds horizontal padding */
 }
 
 .hostsection {
@@ -11,6 +12,7 @@
   gap: 2vw; /* Adjusts spacing between flex items */
   margin-top: 2vw;
   margin-bottom: 5vw;
+
 }
 
 .organizer-section,
@@ -21,9 +23,10 @@
   color: white;
   border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 16px;
-  flex: 1 1 250px; /* Allows items to grow/shrink with a minimum width */
-  max-width: 400px; /* Limits the maximum width of each section */
+
+  /* Allows items to grow/shrink with a minimum width */
+  max-width: 400px;
+  height: 70%; /* Limits the maximum width of each section */
 }
 
 .organizer-section img,
@@ -31,18 +34,24 @@
   width: 100%;
   /* Limits the maximum width of the images */
 }
-
+.organizer-section{
+  background-image: url("../../assests/team/main-qimg-e023e6d31c3f1dd8ad673464e1b52c08-lq.jpg");
+  
+}
 .core-team-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   gap: 20px;
   width: 100%;
+  margin-left: -3vw;
 }
 
 .team-member {
+  background-image: "../../assests/team/c6c2ceb6baa9990646e5466518b470da.png";
   text-align: center;
-  padding: 10px;
+  
   border: 1px solid #ccc;
   border-radius: 8px;
   width: calc(33.33% - 100px); /* Three items per row by default */
@@ -75,6 +84,20 @@
 }
 
 @media (max-width: 480px) {
+  .organizer-section,
+.coorganizer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+
+  /* Allows items to grow/shrink with a minimum width */
+  max-width: 300px;
+  height: 70%; /* Limits the maximum width of each section */
+}
+
   .container {
     margin-top: 30vw;
     padding: 0 5vw; /* Adds horizontal padding */
@@ -87,8 +110,9 @@
   }
   .organizer-section img,
   .coorganizer-section img {
-    width: 60vw; /* Larger width for very small screens */
-    max-width: 100%; /* Ensure the image doesn’t exceed the container width */
+    width: 60%; /* Larger width for very small screens */
+    
+    /* Ensure the image doesn’t exceed the container width */
   }
   .team-member {
     text-align: center;
@@ -97,6 +121,26 @@
     border-radius: 8px;
     width: 300px; /* Three items per row by default */
   }
+  .core-team-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin-left: -11vw;
+  }
+  .hostsection {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Ensures items wrap on smaller screens */
+    width: 100%;
+    gap: 2vw; /* Adjusts spacing between flex items */
+    margin-top: 2vw;
+    margin-bottom: 5vw;
+    margin-left: -7.5vw;
+  
+  }  
 }
 /* Existing modal styles */
 .modal-overlay {
@@ -207,9 +251,9 @@
 }
 
 .organizer-modal-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+
   object-fit: cover;
   margin-bottom: 1rem;
   border: 4px solid #f0f0f0;
@@ -291,4 +335,217 @@
     width: 120px;
     height: 120px;
   }
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  position: relative;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 1.5rem;
+  }
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  position: relative;
+  width: 95%;
+  max-width: 1000px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.modal-body {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Leads Section Styles */
+.leads-section {
+  flex: 2;
+  border-right: 1px solid #e5e5e5;
+  padding-right: 2rem;
+}
+
+.leads-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.lead-card {
+  flex: 1;
+  text-align: center;
+}
+
+.lead-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.lead-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lead-image {
+  width: 160px;
+  height: 160px;
+
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.lead-info h4 {
+  font-weight: 500;
+  margin: 0.5rem 0;
+}
+
+.lead-info p {
+  color: #666;
+  margin: 0;
+}
+
+/* Members Section Styles */
+.members-section {
+  flex: 1;
+  padding-left: 1rem;
+}
+
+.members-section h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.members-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.member-item {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s;
+}
+
+.member-item:last-child {
+  border-bottom: none;
+}
+
+.member-item:hover {
+  background-color: #f8f8f8;
+}
+
+.member-item p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.no-members {
+  color: #666;
+  font-style: italic;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .modal-body {
+    flex-direction: column;
+  }
+
+  .leads-section {
+    border-right: none;
+    border-bottom: 1px solid #e5e5e5;
+    padding-right: 0;
+    padding-bottom: 2rem;
+  }
+
+  .leads-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .members-section {
+    padding-left: 0;
+    padding-top: 2rem;
+  }
+
+  .lead-image {
+    width: 120px;
+    height: 120px;
+  }
+  .hostsection {
+    margin-top: 20vw;
+  }
+}
+.members-section {
+  max-height: 300px; /* Adjust height as needed */
+  overflow-y: auto;
+  padding-right: 10px; /* Optional for scrollbar space */
+}
+
+.members-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between members */
 }
