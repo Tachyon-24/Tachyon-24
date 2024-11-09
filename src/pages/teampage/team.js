@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./team.css";
 
 // Import images
-import gauravbg from "../../assests/team/d1c0ae10136e967d735621c20f5006f2.jpg";
+import gauravbg from "../../assests/team/gauravSirBg.jpg";
 import gaurav from "../../assests/team/IMG_2691 - GAURAV TIWARI.png";
 import saketsirbg from "../../assests/team/draken.jpg";
 import Saketsir from "../../assests/team/_CLG0484 - HIMANSHU KUMAR MAHTO.png";
@@ -220,9 +220,9 @@ const Team = () => {
       ],
     },
     {
-      title: "Sponsorship ",
+      title: "Sponsorship",
       leadName: "Sampurn Chouksey",
-      leadRole: "Sponsrship Lead and Treasurer",
+      leadRole: "Sponsorship Head and Treasurer",
       leadImage: sampurn,
       backGroundImage: sampurnbg,
       members: [
@@ -231,9 +231,9 @@ const Team = () => {
       ],
     },
     {
-      title: "Designing and Social Media",
-      leadName: "Saket Bagdi",
-      leadRole: "Designing & Social Media Head",
+      title: "Management ",
+      leadName: "Gaurav Tiwari",
+      leadRole: "Management Lead",
       leadImage: gaurav,
       backGroundImage: gauravbg,
       coLead: {
@@ -248,9 +248,9 @@ const Team = () => {
       ],
     },
     {
-      title: "Management ",
-      leadName: "Gaurav Tiwari",
-      leadRole: "Managament Lead",
+      title: "Designing and Social Media",
+      leadName: "Saket Bagdi",
+      leadRole: "Designing & Social Media Head",
       leadImage: Saketsir,
       backGroundImage: saketsirbg,
       coLead: {
@@ -267,7 +267,7 @@ const Team = () => {
     {
       title: "Hospitality ",
       leadName: "Shivani Singh",
-      leadRole: "Hsopitality Lead",
+      leadRole: "Hospitality Lead",
       leadImage: shivani,
       backGroundImage: yrichi,
       coLead: {
