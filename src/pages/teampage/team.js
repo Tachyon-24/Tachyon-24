@@ -2,23 +2,23 @@ import React, { useState } from "react";
 import "./team.css";
 
 // Import images
-import gauravbg from "../../assests/team/d1c0ae10136e967d735621c20f5006f2.jpg"
-import gaurav from "../../assests/team/IMG_2691 - GAURAV TIWARI.png"
-import saketsirbg from "../../assests/team/draken.jpg"
-import Saketsir from "../../assests/team/_CLG0484 - HIMANSHU KUMAR MAHTO.png"
+import gauravbg from "../../assests/team/d1c0ae10136e967d735621c20f5006f2.jpg";
+import gaurav from "../../assests/team/IMG_2691 - GAURAV TIWARI.png";
+import saketsirbg from "../../assests/team/draken.jpg";
+import Saketsir from "../../assests/team/_CLG0484 - HIMANSHU KUMAR MAHTO.png";
 import organizerImage from "../../assests/team/WhatsApp Image 2024-11-09 at 6.13.48 PM.png";
-import coOrganizerImage from "../../assests/team/20241013_165421(2).png"
+import coOrganizerImage from "../../assests/team/20241013_165421(2).png";
 import aliceImage from "../../assests/download (3).jpg";
 //import bobImage from "../../assests/download (3).jpg";
-import shivani from "../../assests/team/IMG20240824173138.png"
+import shivani from "../../assests/team/IMG20240824173138.png";
 import charlieImage from "../../assests/download (3).jpg";
-import himanshuSir from "../../assests/team/himanshusir.png"
-import himanshuSirBg from "../../assests/team/c6c2ceb6baa9990646e5466518b470da.png"
-import hardikSirBg from "../../assests/team/main-qimg-e023e6d31c3f1dd8ad673464e1b52c08-lq.jpg"
-import alisirbg from "../../assests/team/OIP.jpg"
-import sampurn from "../../assests/team/sampurn1 - SAMPURN CHOUKSEY.png"
-import sampurnbg from "../../assests/team/5e0a02131c0567d225ee1b2d5c25232b.jpg"
-import yrichi from "../../assests/team/yorichi.jpg"
+import himanshuSir from "../../assests/team/himanshusir.png";
+import himanshuSirBg from "../../assests/team/c6c2ceb6baa9990646e5466518b470da.png";
+import hardikSirBg from "../../assests/team/main-qimg-e023e6d31c3f1dd8ad673464e1b52c08-lq.jpg";
+import alisirbg from "../../assests/team/OIP.jpg";
+import sampurn from "../../assests/team/sampurn1 - SAMPURN CHOUKSEY.png";
+import sampurnbg from "../../assests/team/5e0a02131c0567d225ee1b2d5c25232b.jpg";
+import yrichi from "../../assests/team/yorichi.jpg";
 const OrganizerModal = ({ isOpen, onClose, organizerData }) => {
   if (!isOpen) return null;
 
@@ -84,19 +84,18 @@ const OrganizerModal = ({ isOpen, onClose, organizerData }) => {
   );
 };
 
-
-
-
 const TeamModal = ({ isOpen, onClose, teamData }) => {
   if (!isOpen) return null;
 
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="modal-close" onClick={onClose}>×</button>
-        
+        <button className="modal-close" onClick={onClose}>
+          ×
+        </button>
+
         <h2 className="modal-title">{teamData.title}</h2>
-        
+
         <div className="modal-body">
           {/* Left Section - Team Leads */}
           <div className="leads-section">
@@ -155,7 +154,6 @@ const TeamModal = ({ isOpen, onClose, teamData }) => {
   );
 };
 
-
 const Team = () => {
   const [selectedTeam, setSelectedTeam] = useState(null);
   const [isTeamModalOpen, setIsTeamModalOpen] = useState(false);
@@ -167,7 +165,7 @@ const Team = () => {
       name: "Hardik Sharma",
       role: "Organiser",
       image: organizerImage,
-      backgroundImage:hardikSirBg,
+      backgroundImage: hardikSirBg,
       designation: "Senior Event Coordinator",
       email: "hardik.sharma@example.com",
       phone: "+91 98765 43210",
@@ -183,7 +181,7 @@ const Team = () => {
       name: "Ali Shaharyar Abbas",
       role: "Co-organiser",
       image: coOrganizerImage,
-      backgroundImage:alisirbg,
+      backgroundImage: alisirbg,
       designation: "Assistant Event Coordinator",
       email: "ali.abbas@example.com",
       phone: "+91 98765 43211",
@@ -198,17 +196,17 @@ const Team = () => {
   };
 
   const teamData = [
-    
     {
       title: "Development Team",
       leadName: "Himanshu Kumar Mahto",
       leadRole: "Development Team Head",
-      leadImage:himanshuSir,
-      backGroundImage:himanshuSirBg,
+      leadImage: himanshuSir,
+      backGroundImage: himanshuSirBg,
       coLead: {
-        name: "Pritam Singh Shakhtawat",
+        name: "Pritam Singh Shaktawat",
         role: "Co-Lead",
-        image: "../../assests/team/WhatsApp Image 2024-11-09 at 15.07.03_a921caa5.png",
+        image:
+          "../../assests/team/WhatsApp Image 2024-11-09 at 15.07.03_a921caa5.png",
       },
       members: [
         { name: "Member 1", role: "Designer", image: charlieImage },
@@ -219,15 +217,14 @@ const Team = () => {
         { name: "Member 2", role: "Social Media", image: aliceImage },
         { name: "Member 2", role: "Social Media", image: aliceImage },
         { name: "Member 2", role: "Social Media", image: aliceImage },
-
       ],
     },
     {
       title: "Sponsorship ",
-      leadName: "Sampurn Choksy",
+      leadName: "Sampurn Chouksey",
       leadRole: "Sponsrship Lead and Treasurer",
       leadImage: sampurn,
-      backGroundImage:sampurnbg,
+      backGroundImage: sampurnbg,
       members: [
         { name: "Member 3", role: "Developer", image: charlieImage },
         { name: "Member 4", role: "Developer", image: aliceImage },
@@ -237,12 +234,13 @@ const Team = () => {
       title: "Designing and Social Media",
       leadName: "Saket Bagdi",
       leadRole: "Designing & Social Media Head",
-      leadImage:gaurav,
-      backGroundImage:gauravbg,
+      leadImage: gaurav,
+      backGroundImage: gauravbg,
       coLead: {
         name: "Pritam Singh Shakhtawat",
         role: "Co-Lead",
-        image: "../../assests/team/WhatsApp Image 2024-11-09 at 15.07.03_a921caa5.png",
+        image:
+          "../../assests/team/WhatsApp Image 2024-11-09 at 15.07.03_a921caa5.png",
       },
       members: [
         { name: "Member 1", role: "Designer", image: charlieImage },
@@ -253,12 +251,13 @@ const Team = () => {
       title: "Management ",
       leadName: "Gaurav Tiwari",
       leadRole: "Managament Lead",
-      leadImage:Saketsir,
-      backGroundImage:saketsirbg,
+      leadImage: Saketsir,
+      backGroundImage: saketsirbg,
       coLead: {
         name: "Pritam Singh Shakhtawat",
         role: "Co-Lead",
-        image: "../../assests/team/WhatsApp Image 2024-11-09 at 15.07.03_a921caa5.png",
+        image:
+          "../../assests/team/WhatsApp Image 2024-11-09 at 15.07.03_a921caa5.png",
       },
       members: [
         { name: "Member 1", role: "Designer", image: charlieImage },
@@ -266,22 +265,22 @@ const Team = () => {
       ],
     },
     {
-      
       title: "Hospitality ",
       leadName: "Shivani Singh",
       leadRole: "Hsopitality Lead",
-      leadImage:shivani,
-      backGroundImage:yrichi,
+      leadImage: shivani,
+      backGroundImage: yrichi,
       coLead: {
         name: "Pritam Singh Shakhtawat",
         role: "Co-Lead",
-        image: "../../assests/team/WhatsApp Image 2024-11-09 at 15.07.03_a921caa5.png",
+        image:
+          "../../assests/team/WhatsApp Image 2024-11-09 at 15.07.03_a921caa5.png",
       },
       members: [
         { name: "Member 1", role: "Designer", image: charlieImage },
         { name: "Member 2", role: "Social Media", image: aliceImage },
       ],
-    }
+    },
   ];
 
   const handleTeamClick = (team) => {
@@ -295,239 +294,263 @@ const Team = () => {
   };
 
   return (
-    <div className="container" style={{marginTop:"10vw"}}>
+    <div className="container" style={{ marginTop: "10vw" }}>
       <div className="hostsection">
         <div
           className="organizer-section"
           onClick={() => handleOrganizerClick(organizersData.organizer)}
           style={{
-            position: 'relative',
-            overflow: 'hidden'
+            position: "relative",
+            overflow: "hidden",
           }}
-       >
-         <div
-      style={{
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        background: `url(${organizersData.organizer.backgroundImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        filter: 'blur(2px)',
-        transform: 'scale(1.1)',
-        zIndex: 1
-      }}
-    />
-     <div
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                right: 0,
-                height: '150px',
-                background: 'linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%)',
-                zIndex: 2,
-                pointerEvents: 'none'
-              }}
-            />
-              <div
-              style={{
-                position: 'absolute',
-                bottom: 0,
-                left: 0,
-                right: 0,
-                height: '150px',
-                background: 'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%)',
-                zIndex: 2,
-                pointerEvents: 'none'
-              }}
-            />
-    <div
-      style={{
-        position: 'relative',
-        zIndex: 2,
-        padding: '20px',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        backgroundColor: 'rgba(255, 255, 255, 0.1)'
-      }}
-      
-    >
-          <img
-            src={organizerImage}
-            alt="Organizer"
-            className="organizer-image"
-            style={{width:"100%"}}
+        >
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              background: `url(${organizersData.organizer.backgroundImage})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              filter: "blur(2px)",
+              transform: "scale(1.1)",
+              zIndex: 1,
+            }}
           />
-                        <div style={{backgroundColor:'black', Width:'100%' ,paddingLeft:'40px' ,paddingRight:'40px',borderRadius:'15px'}}>
-
-          <h2>Organiser</h2>
-          <p>Hardik Sharma</p>
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              right: 0,
+              height: "150px",
+              background:
+                "linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%)",
+              zIndex: 2,
+              pointerEvents: "none",
+            }}
+          />
+          <div
+            style={{
+              position: "absolute",
+              bottom: 0,
+              left: 0,
+              right: 0,
+              height: "150px",
+              background:
+                "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%)",
+              zIndex: 2,
+              pointerEvents: "none",
+            }}
+          />
+          <div
+            style={{
+              position: "relative",
+              zIndex: 2,
+              padding: "20px",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              backgroundColor: "rgba(255, 255, 255, 0.1)",
+            }}
+          >
+            <img
+              src={organizerImage}
+              alt="Organizer"
+              className="organizer-image"
+              style={{ width: "100%" }}
+            />
+            <div
+              style={{
+                backgroundColor: "black",
+                Width: "100%",
+                paddingLeft: "40px",
+                paddingRight: "40px",
+                borderRadius: "15px",
+              }}
+            >
+              <h2>Organiser</h2>
+              <p>Hardik Sharma</p>
+            </div>
           </div>
-        </div>
         </div>
         <div
           className="coorganizer-section"
           onClick={() => handleOrganizerClick(organizersData.coorganizer)}
-          style={{position:'relative',
-             overflow: 'hidden'
-          }}
-
+          style={{ position: "relative", overflow: "hidden" }}
         >
-             <div
-      style={{
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        background: `url(${organizersData.coorganizer.backgroundImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        filter: 'blur(2px)',
-        transform: 'scale(1.1)',
-        zIndex: 1
-      }}
-    />
-         <div
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                right: 0,
-                height: '150px',
-                background: 'linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%)',
-                zIndex: 2,
-                pointerEvents: 'none'
-              }}
-            />
-              <div
-              style={{
-                position: 'absolute',
-                bottom: 0,
-                left: 0,
-                right: 0,
-                height: '150px',
-                background: 'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%)',
-                zIndex: 2,
-                pointerEvents: 'none'
-              }}
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              background: `url(${organizersData.coorganizer.backgroundImage})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              filter: "blur(2px)",
+              transform: "scale(1.1)",
+              zIndex: 1,
+            }}
+          />
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              right: 0,
+              height: "150px",
+              background:
+                "linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%)",
+              zIndex: 2,
+              pointerEvents: "none",
+            }}
+          />
+          <div
+            style={{
+              position: "absolute",
+              bottom: 0,
+              left: 0,
+              right: 0,
+              height: "150px",
+              background:
+                "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%)",
+              zIndex: 2,
+              pointerEvents: "none",
+            }}
+          />
+          <div
+            style={{
+              position: "relative",
+              zIndex: 2,
+              padding: "20px",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              backgroundColor: "rgba(255, 255, 255, 0.1)",
+            }}
+          >
+            <img
+              src={coOrganizerImage}
+              alt="Organizer"
+              className="organizer-image"
             />
             <div
-      style={{
-        position: 'relative',
-        zIndex: 2,
-        padding: '20px',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        backgroundColor: 'rgba(255, 255, 255, 0.1)'
-      }}
-      
-    >
-          <img
-            src={coOrganizerImage}
-            alt="Organizer"
-            className="organizer-image"
-          />
-                        <div style={{backgroundColor:'black', Width:'100%' ,paddingLeft:'70px' ,paddingRight:'70px',borderRadius:'15px'}}>
-
-          <h2>CoOrganiser</h2>
-          <p>Ali Shaharyar Abbas</p>
+              style={{
+                backgroundColor: "black",
+                Width: "100%",
+                paddingLeft: "70px",
+                paddingRight: "70px",
+                borderRadius: "15px",
+              }}
+            >
+              <h2>CoOrganiser</h2>
+              <p>Ali Shaharyar Abbas</p>
+            </div>
           </div>
-        </div>
         </div>
       </div>
 
       <div className="container">
-      {/* ... (previous hostsection remains the same) */}
-      <div className="core-team-section">
-        {teamData.map((team, index) => (
-          <div
-            key={index}
-            className="team-member"
-            onClick={() => handleTeamClick(team)}
-            style={{
-              position: 'relative',
-              overflow: 'hidden',
-            
-            }}
-          >
-            {/* Background div with blur effect */}
+        {/* ... (previous hostsection remains the same) */}
+        <div className="core-team-section">
+          {teamData.map((team, index) => (
             <div
+              key={index}
+              className="team-member"
+              onClick={() => handleTeamClick(team)}
               style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                backgroundImage: team.backGroundImage ? `url(${team.backGroundImage})` : 'none',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-                filter: 'blur(2px)',
-                transform: 'scale(1.1)', // Prevents blur edges from showing
-                zIndex: 1
-              }}
-            />
-            <div
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                right: 0,
-                height: '150px',
-                background: 'linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%)',
-                zIndex: 2,
-                pointerEvents: 'none'
-              }}
-            />
-              <div
-              style={{
-                position: 'absolute',
-                bottom: 0,
-                left: 0,
-                right: 0,
-                height: '150px',
-                background: 'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%)',
-                zIndex: 2,
-                pointerEvents: 'none'
-              }}
-            />
-
-            {/* Content div */}
-            <div
-              style={{
-                position: 'relative',
-                zIndex: 2,
-                padding: '20px',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                backgroundColor: 'rgba(255, 255, 255, 0.1)', // Optional: adds a slight overlay
+                position: "relative",
+                overflow: "hidden",
               }}
             >
-              <img
-                src={team.leadImage}
-                alt={team.leadName}
-                className="team-member-image"
+              {/* Background div with blur effect */}
+              <div
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  backgroundImage: team.backGroundImage
+                    ? `url(${team.backGroundImage})`
+                    : "none",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                  filter: "blur(2px)",
+                  transform: "scale(1.1)", // Prevents blur edges from showing
+                  zIndex: 1,
+                }}
               />
-              <div style={{backgroundColor:'black', Width:'100%' ,paddingLeft:'40px' ,paddingRight:'40px',borderRadius:'15px'}}>
-              <h3>{team.leadRole}</h3>
-              <p>{team.leadName}</p>
+              <div
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  height: "150px",
+                  background:
+                    "linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%)",
+                  zIndex: 2,
+                  pointerEvents: "none",
+                }}
+              />
+              <div
+                style={{
+                  position: "absolute",
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  height: "150px",
+                  background:
+                    "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%)",
+                  zIndex: 2,
+                  pointerEvents: "none",
+                }}
+              />
+
+              {/* Content div */}
+              <div
+                style={{
+                  position: "relative",
+                  zIndex: 2,
+                  padding: "20px",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  backgroundColor: "rgba(255, 255, 255, 0.1)", // Optional: adds a slight overlay
+                }}
+              >
+                <img
+                  src={team.leadImage}
+                  alt={team.leadName}
+                  className="team-member-image"
+                />
+                <div
+                  style={{
+                    backgroundColor: "black",
+                    Width: "100%",
+                    paddingLeft: "40px",
+                    paddingRight: "40px",
+                    borderRadius: "15px",
+                  }}
+                >
+                  <h3>{team.leadRole}</h3>
+                  <p>{team.leadName}</p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
-      {/* ... (modals remain the same) */}
-    </div>
+        {/* ... (modals remain the same) */}
+      </div>
       <TeamModal
         isOpen={isTeamModalOpen}
         onClose={() => setIsTeamModalOpen(false)}
