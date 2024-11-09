@@ -1,12 +1,11 @@
+
 /* Page Layout */
 .events-page {
   min-height: 100vh;
-  background: 
-    radial-gradient(circle at right, #222449, transparent 55%),
-    linear-gradient(to bottom, #222449 0px, transparent 130px);
-  background-size: 360px 720px, 100% 100%, 100% 100%;
-  background-position: right, center, top;
-  background-repeat: no-repeat, no-repeat;
+  background: linear-gradient(to bottom, #222449 0px, transparent 130px);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
   padding: 10rem 2rem 2rem;
   color: white;
@@ -51,7 +50,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: 0.7;
+  opacity: 0.4;
   transition: all 0.3s ease;
   z-index: 1;
   transform-origin: center bottom;
@@ -239,6 +238,13 @@
   color: white;
 }
 
+.event-card {
+  margin: 1rem 28px;
+  border-radius: 1.5rem;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
   .branches-container,
@@ -342,3 +348,5 @@
     padding-top: 0.6rem;
   }
 }
+
+
