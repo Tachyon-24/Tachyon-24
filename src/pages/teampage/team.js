@@ -83,9 +83,15 @@ const OrganizerModal = ({ isOpen, onClose, organizerData }) => {
     </div>
   );
 };
-
 const TeamModal = ({ isOpen, onClose, teamData }) => {
   if (!isOpen) return null;
+
+  // Normalize co-leads data to always be an array
+  const coLeads = teamData.coLead
+    ? Array.isArray(teamData.coLead)
+      ? teamData.coLead
+      : [teamData.coLead]
+    : [];
 
   return (
     <div className="modal-overlay" onClick={onClose}>
@@ -97,7 +103,6 @@ const TeamModal = ({ isOpen, onClose, teamData }) => {
         <h2 className="modal-title">{teamData.title}</h2>
 
         <div className="modal-body">
-          {/* Left Section - Team Leads */}
           <div className="leads-section">
             <div className="leads-container">
               {/* Team Lead */}
@@ -114,25 +119,24 @@ const TeamModal = ({ isOpen, onClose, teamData }) => {
                 </div>
               </div>
 
-              {/* Co-Lead if exists */}
-              {teamData.coLead && (
-                <div className="lead-card">
+              {/* Co-Leads */}
+              {coLeads.map((coLead, index) => (
+                <div key={index} className="lead-card">
                   <h3>Co-Lead</h3>
                   <div className="lead-info">
                     <img
-                      src={teamData.coLead.image}
-                      alt={teamData.coLead.name}
+                      src={coLead.image}
+                      alt={coLead.name}
                       className="lead-image"
                     />
-                    <h4>{teamData.coLead.name}</h4>
-                    <p>{teamData.coLead.role}</p>
+                    <h4>{coLead.name}</h4>
+                    <p>{coLead.role}</p>
                   </div>
                 </div>
-              )}
+              ))}
             </div>
           </div>
 
-          {/* Right Section - Team Members */}
           <div className="members-section">
             <h3>Team Members</h3>
             {teamData.members && teamData.members.length > 0 ? (
@@ -153,7 +157,6 @@ const TeamModal = ({ isOpen, onClose, teamData }) => {
     </div>
   );
 };
-
 const Team = () => {
   const [selectedTeam, setSelectedTeam] = useState(null);
   const [isTeamModalOpen, setIsTeamModalOpen] = useState(false);
@@ -202,12 +205,20 @@ const Team = () => {
       leadRole: "Development Head",
       leadImage: himanshuSir,
       backGroundImage: himanshuSirBg,
-      coLead: {
-        name: "Pritam Singh Shaktawat",
-        role: "Co-Lead",
-        image:
-          "../../assests/team/WhatsApp Image 2024-11-09 at 15.07.03_a921caa5.png",
-      },
+      coLead: [
+        {
+          name: "Pritam Singh Shaktawat",
+          role: "Co-Lead",
+          image:
+            "../../assests/team/WhatsApp Image 2024-11-09 at 15.07.03_a921caa5.png",
+        },
+        {
+          name: "Pritam Singh Shaktawat",
+          role: "Co-Lead",
+          image:
+            "../../assests/team/WhatsApp Image 2024-11-09 at 15.07.03_a921caa5.png",
+        },
+      ],
       members: [
         { name: "Member 1", role: "Designer", image: charlieImage },
         { name: "Member 2", role: "Social Media", image: aliceImage },
@@ -361,7 +372,6 @@ const Team = () => {
               src={organizerImage}
               alt="Organizer"
               className="organizer-image"
-              style={{ width: "100%" }}
             />
             <div
               style={{
@@ -439,6 +449,7 @@ const Team = () => {
               src={coOrganizerImage}
               alt="Organizer"
               className="organizer-image"
+              style={{ Width: "100%" }}
             />
             <div
               style={{
