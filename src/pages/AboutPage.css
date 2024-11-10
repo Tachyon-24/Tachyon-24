@@ -53,6 +53,11 @@
   margin-bottom: 100px;
 }
 
+.details-box-2,
+.details-box-3 {
+  margin-top: 40px;
+}
+
 .details-box-3{
   margin-left: 0;
   margin-right: 0;
@@ -216,6 +221,8 @@
 }
 
 .containerStyles {
+  align-items: center;
+  margin-top: 20px;
   width: 800px;
   height: 500px;
 }
@@ -229,9 +236,6 @@
   width : auto;
   height: 800px;
 }
-
-
-
 
 @media (max-width : 1471px) {
   .details-box-1,.details-box-2,.details-box-3{

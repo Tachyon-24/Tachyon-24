@@ -79,7 +79,7 @@
     background: radial-gradient(circle, #ee4e1c, transparent);    
 }
 
-@media (max-width:1000px){
+@media (max-width:1024px){
     .MerchPromo{
         gap : 5%;
     }
@@ -93,7 +93,7 @@
 }
 
 
-@media (max-width:700px){
+@media (max-width:719px){
     .Merchtitle{
         font-size: 300%;
         margin-bottom: 50px;
