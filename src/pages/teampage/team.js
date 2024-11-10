@@ -498,8 +498,8 @@ const Team = () => {
               style={{
                 backgroundColor: "black",
                 Width: "100%",
-                paddingLeft: "70px",
-                paddingRight: "70px",
+                paddingLeft: "100px",
+                paddingRight: "100px",
                 borderRadius: "15px",
               }}
             >
@@ -590,8 +590,8 @@ const Team = () => {
                   style={{
                     backgroundColor: "black",
                     Width: "100%",
-                    paddingLeft: "40px",
-                    paddingRight: "40px",
+                    paddingLeft: "50px",
+                    paddingRight: "50px",
                     borderRadius: "15px",
                   }}
                 >
