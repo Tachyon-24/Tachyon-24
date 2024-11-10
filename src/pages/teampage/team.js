@@ -245,11 +245,18 @@ const Team = () => {
         { name: "Aditya Vyas", role: "Senior Developer", image: charlieImage },
         { name: "Vansh Verma", role: "Senior Developer", image: aliceImage },
         { name: "Ranjan Mishra", role: "Developer", image: aliceImage },
-        { name: "", role: "Developer", image: aliceImage },
-        { name: "", role: "Developer", image: aliceImage },
-        { name: "", role: "Developer", image: aliceImage },
-        { name: "", role: "Junior Developer", image: aliceImage },
-        { name: "", role: "Junior Developer", image: aliceImage },
+        { name: "Pushkar Chaturvedi", role: "Developer", image: aliceImage },
+        { name: "Suraj Kumar", role: "Developer", image: aliceImage },
+        {
+          name: "Divyanshi Ghatiya",
+          role: "Junior Developer",
+          image: aliceImage,
+        },
+        {
+          name: "Vedansh Dhingra",
+          role: "Junior Developer",
+          image: aliceImage,
+        },
       ],
     },
     {
@@ -264,10 +271,83 @@ const Team = () => {
           role: "Co-Lead",
           image: kavya,
         },
+        {
+          name: "Aanjaney Mishra",
+          role: "Co-Lead",
+          image: aliceImage,
+        },
       ],
       members: [
-        { name: "Member 3", role: "Developer", image: charlieImage },
-        { name: "Member 4", role: "Developer", image: aliceImage },
+        {
+          name: "Devesh Kumar",
+          role: "Sponsorship Co-ordinator",
+          image: charlieImage,
+        },
+        {
+          name: "Aditri Jain",
+          role: "Sponsorship Co-ordinator",
+          image: aliceImage,
+        },
+        {
+          name: "Harsh Patel",
+          role: "Sponsorship Co-ordinator",
+          image: charlieImage,
+        },
+        {
+          name: "Laxmikant Shukla",
+          role: "Sponsorship Co-ordinator",
+          image: aliceImage,
+        },
+        {
+          name: "Aditya Sachan",
+          role: "Sponsorship Co-ordinator",
+          image: charlieImage,
+        },
+        {
+          name: "Adarsh Singh",
+          role: "Sponsorship Co-ordinator",
+          image: aliceImage,
+        },
+        {
+          name: "Sejal Raghuvanshi",
+          role: "Sponsorship Co-ordinator",
+          image: charlieImage,
+        },
+        {
+          name: "Divyanshi Dixit",
+          role: "Sponsorship Co-ordinator",
+          image: aliceImage,
+        },
+        {
+          name: "Kanishk Donderia",
+          role: "Sponsorship Co-ordinator",
+          image: charlieImage,
+        },
+        {
+          name: "Rishabh Keshari",
+          role: "Sponsorship Co-ordinator",
+          image: aliceImage,
+        },
+        {
+          name: "Riya Dwivedi",
+          role: "Sponsorship Co-ordinator",
+          image: charlieImage,
+        },
+        {
+          name: "Swapnil Bam",
+          role: "Sponsorship Co-ordinator",
+          image: aliceImage,
+        },
+        {
+          name: "Harshit Mishra",
+          role: "Sponsorship Co-ordinator",
+          image: charlieImage,
+        },
+        {
+          name: "Subhi Jain",
+          role: "Sponsorship Co-ordinator",
+          image: aliceImage,
+        },
       ],
     },
     {
@@ -285,8 +365,86 @@ const Team = () => {
         },
       ],
       members: [
-        { name: "Member 1", role: "Designer", image: charlieImage },
-        { name: "Member 2", role: "Social Media", image: aliceImage },
+        {
+          name: "Ajitesh Singh",
+          role: "Management Co-ordinator",
+          image: charlieImage,
+        },
+        {
+          name: "Priyanshi Mishra",
+          role: "Management Co-ordinator",
+          image: aliceImage,
+        },
+        {
+          name: "Devansh Bhargava",
+          role: "Management Co-ordinator",
+          image: charlieImage,
+        },
+        {
+          name: "Ajitesh Awasthi",
+          role: "Management Co-ordinator",
+          image: aliceImage,
+        },
+        {
+          name: "Astha Singh",
+          role: "Management Co-ordinator",
+          image: charlieImage,
+        },
+        {
+          name: "Sejal Raghuwanshi",
+          role: "Management Co-ordinator",
+          image: aliceImage,
+        },
+        {
+          name: "Palak Chauhan",
+          role: "Management Co-ordinator",
+          image: charlieImage,
+        },
+        {
+          name: "Himesh verma",
+          role: "Management Co-ordinator",
+          image: aliceImage,
+        },
+        {
+          name: "Gagan Shivhare",
+          role: "Management Co-ordinator",
+          image: charlieImage,
+        },
+        {
+          name: "Priyansh Goyal",
+          role: "Management Co-ordinator",
+          image: aliceImage,
+        },
+        {
+          name: "Narayan Singh",
+          role: "Management Co-ordinator",
+          image: charlieImage,
+        },
+        {
+          name: "Dhruv Diggiwal",
+          role: "Management Co-ordinator",
+          image: aliceImage,
+        },
+        {
+          name: "Sarthak Sirvaiya",
+          role: "Management Co-ordinator",
+          image: aliceImage,
+        },
+        {
+          name: "Juhi Gupta",
+          role: "Management Co-ordinator",
+          image: aliceImage,
+        },
+        {
+          name: "Namaswi Dubey",
+          role: "Management Co-ordinator",
+          image: aliceImage,
+        },
+        {
+          name: "Nandini Kaushik",
+          role: "Management Co-ordinator",
+          image: aliceImage,
+        },
       ],
     },
     {
@@ -308,8 +466,40 @@ const Team = () => {
         },
       ],
       members: [
-        { name: "Member 1", role: "Designer", image: charlieImage },
-        { name: "Member 2", role: "Social Media", image: aliceImage },
+        {
+          name: "Kushagra Singh",
+          role: "Senior Designer",
+          image: charlieImage,
+        },
+        { name: "Ojas Singhai", role: "Senior Designer", image: aliceImage },
+        {
+          name: "Vishwesh Patidar",
+          role: "Senior Designer",
+          image: charlieImage,
+        },
+        { name: "Yash Jain", role: "Senior Designer", image: aliceImage },
+        { name: "Yuvika Yadav", role: "Senior Designer", image: charlieImage },
+        { name: "Bhumika Soni", role: "Designer", image: aliceImage },
+        { name: "Kanchi Gupta", role: "Designer", image: charlieImage },
+        { name: "Kavya Jain", role: "Junior Designer", image: aliceImage },
+        {
+          name: "Manas Upadhyay",
+          role: "Junior Designer",
+          image: charlieImage,
+        },
+        {
+          name: "Ajinkya Borwankar",
+          role: "Junior Designer",
+          image: aliceImage,
+        },
+        { name: "Aryan Nayak", role: "Junior Designer", image: charlieImage },
+        {
+          name: "Chitranshi Tiwari",
+          role: "Junior Designer",
+          image: aliceImage,
+        },
+        { name: "Gulsahn Yadav", role: "Junior Designer", image: charlieImage },
+        { name: "Kratika Yadav", role: "Junior Designer", image: aliceImage },
       ],
     },
     {
@@ -331,8 +521,51 @@ const Team = () => {
         },
       ],
       members: [
-        { name: "Member 1", role: "Designer", image: charlieImage },
-        { name: "Member 2", role: "Social Media", image: aliceImage },
+        {
+          name: "Shouray Soni",
+          role: "Hospitality Co-ordinator",
+          image: charlieImage,
+        },
+        {
+          name: "Tanya Singh",
+          role: "Hospitality Co-ordinator",
+          image: aliceImage,
+        },
+        {
+          name: "Anchit Dixit",
+          role: "Hospitality Co-ordinator",
+          image: charlieImage,
+        },
+        {
+          name: "Brij Sharma ",
+          role: "Hospitality Co-ordinator",
+          image: charlieImage,
+        },
+        {
+          name: "Divya Jain",
+          role: "Hospitality Co-ordinator",
+          image: aliceImage,
+        },
+        {
+          name: "Shejal Dubey",
+          role: "Hospitality Co-ordinator",
+          image: charlieImage,
+        },
+        {
+          name: "Piyush Kumar",
+          role: "Hospitality Co-ordinator",
+          image: aliceImage,
+        },
+        {
+          name: "Akshita Bansal",
+          role: "Hospitality Co-ordinator",
+          image: charlieImage,
+        },
+        {
+          name: "Tanisha Bairagi",
+          role: "Hospitality Co-ordinator",
+          image: aliceImage,
+        },
       ],
     },
   ];
