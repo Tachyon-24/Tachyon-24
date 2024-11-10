@@ -19,7 +19,7 @@ import alisirbg from "../../assests/team/OIP.png";
 import sampurn from "../../assests/team/sampurn1 - SAMPURN CHOUKSEY.png";
 import sampurnbg from "../../assests/team/5e0a02131c0567d225ee1b2d5c25232b.jpg";
 import yrichi from "../../assests/team/yorichi.jpg";
-import pritam from "../../assests/team/pritam.jpg";
+import pritam from "../../assests/team/pritam.png";
 import alakh from "../../assests/team/alakh.png";
 import aakarsh from "../../assests/team/aakarsh.png";
 import deepak from "../../assests/team/deepak.png";
