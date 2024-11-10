@@ -19,6 +19,14 @@ import alisirbg from "../../assests/team/OIP.png";
 import sampurn from "../../assests/team/sampurn1 - SAMPURN CHOUKSEY.png";
 import sampurnbg from "../../assests/team/5e0a02131c0567d225ee1b2d5c25232b.jpg";
 import yrichi from "../../assests/team/yorichi.jpg";
+import pritam from "../../assests/team/pritam.jpg";
+import alakh from "../../assests/team/alakh.png";
+import aakarsh from "../../assests/team/aakarsh.png";
+import deepak from "../../assests/team/deepak.png";
+import kavya from "../../assests/team/kavya.png";
+import om from "../../assests/team/om.png";
+import sankalp from "../../assests/team/sankalp.png";
+import yashaggrahari from "../../assests/team/yashaggrahari.png";
 const OrganizerModal = ({ isOpen, onClose, organizerData }) => {
   if (!isOpen) return null;
 
@@ -31,23 +39,29 @@ const OrganizerModal = ({ isOpen, onClose, organizerData }) => {
         <button className="organizer-modal-close" onClick={onClose}>
           ×
         </button>
-        
+
         <div className="organizer-modal-content">
           {/* Left Details */}
           <div className="organizer-modal-left">
             <div className="organizer-detail-item">
               <span className="organizer-detail-label">Name:</span>
-              <span className="organizer-detail-value">{organizerData.name}</span>
+              <span className="organizer-detail-value">
+                {organizerData.name}
+              </span>
             </div>
 
             <div className="organizer-detail-item">
               <span className="organizer-detail-label">Designation:</span>
-              <span className="organizer-detail-value">{organizerData.designation}</span>
+              <span className="organizer-detail-value">
+                {organizerData.designation}
+              </span>
             </div>
 
             <div className="organizer-detail-item">
               <span className="organizer-detail-label">Email:</span>
-              <span className="organizer-detail-value">{organizerData.email}</span>
+              <span className="organizer-detail-value">
+                {organizerData.email}
+              </span>
             </div>
           </div>
 
@@ -68,19 +82,25 @@ const OrganizerModal = ({ isOpen, onClose, organizerData }) => {
           <div className="organizer-modal-right">
             <div className="organizer-detail-item">
               <span className="organizer-detail-label">Phone:</span>
-              <span className="organizer-detail-value">{organizerData.phone}</span>
+              <span className="organizer-detail-value">
+                {organizerData.phone}
+              </span>
             </div>
 
             {organizerData.department && (
               <div className="organizer-detail-item">
                 <span className="organizer-detail-label">Department:</span>
-                <span className="organizer-detail-value">{organizerData.department}</span>
+                <span className="organizer-detail-value">
+                  {organizerData.department}
+                </span>
               </div>
             )}
 
             {organizerData.responsibilities && (
               <div className="organizer-detail-item">
-                <span className="organizer-detail-label">Key Responsibilities:</span>
+                <span className="organizer-detail-label">
+                  Key Responsibilities:
+                </span>
                 <ul className="organizer-responsibilities-list">
                   {organizerData.responsibilities.map((resp, index) => (
                     <li key={index}>{resp}</li>
@@ -126,7 +146,6 @@ const TeamModal = ({ isOpen, onClose, teamData }) => {
                     className="lead-image"
                   />
                   <h4>{teamData.leadName}</h4>
-                 
                 </div>
               </div>
 
@@ -141,7 +160,6 @@ const TeamModal = ({ isOpen, onClose, teamData }) => {
                       className="lead-image"
                     />
                     <h4>{coLead.name}</h4>
-                  
                   </div>
                 </div>
               ))}
@@ -220,25 +238,18 @@ const Team = () => {
         {
           name: "Pritam Singh Shaktawat",
           role: "Co-Lead",
-          image:
-            "../../assests/team/WhatsApp Image 2024-11-09 at 15.07.03_a921caa5.png",
-        },
-        {
-          name: "Pritam Singh Shaktawat",
-          role: "Co-Lead",
-          image:
-            "../../assests/team/WhatsApp Image 2024-11-09 at 15.07.03_a921caa5.png",
+          image: pritam,
         },
       ],
       members: [
-        { name: "Member 1", role: "Designer", image: charlieImage },
-        { name: "Member 2", role: "Social Media", image: aliceImage },
-        { name: "Member 2", role: "Social Media", image: aliceImage },
-        { name: "Member 2", role: "Social Media", image: aliceImage },
-        { name: "Member 2", role: "Social Media", image: aliceImage },
-        { name: "Member 2", role: "Social Media", image: aliceImage },
-        { name: "Member 2", role: "Social Media", image: aliceImage },
-        { name: "Member 2", role: "Social Media", image: aliceImage },
+        { name: "Aditya Vyas", role: "Senior Developer", image: charlieImage },
+        { name: "Vansh Verma", role: "Senior Developer", image: aliceImage },
+        { name: "Ranjan Mishra", role: "Developer", image: aliceImage },
+        { name: "", role: "Developer", image: aliceImage },
+        { name: "", role: "Developer", image: aliceImage },
+        { name: "", role: "Developer", image: aliceImage },
+        { name: "", role: "Junior Developer", image: aliceImage },
+        { name: "", role: "Junior Developer", image: aliceImage },
       ],
     },
     {
@@ -247,6 +258,13 @@ const Team = () => {
       leadRole: "Sponsorship Head",
       leadImage: sampurn,
       backGroundImage: sampurnbg,
+      coLead: [
+        {
+          name: "Kavya Singh",
+          role: "Co-Lead",
+          image: kavya,
+        },
+      ],
       members: [
         { name: "Member 3", role: "Developer", image: charlieImage },
         { name: "Member 4", role: "Developer", image: aliceImage },
@@ -258,12 +276,14 @@ const Team = () => {
       leadRole: "Management Head",
       leadImage: gaurav,
       backGroundImage: gauravbg,
-      coLead: {
-        name: "Pritam Singh Shakhtawat",
-        role: "Co-Lead",
-        image:
-          "../../assests/team/WhatsApp Image 2024-11-09 at 15.07.03_a921caa5.png",
-      },
+      coLead: [
+        { name: "Yash Agrahari", role: "Co-Lead", image: yashaggrahari },
+        {
+          name: "Deepak Prajapati",
+          role: "Co-Lead",
+          image: deepak,
+        },
+      ],
       members: [
         { name: "Member 1", role: "Designer", image: charlieImage },
         { name: "Member 2", role: "Social Media", image: aliceImage },
@@ -275,12 +295,18 @@ const Team = () => {
       leadRole: "Designing Head",
       leadImage: Saketsir,
       backGroundImage: saketsirbg,
-      coLead: {
-        name: "Pritam Singh Shakhtawat",
-        role: "Co-Lead",
-        image:
-          "../../assests/team/WhatsApp Image 2024-11-09 at 15.07.03_a921caa5.png",
-      },
+      coLead: [
+        {
+          name: "Alakh Shrivastava",
+          role: "Co-Lead",
+          image: alakh,
+        },
+        {
+          name: "Aakarsh Dubey",
+          role: "Co-Lead",
+          image: aakarsh,
+        },
+      ],
       members: [
         { name: "Member 1", role: "Designer", image: charlieImage },
         { name: "Member 2", role: "Social Media", image: aliceImage },
@@ -292,12 +318,18 @@ const Team = () => {
       leadRole: "Hospitality Head",
       leadImage: shivani,
       backGroundImage: yrichi,
-      coLead: {
-        name: "Pritam Singh Shakhtawat",
-        role: "Co-Lead",
-        image:
-          "../../assests/team/WhatsApp Image 2024-11-09 at 15.07.03_a921caa5.png",
-      },
+      coLead: [
+        {
+          name: "Om Parate",
+          role: "Co-Lead",
+          image: om,
+        },
+        {
+          name: "Sankalp Pathak",
+          role: "Co-Lead",
+          image: sankalp,
+        },
+      ],
       members: [
         { name: "Member 1", role: "Designer", image: charlieImage },
         { name: "Member 2", role: "Social Media", image: aliceImage },
