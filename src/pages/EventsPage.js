@@ -4,7 +4,7 @@ import './EventsPage.css';
 import Footer from "../components/Footer";
 
 const eventsData = {
-  "CSE": {
+ "CSE": {
     "Rospinot": [
       { id: 1, name: "Robo Charades", description: "Interactive robot charades competition", venue: "Lab 101", image: "/16.jpg" },
       { id: 2, name: "Robo Soccer", description: "Robot combat challenge", venue: "Arena", image: "/17.jpg" },
@@ -97,17 +97,93 @@ const branchIcons = {
 };
 
 const extendedDescriptions = {
-  1: "A more detailed description for Robo Charades",
-  2: "A more detailed description for Robo Soccer",
-  // Add more extended descriptions if needed...
+  // CSE > Rospinot
+  1: "Test your skills in communicating ideas without words in this unique Robot Charades event, where robots mimic actions for participants to guess.",
+  2: "A fast-paced Robo Soccer competition where bots collide on the field for victory. Navigate, tackle, and score in a challenging arena.",
+  3: "Innovate and showcase unique robotics projects in Robo Bazzinga. Bring your ideas to life and compete for the title of top innovator.",
+  4: "A tech-infused escape room challenge where participants solve puzzles and complete tasks with the aid of technology to escape in time.",
+  5: "Compete in a virtual environment in this Simulation Gaming Tournament, testing reflexes and strategies in realistic simulations.",
+
+  // CSE > CSI-Bitwise
+  6: "Take on the Blind Code challenge where coding is done without an immediate output display, testing your problem-solving skills and memory.",
+  7: "Participate in Code Mania, a competitive coding event designed to challenge coders with unique problems and algorithms.",
+  8: "A welcoming event for beginners to code and learn in a supportive environment, focusing on foundational coding challenges.",
+
+  // CSE > CSI-Development
+  9: "Race against time in Hack Sprint, where participants must create functional applications within a limited time frame.",
+  10: "In Code Relay, teams code in segments, passing projects between members. Coordination and teamwork are key in this relay coding challenge.",
+  11: "Game developers join in the Smash Kart.io challenge, where skills in gaming and development are put to the test.",
+
+  // CSE > CSI-Botnet
+  12: "Decrypt puzzles and follow cryptic clues in this Cryptography Hunt, testing participants' knowledge of cryptographic methods.",
+  13: "Capture The Flag (CTF) focuses on cybersecurity skills, with participants identifying vulnerabilities and capturing 'flags' hidden in systems.",
+  14: "Raise awareness about phishing and cybersecurity with Phishers, an event focused on recognizing and preventing cyber threats.",
+
+  // CSE > CSI-MM&UI/UX
+  15: "Showcase your UI/UX design talents in GLITCH, where designers must create solutions for real-world problems.",
+  16: "Participate in ARCADE BOX, a design competition that pushes creative boundaries with interactive and user-centered designs.",
+  17: "Compete in Typolympics, where participants show off typography skills in unique and imaginative ways.",
+  18: "Digital comic creation competition Comicster lets you bring your story and art to life in comic format.",
+
+  // CSE > JDSC
+  19: "Show off your CSS skills in CSS Lottery, where participants create visually appealing styles in real-time.",
+  20: "Uncover hidden messages in Steganofy, a steganography challenge focusing on data hiding techniques in images and text.",
+  21: "Test image manipulation skills in Image Imagine, an event based on advanced image processing techniques.",
+
+  // CSE > VR AR MR
+  22: "Experience the thrill of VR in Cow Boy Shooter, where players participate in an immersive VR shooting challenge.",
+  23: "Engage in AR Treasure Hunt, where participants use augmented reality to find hidden treasures across campus.",
+  24: "Create 2D games and showcase creativity and technical prowess in this game development event.",
+
+  // CSE > GFG
+  25: "Compete in Query Quest, where participants solve complex database challenges with optimized SQL queries.",
+  26: "Brain Teaser focuses on logic puzzles, encouraging problem-solving skills and quick thinking.",
+  27: "Identify and recognize famous brands in Spot the Brand, testing participants’ marketing and branding knowledge.",
+
+  // CSE > Mozilla
+  28: "A security challenge focusing on web security concepts and vulnerabilities, War For Trezor challenges participants’ hacking skills.",
+  29: "Design unique pixel art for web projects in Website Pixel Art, blending creativity with web-based designs.",
+
+  // ECE
+  30: "Witness thrilling robot combats in Robo War, where participants engage in a high-energy bot-to-bot battle.",
+  31: "Laser Tag combines electronics and fun in this thrilling laser game experience on the field.",
+  32: "Robo Race is all about speed, where participants race custom-built robots on a set track.",
+  33: "Maze Bot challenges participants to build robots that navigate mazes autonomously.",
+  34: "Showcase your skills in electronic design and control in this Pinball competition with a twist.",
+  35: "Create functional electronic devices using scrap materials in Junkyar War, a test of creativity and ingenuity.",
+  36: "Display and present projects in the Exhibition, where participants showcase innovative electronic ideas and solutions.",
+
+  // MECHANICAL
+  37: "Hawkeye Bow lets participants showcase their mechanical design skills in creating functional bows.",
+  38: "Demonstrate knowledge in hydraulics by designing functional Hydraulic Arms, testing power and control.",
+  39: "Assembling Gear is a hands-on event focusing on precise gear assembly and understanding mechanical systems.",
+  40: "Waterjet competition involves using waterjet technology to perform cutting tasks, focusing on precision and technique.",
+  41: "Design a spring suspension system for cars in the Spring Suspension Car event, balancing performance with durability.",
+  42: "Unleash your creativity in DIY Engineering Competition, where participants create engineering solutions from scratch.",
+  43: "Design an integrated traffic light and maglev train system using Arduino in this electronics-mechanical project event.",
+
+  // CIVIL
+  44: "Take part in BOB the Builder, a construction challenge focused on problem-solving in civil engineering.",
+  45: "A strategic building game where participants compete in the classic game of TIC TAC TOE with a civil engineering twist.",
+  46: "Float the Ball is a fluid dynamics event, testing participants' knowledge of forces and pressure.",
+  47: "Explore architectural creativity in Clay Modelling, a hands-on modeling event with clay.",
+  48: "Design and test small structures in DEFYROUE, a structural engineering competition emphasizing stability and innovation.",
+
+  // CHEMICAL
+  49: "Flame Fun involves chemical reactions demonstrating combustion and heat, blending chemistry with visual appeal.",
+  50: "Create art using pH indicators in Litmus Art, showcasing creativity with color-changing reactions.",
+  51: "Explore the unique properties of non-Newtonian fluids in this hands-on event.",
+  52: "Chemical Chameleon focuses on color-changing reactions and chemical demonstrations.",
+  53: "Build a working lava lamp using chemical separation principles in this density-based experiment.",
+  54: "Design a chemical-powered vehicle for Racing Car, focusing on efficiency and performance in a race setup."
 };
 
 const Events = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [selectedBranch, setSelectedBranch] = useState(null);
-  const [selectedEvent, setSelectedEvent] = useState(null);
   const [selectedClub, setSelectedClub] = useState(null);
+  const [selectedEvent, setSelectedEvent] = useState(null);
   const [flippedCards, setFlippedCards] = useState(new Set());
 
   useEffect(() => {
@@ -177,28 +253,29 @@ const Events = () => {
     }
   };
 
-  const handleEventClick = (event) => {
-    if (event === selectedEvent) {
-      setSelectedEvent(null);
-      updateHistory(selectedBranch, selectedClub);
-    } else {
-      setSelectedEvent(event);
-      updateHistory(selectedBranch, selectedClub, event);
-    }
-  };
+  // const handleEventClick = (event) => {
+  //   if (event === selectedEvent) {
+  //     setSelectedEvent(null);
+  //     updateHistory(selectedBranch, selectedClub);
+  //   } else {
+  //     setSelectedEvent(event);
+  //     updateHistory(selectedBranch, selectedClub, event);
+  //   }
+  // };
 
   const handleCardFlip = (eventId, e) => {
     e.stopPropagation();
     setFlippedCards(prev => {
       const newFlipped = new Set(prev);
       if (newFlipped.has(eventId)) {
-        newFlipped.delete(eventId);
+        newFlipped.delete(eventId); // If already flipped, unflip it
       } else {
-        newFlipped.add(eventId);
+        newFlipped.add(eventId); // Flip the card
       }
       return newFlipped;
     });
   };
+  
 
   const renderBranches = () => (
     <div className="branches-container">
@@ -224,34 +301,26 @@ const Events = () => {
   );
 
   const renderEventCard = (event, isMainEvent = false) => {
-    const isFlipped = flippedCards.has(event.id);
-    
+    const isFlipped = flippedCards.has(event.id); // Check if the card is flipped
+  
     return (
       <div
         key={event.id}
         className={`event-card ${isMainEvent ? 'main-event' : 'small-event'} ${isFlipped ? 'flipped' : ''}`}
-        onClick={() => handleEventClick(event)}
+        onClick={(e) => handleCardFlip(event.id, e)} // Flip the card when clicked
       >
-        {isMainEvent && event.image && (
-          <img src={event.image} alt={event.name} className="event-image" />
-        )}
-        <div className="event-content">
+        <div className="card-front">
+          <img src={event.image} alt={event.name} />
           <h3>{event.name}</h3>
-          <p>{isFlipped && extendedDescriptions[event.id] ? extendedDescriptions[event.id] : event.description}</p>
-          <p className="event-details">Venue: {event.venue}</p>
-          {extendedDescriptions[event.id] && (
-            <button 
-              className="flip-button"
-              onClick={(e) => handleCardFlip(event.id, e)}
-            >
-              {isFlipped ? 'Show Less' : 'Show More'}
-            </button>
-          )}
+          <p>{event.venue}</p>
+        </div>
+        <div className="card-back">
+          <p>{extendedDescriptions[event.id]}</p>
         </div>
       </div>
     );
   };
-
+  
   const renderEvents = (events) => {
     const mainEvents = events.slice(0, 2);
     const otherEvents = events.slice(2);
