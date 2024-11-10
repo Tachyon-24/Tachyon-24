@@ -61,6 +61,7 @@
 }
 
 .container {
+  margin-top: 100px !important;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -188,6 +189,13 @@
 }
 
 @media screen and (max-width: 767px) {
+  .footer_section{
+    margin-top: 50px;
+  }
+  .container{
+    margin-top: 100px !important;
+  }
+
   .footer_section {
     padding: 30px 15px;
   }
@@ -214,9 +222,13 @@
 }
 
 @media screen and (max-width: 479px) {
+  .footer_section{
+    margin-top: 50px;
+  }
   .container {
     padding-left: 15px;
     padding-right: 15px;
+    margin-top: 50px !important;
   }
 
   .footer_section {
@@ -250,6 +262,14 @@
 
 /* Extra small devices */
 @media screen and (max-width: 360px) {
+  .footer_section{
+    margin-top: 100px;
+  }
+
+  .container{
+    margin-top: 50px !important;
+  }
+
   .spark,
   .spark-1,
   .spark-2,
