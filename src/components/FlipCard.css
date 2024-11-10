@@ -398,6 +398,7 @@
   .tabs_menu_characters_home {
     flex-direction: column;
     gap: 10px;
+    margin-right: 5vh;
   }
 
   .item_tabs_characters_home {
