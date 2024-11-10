@@ -23,54 +23,65 @@ const OrganizerModal = ({ isOpen, onClose, organizerData }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="modal-overlay" onClick={onClose}>
+    <div className="organizer-modal-overlay" onClick={onClose}>
       <div
-        className="modal-content organizer-modal"
+        className="organizer-modal-wrapper"
         onClick={(e) => e.stopPropagation()}
       >
+        <button className="organizer-modal-close" onClick={onClose}>
+          ×
+        </button>
+        
         <div className="organizer-modal-content">
-          <div className="organizer-header">
-            <img
-              src={organizerData.image}
-              alt={organizerData.name}
-              className="organizer-modal-image"
-            />
-            <h2 className="modal-title">{organizerData.name}</h2>
-            <span className="detail-value">{organizerData.role}</span>
+          {/* Left Details */}
+          <div className="organizer-modal-left">
+            <div className="organizer-detail-item">
+              <span className="organizer-detail-label">Name:</span>
+              <span className="organizer-detail-value">{organizerData.name}</span>
+            </div>
+
+            <div className="organizer-detail-item">
+              <span className="organizer-detail-label">Designation:</span>
+              <span className="organizer-detail-value">{organizerData.designation}</span>
+            </div>
+
+            <div className="organizer-detail-item">
+              <span className="organizer-detail-label">Email:</span>
+              <span className="organizer-detail-value">{organizerData.email}</span>
+            </div>
           </div>
 
-          <div className="organizer-details">
-            <div className="detail-item">
-              <span className="detail-label">Name:</span>
-              <span className="detail-value">{organizerData.name}</span>
+          {/* Center Photo Section */}
+          <div className="organizer-modal-center">
+            <div className="organizer-photo-container">
+              <img
+                src={organizerData.image}
+                alt={organizerData.name}
+                className="organizer-modal-image"
+              />
             </div>
+            <h2 className="organizer-modal-title">{organizerData.name}</h2>
+            <span className="organizer-modal-role">{organizerData.role}</span>
+          </div>
 
-            <div className="detail-item">
-              <span className="detail-label">Designation:</span>
-              <span className="detail-value">{organizerData.designation}</span>
-            </div>
-
-            <div className="detail-item">
-              <span className="detail-label">Email:</span>
-              <span className="detail-value">{organizerData.email}</span>
-            </div>
-
-            <div className="detail-item">
-              <span className="detail-label">Phone:</span>
-              <span className="detail-value">{organizerData.phone}</span>
+          {/* Right Details */}
+          <div className="organizer-modal-right">
+            <div className="organizer-detail-item">
+              <span className="organizer-detail-label">Phone:</span>
+              <span className="organizer-detail-value">{organizerData.phone}</span>
             </div>
 
             {organizerData.department && (
-              <div className="detail-item">
-                <span className="detail-label">Department:</span>
-                <span className="detail-value">{organizerData.department}</span>
+              <div className="organizer-detail-item">
+                <span className="organizer-detail-label">Department:</span>
+                <span className="organizer-detail-value">{organizerData.department}</span>
               </div>
             )}
 
             {organizerData.responsibilities && (
-              <div className="detail-item">
-                <span className="detail-label">Key Responsibilities:</span>
-                <ul className="responsibilities-list">
+              <div className="organizer-detail-item">
+                <span className="organizer-detail-label">Key Responsibilities:</span>
+                <ul className="organizer-responsibilities-list">
                   {organizerData.responsibilities.map((resp, index) => (
                     <li key={index}>{resp}</li>
                   ))}
@@ -115,7 +126,7 @@ const TeamModal = ({ isOpen, onClose, teamData }) => {
                     className="lead-image"
                   />
                   <h4>{teamData.leadName}</h4>
-                  <p>{teamData.leadRole}</p>
+                 
                 </div>
               </div>
 
@@ -130,7 +141,7 @@ const TeamModal = ({ isOpen, onClose, teamData }) => {
                       className="lead-image"
                     />
                     <h4>{coLead.name}</h4>
-                    <p>{coLead.role}</p>
+                  
                   </div>
                 </div>
               ))}
