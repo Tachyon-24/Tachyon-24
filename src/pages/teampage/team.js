@@ -556,16 +556,6 @@ const Team = () => {
           role: "Hospitality Co-ordinator",
           image: aliceImage,
         },
-        {
-          name: "Akshita Bansal",
-          role: "Hospitality Co-ordinator",
-          image: charlieImage,
-        },
-        {
-          name: "Tanisha Bairagi",
-          role: "Hospitality Co-ordinator",
-          image: aliceImage,
-        },
       ],
     },
   ];
