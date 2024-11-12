@@ -78,7 +78,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 1000000;
 }
 
 /* Modal Content Styles */
@@ -89,6 +89,7 @@
   padding: 30px;
   width: 90%;
   max-width: 1200px;
+  margin-top: 40px;
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
@@ -105,7 +106,7 @@
   font-size: 24px;
   color: white;
   cursor: pointer;
-  padding: 0.5rem;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -135,6 +136,7 @@
 .leads-section {
   flex: 2;
   min-width: 0;
+  margin-top: 100px;
 }
 
 .leads-container {
@@ -297,10 +299,14 @@
   }
 
   .leads-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-right: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding-right: 0;
     padding-bottom: 2rem;
+    margin-top: 100px;
   }
 
   .leads-container {

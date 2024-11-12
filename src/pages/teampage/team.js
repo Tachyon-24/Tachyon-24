@@ -27,6 +27,15 @@ import kavya from "../../assests/team/kavya.png";
 import om from "../../assests/team/om.png";
 import sankalp from "../../assests/team/sankalp.png";
 import yashaggrahari from "../../assests/team/yashaggrahari.png";
+import pritambg from "./../../assests/team/pritambackground.jpg"
+import kavyabg from "../../assests/team/kavyabg.jpg"
+import anjanney from "../../assests/team/roy_mustang___fma_by_gbtz007_d584obo-fullview.jpg"
+import chojibg from "../../assests/team/chojibg.jpg"
+import killua from "../../assests/team/killua.jpg"
+import yami from "../../assests/team/yami.jpg"
+import download from "../../assests/team/download.jpg"
+import ichigo from "../../assests/team/ichigo.jpg"
+import thorfinn from "../../assests/team/thorfinn.jpg"
 const OrganizerModal = ({ isOpen, onClose, organizerData }) => {
   if (!isOpen) return null;
 
@@ -140,11 +149,44 @@ const TeamModal = ({ isOpen, onClose, teamData }) => {
               <div className="lead-card">
                 <h3>Team Lead</h3>
                 <div className="lead-info">
-                  <img
-                    src={teamData.leadImage}
-                    alt={teamData.leadName}
-                    className="lead-image"
-                  />
+                  <div style={{ 
+                    position: 'relative',
+                    width: '150px',  // Adjust based on your image size
+                    height: '150px', // Adjust based on your image size
+                    borderRadius: '50%',
+                    overflow: 'hidden',
+                    margin: '0 auto'
+                  }}>
+                    {/* Background Image */}
+                    <div
+                      style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        background: `url(${teamData.backGroundImage})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        backgroundRepeat: 'no-repeat',
+                        filter: 'blur(2px)',
+                        transform: 'scale(1.1)',
+                        zIndex: 1,
+                      }}
+                    />
+                    {/* Profile Image */}
+                    <img
+                      src={teamData.leadImage}
+                      alt={teamData.leadName}
+                      style={{
+                        position: 'relative',
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        zIndex: 2,
+                      }}
+                    />
+                  </div>
                   <h4>{teamData.leadName}</h4>
                 </div>
               </div>
@@ -154,11 +196,44 @@ const TeamModal = ({ isOpen, onClose, teamData }) => {
                 <div key={index} className="lead-card">
                   <h3>Co-Lead</h3>
                   <div className="lead-info">
-                    <img
-                      src={coLead.image}
-                      alt={coLead.name}
-                      className="lead-image"
-                    />
+                    <div style={{ 
+                      position: 'relative',
+                      width: '150px',  // Adjust based on your image size
+                      height: '150px', // Adjust based on your image size
+                      borderRadius: '50%',
+                      overflow: 'hidden',
+                      margin: '0 auto'
+                    }}>
+                      {/* Background Image */}
+                      <div
+                        style={{
+                          position: 'absolute',
+                          top: 0,
+                          left: 0,
+                          right: 0,
+                          bottom: 0,
+                          background: `url(${coLead.backGroundImage})`,
+                          backgroundSize: 'cover',
+                          backgroundPosition: 'center',
+                          backgroundRepeat: 'no-repeat',
+                          filter: 'blur(2px)',
+                          transform: 'scale(1.1)',
+                          zIndex: 1,
+                        }}
+                      />
+                      {/* Profile Image */}
+                      <img
+                        src={coLead.image}
+                        alt={coLead.name}
+                        style={{
+                          position: 'relative',
+                          width: '100%',
+                          height: '100%',
+                          objectFit: 'cover',
+                          zIndex: 2,
+                        }}
+                      />
+                    </div>
                     <h4>{coLead.name}</h4>
                   </div>
                 </div>
@@ -239,6 +314,7 @@ const Team = () => {
           name: "Pritam Singh Shaktawat",
           role: "Co-Lead",
           image: pritam,
+          backGroundImage:pritambg
         },
       ],
       members: [
@@ -270,11 +346,13 @@ const Team = () => {
           name: "Kavya Singh",
           role: "Co-Lead",
           image: kavya,
+          backGroundImage:kavyabg
         },
         {
           name: "Aanjaney Mishra",
           role: "Co-Lead",
           image: aliceImage,
+          backGroundImage:anjanney
         },
       ],
       members: [
@@ -357,11 +435,14 @@ const Team = () => {
       leadImage: gaurav,
       backGroundImage: gauravbg,
       coLead: [
-        { name: "Yash Agrahari", role: "Co-Lead", image: yashaggrahari },
+        { name: "Yash Agrahari", role: "Co-Lead", image: yashaggrahari,
+          backGroundImage:chojibg
+         },
         {
           name: "Deepak Prajapati",
           role: "Co-Lead",
           image: deepak,
+          backGroundImage:killua
         },
       ],
       members: [
@@ -458,11 +539,13 @@ const Team = () => {
           name: "Alakh Shrivastava",
           role: "Co-Lead",
           image: alakh,
+          backGroundImage:yami
         },
         {
           name: "Aakarsh Dubey",
           role: "Co-Lead",
           image: aakarsh,
+          backGroundImage:ichigo
         },
       ],
       members: [
@@ -513,11 +596,13 @@ const Team = () => {
           name: "Om Parate",
           role: "Co-Lead",
           image: om,
+          backGroundImage:download
         },
         {
           name: "Sankalp Pathak",
           role: "Co-Lead",
           image: sankalp,
+          backGroundImage:thorfinn
         },
       ],
       members: [
