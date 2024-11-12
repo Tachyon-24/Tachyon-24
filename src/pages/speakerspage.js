@@ -26,8 +26,8 @@ const SpeakerSpage = () => {
                 <div className="personinfo">
                   <img src="./bhoomiksharma.jpg" alt="speakerimg1" />
                   <span>Bhoomik Sharma</span>
-                  <span>MLops @Google</span>
-                  <a href="https://www.linkedin.com/in/pushkar-chaturvedi-a83778284/">
+                  <span>Team Lead @Wipro</span>
+                  <a href="https://www.linkedin.com/in/bhoomik-sharma?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
                     <img
                       id="linkdinlogo"
                       src="./linkdinlogo.png"
@@ -47,8 +47,8 @@ const SpeakerSpage = () => {
                 <div className="personinfo">
                   <img src="./shubhangi.jpg" alt="speakerimg1" />
                   <span>shubhangi Bhargava</span>
-                  <span>MLops @Google</span>
-                  <a href="https://www.linkedin.com/in/pushkar-chaturvedi-a83778284/">
+                  <span>Manager @HSBC</span>
+                  <a href="https://www.linkedin.com/in/shubhangi-bhargava-3270a7125?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
                     <img
                       id="linkdinlogo"
                       src="./linkdinlogo.png"
@@ -92,8 +92,8 @@ const SpeakerSpage = () => {
                 <div className="personinfo">
                   <img src="./AAGAMJAIN.jpg" alt="speakerimg1" />
                   <span>Aagam jain</span>
-                  <span>AI Engineer @Meta</span>
-                  <a href="https://www.linkedin.com/in/pushkar-chaturvedi-a83778284/">
+                  <span>Software Engineer @Goldman Sachs</span>
+                  <a href="https://www.linkedin.com/in/aagam-jain-a47144176?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
                     <img
                       id="linkdinlogo"
                       src="./linkdinlogo.png"
@@ -157,8 +157,8 @@ const SpeakerSpage = () => {
                 <div className="personinfo">
                   <img src="./riteshyadav.jpg" alt="speakerimg1" />
                   <span>Ritesh Yadav</span>
-                  <span>MLops @Google</span>
-                  <a href="https://www.linkedin.com/in/pushkar-chaturvedi-a83778284/">
+                  <span>Data Scientist @Intellectai</span>
+                  <a href="https://www.linkedin.com/in/ritesh-yadav2011?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
                     <img
                       id="linkdinlogo"
                       src="./linkdinlogo.png"
