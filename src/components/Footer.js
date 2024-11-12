@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+// import { Link } from 'lucide-react';
 import './Footer.css';
 import footerLogo from '../assests/footer-logo.png'
 
@@ -83,7 +84,7 @@ const Footer = () => {
                     <div className="paragraph_1 paragraph_1_align_center paragraph_1_margin_bottom_80px">
                         <span className="text-dim">ALL CREDITS TO</span>{' '}
                         <a 
-                            href="https://en.wikipedia.org/wiki/Koyoharu_Gotouge" 
+                            href="/team" 
                             target="_blank" 
                             rel="noopener noreferrer" 
                             className="link_paragraph_1"
