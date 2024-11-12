@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./team.css";
 
 // Import images
+import anjanaeymain from "../../assests/team/file.png"
 import gauravbg from "../../assests/team/gauravSirBg.jpg";
 import gaurav from "../../assests/team/IMG_2691 - GAURAV TIWARI.png";
 import saketsirbg from "../../assests/team/draken.jpg";
@@ -351,7 +352,7 @@ const Team = () => {
         {
           name: "Aanjaney Mishra",
           role: "Co-Lead",
-          image: aliceImage,
+          image: anjanaeymain,
           backGroundImage:anjanney
         },
       ],
