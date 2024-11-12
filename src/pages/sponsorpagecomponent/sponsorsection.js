@@ -25,35 +25,35 @@ const SponsorsSection = () => {
 
   return (
     <section className="sponsorsection">
-      <h1 style = {{fontSize : "50px", "marginBottom" : "60px"}}>Comming Soon..</h1>  {/*Remove this and uncomment the below part to see the sponsors page */}
-      {/* <div className="scroller" data-speed="fast" data-direction = "left">
+      <div className="titlesponsors">Our Sponsors</div>
+      {/* <h1 style = {{fontSize : "50px", "marginBottom" : "60px"}}>Comming Soon..</h1>  Remove this and uncomment the below part to see the sponsors page */}
+     <div className="sponsors">
+     <div className="scroller" data-speed="fast" data-direction = "left">
         <ul className="tag-list scroller__inner">
-          <li><img src="/logo192.png" alt="companylogo"></img></li>
-          <li><img src="/devfoliologo.png" alt="companylogo"></img></li>
+          <li><img id="unstop" src="/Unstop.png" alt="companylogo"></img></li>
+          <li><img id="titan" src="/titan.png" alt="companylogo"></img></li>
+          <li><img id="fasttrack" src="/Fastrack_logo.png" alt="companylogo"></img></li>
+          <li><img id="megamind" src="/MegaMind.png" alt="companylogo"></img></li>
+          <li><img id="kitchen" src="/kitchenlogo.png" alt="companylogo"></img></li>
+          <li><img id="PCE" src="/PCElogo2.png" alt="companylogo"></img></li>
+          <li><img id="tealogylogo" src="/tealogy.png" alt="companylogo"></img></li>
         </ul>
       </div>
 
-      <div className="scroller" data-speed="fast" data-direction = "right">
-        <ul className="tag-list scroller__inner">
-          <li><img src="/logo192.png" alt="companylogo"></img></li>
-          <li><img src="/devfoliologo.png" alt="companylogo"></img></li>
-        </ul>
-      </div>
-      
-      <div className="scroller" data-speed="fast" data-direction = "left">
-        <ul className="tag-list scroller__inner">
-          <li><img src="/logo192.png" alt="companylogo"></img></li>
-          <li><img src="/devfoliologo.png" alt="companylogo"></img></li>
-        </ul>
-      </div>
       
       <div className="scroller" data-speed="fast" data-direction = "right">
         <ul className="tag-list scroller__inner">
-          <li><img src="/logo192.png" alt="companylogo"></img></li>
-          <li><img src="/devfoliologo.png" alt="companylogo"></img></li>
+          <li><img id="someonelogo" src="/someone.png" alt="companylogo"></img></li>
+          <li><img id="axisbanklogo" src="/axis_bank_logo.png" alt="companylogo"></img></li>
+          <li><img id="protienlogo" src="/Protien-4Ulogo.png" alt="companylogo"></img></li>
+          <li><img id="Trip247logo" src="/Trip247logo.png" alt="companylogo"></img></li>
+          <li><img id="gunaagrologo" src="/gunaagro-logo.png" alt="companylogo"></img></li>
+          <li><img id="shekunjlogo" src="/shekunjlogo.png" alt="companylogo"></img></li>
+          <li><img id="vadapavlogo" src="/vadapavlogo.png" alt="companylogo"></img></li>
         </ul>
       </div>
-       */}
+     
+      </div> 
     </section>  
   );
 };
