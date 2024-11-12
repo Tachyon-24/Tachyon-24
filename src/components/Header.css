@@ -53,6 +53,7 @@
 
 /* Desktop Navigation */
 .slide-menu {
+  cursor: pointer !important;
   position: fixed;
   top: 0;
   right: -300px;

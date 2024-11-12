@@ -6,7 +6,7 @@
 .container {
   max-width: 1400px;
   margin: 0 auto;
-  margin-bottom: 10vh;
+  margin-bottom: 6vh;
 }
 
 .wrap_tabs_characters_home {
@@ -398,6 +398,7 @@
   .tabs_menu_characters_home {
     flex-direction: column;
     gap: 10px;
+    margin-right: 5vh;
   }
 
   .item_tabs_characters_home {

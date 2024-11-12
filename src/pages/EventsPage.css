@@ -36,70 +36,147 @@
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  perspective: 1000px; /* Add perspective to create the 3D effect */
 }
 
-/* Shared Background Overlay */
-.branch-card::before,
-.event-card::before,
-.club-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
+/* Rotation effect */
+.event-card {
+  width: 500px;
+  height: 600px;
+  margin: 10px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 20px;
+  padding: 0; /* Remove padding to make room for the full image */
+  overflow: hidden; /* Hide content overflow */
+  perspective: 1000px; /* Add perspective for 3D flip effect */
+  display: flex;
+  flex-direction: column;
+}
+
+.event-card p{
+  font-size: 2rem;
+  /* margin-right: 33vh; */
+  text-align: center;
+  margin-top: 110%;
+
+}
+
+
+.card-front, .card-back {
   width: 100%;
   height: 100%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity: 0.7;
-  transition: all 0.3s ease;
+  position: absolute;
+  backface-visibility: hidden; /* Hide the back of the card when flipped */
+  transition: transform 0.6s;
+}
+
+.card-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Push content to the top of the card */
+  align-items: center;
+  position: relative;
+  height: 100%;
   z-index: 1;
-  transform-origin: center bottom;
+}
+.card-front h3,
+.card-front h4 {
+  position: absolute;
+  top: 78%; 
+  left: 33%;
+  text-align: center;
+  transform: translateX(-50%);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: white;
 }
 
-/* Shared Gradient Overlay */
-.branch-card::after,
-.event-card::after,
-.club-card::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
+.card-front h3 {
+  font-size: 2rem; /* Adjust event name size */
+}
+
+.card-front h4 {
+  font-size: 1.2rem; /* Adjust venue name size */
+  margin-top: 0.5rem; /* Space between event name and venue name */
+}
+
+.card-front img {
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    180deg, 
-    rgba(0,0,0,0.2) 0%,
-    rgba(0,0,0,0.4) 50%,
-    rgba(0,0,0,0.8) 100%
-  );
+  object-fit: cover; /* Make the image cover the entire card */
+  position: absolute; /* Position image behind content */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Send image behind text content */
+}
+
+.card-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.6); /* Slightly darker background */
+  color: white;
+  font-size: 1rem;
+  z-index: 1;
+}
+
+.card-back p{
+  font-size: 1.8rem;
+  /* margin-right: 33vh; */
+  text-align: center;
+  margin-top: -5%;
+}
+
+.event-card.flipped .card-front {
+  transform: rotateY(180deg);
+}
+
+.event-card.flipped .card-back {
+  transform: rotateY(0deg);
+}
+
+.event-card .event-content,
+.event-card .event-description {
+  backface-visibility: hidden;
+}
+
+.event-card.clicked {
+  transform: rotateY(180deg); /* Rotate the card on click */
+}
+
+/* Front side of the card */
+.event-card .event-content {
+  position: relative;
   z-index: 2;
 }
 
-/* Shared Hover Effects */
-.branch-card:hover,
-.event-card:hover,
-.club-card:hover {
-  transform: scale(0.98);
-  opacity: 1;
+/* Back side of the card */
+
+.event-card .event-description {
+  display: none; /* Hide description by default */
 }
 
-.branch-card:hover::before,
-.event-card:hover::before,
-.club-card:hover::before {
-  opacity: 1;
-  transform: scale(1.05);
+.event-card.clicked .event-description {
+  opacity: 1; /* Make the description visible when the card is clicked */
+}
+.event-content h3,
+.event-content p {
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  margin: 1rem 0;
 }
 
-/* Content Positioning */
-.branch-content,
-.event-content,
-.club-content {
-  position: relative;
-  z-index: 3;
-  width: 100%;
+.event-details {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1rem;
 }
-
 /* Grid Layouts */
 .branches-container,
 .clubs-container {
@@ -109,74 +186,6 @@
   padding: 2rem;
   margin: 0 auto;
   max-width: 1200px;
-}
-
-/* Branch-specific Styles */
-.branch-card[data-branch="CSE"] {
-  background: linear-gradient(135deg, rgba(255, 185, 56, 0.15) 0%, rgba(253, 112, 20, 0.15) 100%);
-}
-.branch-card[data-branch="CSE"]::before {
-  background-image: url('/public/ayanokoji.png');
-}
-
-.branch-card[data-branch="CHEMICAL"] {
-  background: linear-gradient(135deg, rgba(238, 9, 121, 0.15) 0%, rgba(255, 106, 0, 0.15) 100%);
-}
-.branch-card[data-branch="CHEMICAL"]::before {
-  background-image: url('/public/senku.png');
-}
-
-.branch-card[data-branch="ECE"] {
-  background: linear-gradient(135deg, rgba(54, 209, 220, 0.15) 0%, rgba(91, 134, 229, 0.15) 100%);
-}
-.branch-card[data-branch="ECE"]::before {
-  background-image: url('/public/L.jpg');
-}
-
-.branch-card[data-branch="MECHANICAL"] {
-  background: linear-gradient(135deg, rgba(75, 121, 161, 0.15) 0%, rgba(40, 62, 81, 0.15) 100%);
-}
-.branch-card[data-branch="MECHANICAL"]::before {
-  background-image: url('/public/rintaro.jpg');
-}
-
-.branch-card[data-branch="CIVIL"] {
-  background: linear-gradient(135deg, rgba(17, 153, 142, 0.15) 0%, rgba(56, 239, 125, 0.15) 100%);
-}
-.branch-card[data-branch="CIVIL"]::before {
-  background-image: url('/public/levi.jpg');
-}
-
-/* Branch Header Styles */
-.branch-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.branch-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin: 0;
-  letter-spacing: 0.5px;
-  color: white;
-  text-transform: uppercase;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.branch-icon {
-  font-size: 2.5rem;
-  opacity: 0.9;
-}
-
-.branch-count {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.9);
-  margin-top: 0.5rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 /* Event Card Specific Styles */
@@ -204,39 +213,15 @@
   padding-top: 1rem;
 }
 
-/* Club Card Specific Styles */
-.club-card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 2rem;
-  font-weight: 700;
+.flip-button {
+  margin-top: 10px;
+  padding: 6px 10px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid white;
   color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.club-card p {
-  margin: 0;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 1rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-/* Navigation */
-.navigation {
-  margin-bottom: 2rem;
-}
-
-.back-button {
-  background: none;
-  border: none;
-  color: rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
   cursor: pointer;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  transition: color 0.3s ease;
-}
-
-.back-button:hover {
-  color: white;
+  font-size: 14px;
 }
 
 /* Responsive Design */
@@ -249,6 +234,7 @@
   
   .event-card {
     min-height: 350px;
+    width:50vh;
   }
   
   .event-content h3 {
@@ -296,6 +282,20 @@
     min-height: 300px;
     padding: 1.5rem;
   }
+
+  .event-card:hover {
+    transform: scale(1.03); /* Smaller scale for hover */
+  }
+
+  .event-card img.event-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+   
+  .branch-title {
+    font-size: 1.5rem;
+  }
   
   .event-content h3 {
     font-size: 1.2rem;
@@ -324,8 +324,8 @@
 
 @media (max-width: 480px) {
   .event-card {
-    min-height: 250px;
-    padding: 1.25rem;
+    padding: 0;
+    width: 38vh;
   }
   
   .event-content h3 {
@@ -341,4 +341,10 @@
     margin-top: 0.6rem;
     padding-top: 0.6rem;
   }
+  .event-card img.event-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
 }

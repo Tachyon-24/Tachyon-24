@@ -1,18 +1,21 @@
+/* Main Container Styles */
 .container {
   margin-top: 10vw;
-  padding: 0 5vw; /* Adds horizontal padding */
+  margin-left: -2vw;
 }
 
+/* Host Section Styles */
 .hostsection {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* Ensures items wrap on smaller screens */
+  flex-wrap: wrap;
   width: 100%;
-  gap: 2vw; /* Adjusts spacing between flex items */
+  gap: 2vw;
   margin-top: 2vw;
   margin-bottom: 5vw;
 }
 
+/* Organizer and Co-organizer Section Styles */
 .organizer-section,
 .coorganizer-section {
   display: flex;
@@ -21,117 +24,89 @@
   color: white;
   border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 16px;
-  flex: 1 1 250px; /* Allows items to grow/shrink with a minimum width */
-  max-width: 400px; /* Limits the maximum width of each section */
+  max-width: 400px;
+  height: 100%;
 }
 
 .organizer-section img,
 .coorganizer-section img {
   width: 100%;
-  /* Limits the maximum width of the images */
 }
 
+.organizer-section {
+  background-image: url("../../assests/team/main-qimg-e023e6d31c3f1dd8ad673464e1b52c08-lq.jpg");
+}
+
+/* Core Team Section Styles */
 .core-team-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   gap: 20px;
   width: 100%;
+  margin-left: -3vw;
 }
 
+/* Team Member Styles */
 .team-member {
+  background-image: url("../../assests/team/c6c2ceb6baa9990646e5466518b470da.png");
   text-align: center;
-  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  width: calc(33.33% - 100px); /* Three items per row by default */
+  width: calc(33.33% - 100px);
 }
+
 .team-member img {
   width: 100%;
 }
-.team-member h3 {
-  color: white;
-}
+
+.team-member h3,
 .team-member p {
   color: white;
 }
-@media (max-width: 768px) {
-  .container {
-    margin-top: 30vw;
-    padding: 0 5vw; /* Adds horizontal padding */
-  }
-  .core-team-section {
-    gap: 20px;
-  }
 
-  .team-member {
-    text-align: center;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 300px; /* Three items per row by default */
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    margin-top: 30vw;
-    padding: 0 5vw; /* Adds horizontal padding */
-  }
-  .core-team-section {
-    gap: 10px;
-  }
-  .team-member {
-    width: 100%; /* Full width on smaller screens */
-  }
-  .organizer-section img,
-  .coorganizer-section img {
-    width: 60vw; /* Larger width for very small screens */
-    max-width: 100%; /* Ensure the image doesn’t exceed the container width */
-  }
-  .team-member {
-    text-align: center;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 300px; /* Three items per row by default */
-  }
-}
-/* Existing modal styles */
+/* Modal Overlay Styles */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 1000000;
 }
 
+/* Modal Content Styles */
 .modal-content {
-  background-color: white;
-  padding: 2rem;
-  border-radius: 8px;
-  position: relative;
+  background-color: rgba(26, 26, 26, 0.7);
+  backdrop-filter: blur(16px);
+  border-radius: 15px;
+  padding: 30px;
   width: 90%;
-  max-width: 800px;
+  max-width: 1200px;
+  margin-top: 40px;
   max-height: 90vh;
   overflow-y: auto;
+  position: relative;
+  color: white;
 }
 
+/* Modal Close Button */
 .modal-close {
   position: absolute;
-  right: 1rem;
-  top: 1rem;
+  right: 20px;
+  top: 20px;
   background: none;
   border: none;
-  font-size: 1.5rem;
+  font-size: 24px;
+  color: white;
   cursor: pointer;
-  padding: 0.5rem;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -139,71 +114,306 @@
 }
 
 .modal-close:hover {
-  background-color: #f0f0f0;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
+/* Modal Title */
 .modal-title {
-  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: white;
   font-weight: bold;
-  margin-bottom: 1.5rem;
 }
 
-/* Existing team modal styles */
-.team-section {
-  margin-bottom: 2rem;
-}
-
-.section-title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.member-card {
+/* Modal Body Layout */
+.modal-body {
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: 30px;
 }
 
-.member-image {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
+/* Leads Section Styles */
+.leads-section {
+  flex: 2;
+  min-width: 0;
+  margin-top: 100px;
 }
 
-.member-info {
+.leads-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 15px;
+}
+
+/* Lead Card Styles */
+.lead-card {
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+}
+
+.lead-card h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #76B900;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Lead Info Styles */
+.lead-info {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.lead-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.lead-info h4 {
+  margin: 5px 0;
+  color: #fff;
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.lead-info p {
+  color: #ccc;
+  margin: 0;
+  text-align: center;
+}
+
+/* Members Section Styles */
+.members-section {
+  flex: 1;
+  min-width: 250px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #76B900;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.members-section h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Members List Styles */
+.members-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* Member Item Styles */
+.member-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 8px;
 }
 
 .member-name {
-  font-weight: 600;
-  margin-bottom: 0.25rem;
+  margin: 0;
+  color: #fff;
+  font-weight: 500;
 }
 
-.member-role {
+.member-designation {
+  margin: 5px 0 0;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+/* No Members Message */
+.no-members {
   color: #666;
+  font-style: italic;
 }
 
-/* New organizer modal styles */
-.organizer-modal {
+/* Custom Scrollbar Styles */
+.leads-container::-webkit-scrollbar,
+.members-list::-webkit-scrollbar,
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.leads-container::-webkit-scrollbar-track,
+.members-list::-webkit-scrollbar-track,
+.modal-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.leads-container::-webkit-scrollbar-thumb,
+.members-list::-webkit-scrollbar-thumb,
+.modal-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.leads-container::-webkit-scrollbar-thumb:hover,
+.members-list::-webkit-scrollbar-thumb:hover,
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    margin-top: 30vw;
+    padding: 0 5vw;
+  }
+
+  .core-team-section {
+    gap: 20px;
+  }
+
+  .team-member {
+    width: 300px;
+    padding: 10px;
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .modal-body {
+    flex-direction: column;
+  }
+
+  .leads-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-right: 0;
+    padding-bottom: 2rem;
+    margin-top: 100px;
+  }
+
+  .leads-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .members-section {
+    padding-left: 0;
+    padding-top: 2rem;
+  }
+  .member-designation {
+    color: #76B900;
+  }
+  .lead-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .hostsection {
+    margin-top: 20vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .organizer-section,
+  .coorganizer-section {
+    max-width: 300px;
+  }
+  .coorganizer-section {
+    height: 100%;
+  }
+  .coorganizer-section img {
+    width: 100%;
+  }
+  .container {
+    margin-top: 30vw;
+    padding: 0 5vw;
+  }
+
+  .core-team-section {
+    gap: 10px;
+    margin-left: -11vw;
+  }
+
+  .team-member {
+    width: 300px;
+  }
+
+  .organizer-section img,
+  .coorganizer-section img {
+    width: 60%;
+  }
+
+  .hostsection {
+    margin-left: -7.5vw;
+  }
+}
+/* Organizer Modal Styles */
+.organizer-modal-overlay {
+  position: fixed;
+  top: 10%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(20px);
+}
+
+.organizer-modal-wrapper {
+  background-color: rgba(26, 26, 26, 0.7);
+  backdrop-filter: blur(16px);
+  padding: 2rem;
+  border-radius: 8px;
   max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.organizer-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .organizer-modal-content {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
-.organizer-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.organizer-modal-header {
   text-align: center;
-  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
 }
 
 .organizer-modal-image {
@@ -212,83 +422,212 @@
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1rem;
-  border: 4px solid #f0f0f0;
 }
 
-.organizer-details {
+.organizer-modal-title {
+  margin: 0.5rem 0;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.organizer-modal-role {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.organizer-modal-details {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.detail-item {
+.organizer-detail-item {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
 }
 
-.detail-label {
-  font-weight: 600;
-  color: #333;
+.organizer-detail-label {
+  font-weight: bold;
+  color:#512fff;
 }
 
-.detail-value {
+.organizer-detail-value {
   color: #666;
 }
 
-.responsibilities-list {
+.organizer-responsibilities-list {
   margin: 0;
   padding-left: 1.5rem;
-}
-
-.responsibilities-list li {
-  margin-bottom: 0.5rem;
   color: #666;
 }
 
-/* Existing responsive styles */
-.team-members-grid {
+.organizer-responsibilities-list li {
+  margin-bottom: 0.5rem;
+}
+/* Organizer Modal Styles */
+.organizer-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.organizer-modal-wrapper {
+  
+  border-radius: 8px;
+  width: 95%;
+  max-width: 1200px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 2rem;
+}
+
+.organizer-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.organizer-modal-content {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 2rem;
+  align-items: start;
+  min-height: 500px;
 }
 
-.team-members-grid .member-image {
-  width: 60px;
-  height: 60px;
+/* Left and Right sections */
+.organizer-modal-left,
+.organizer-modal-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
 }
 
-/* Scrollbar styles */
-.modal-content::-webkit-scrollbar {
-  width: 8px;
+/* Center section with photo */
+.organizer-modal-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
 }
 
-.modal-content::-webkit-scrollbar-track {
-  background: #f1f1f1;
+.organizer-photo-container {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 1.5rem;
+  position: relative;
 }
 
-.modal-content::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
+.organizer-modal-image {
+  width: 100%;
+  height: 100%;
+  
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
-.modal-content::-webkit-scrollbar-thumb:hover {
-  background: #555;
+.organizer-modal-title {
+  margin: 0.5rem 0;
+  font-size: 2rem;
+  color:#76B900;
 }
 
-@media (max-width: 768px) {
-  .modal-content {
-    width: 95%;
-    padding: 1.5rem;
-  }
+.organizer-modal-role {
+  color: white;
+  font-size: 1.2rem;
+}
 
-  .team-members-grid {
+/* Detail items styling */
+.organizer-detail-item {
+
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.organizer-detail-label {
+  font-weight: bold;
+  color: #76B900;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.organizer-detail-value {
+  color: white;
+  font-size: 1rem;
+}
+
+.organizer-responsibilities-list {
+  margin: 0.5rem 0 0 0;
+  padding-left: 1.5rem;
+  color: white;
+}
+
+.organizer-responsibilities-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .organizer-modal-content {
     grid-template-columns: 1fr;
+    grid-template-areas: 
+      "center"
+      "left"
+      "right";
   }
 
-  .organizer-modal-image {
-    width: 120px;
-    height: 120px;
+  .organizer-modal-left {
+    grid-area: left;
+  }
+
+  .organizer-modal-center {
+    grid-area: center;
+  }
+
+  .organizer-modal-right {
+    grid-area: right;
+  }
+
+  .organizer-photo-container {
+    width: 250px;
+    height: 250px;
+  }
+
+  .organizer-modal-left,
+  .organizer-modal-right {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .organizer-modal-wrapper {
+    padding: 1rem;
+  }
+
+  .organizer-photo-container {
+    width: 200px;
+    height: 200px;
+  }
+
+  .organizer-modal-title {
+    font-size: 1.5rem;
   }
 }
