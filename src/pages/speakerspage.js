@@ -1,408 +1,149 @@
-import React, { useState } from "react";
-import "./speakerspage.css";
-import Footer from "../components/Footer";
+import { useState } from 'react';
+import "./speakerspage.css"
+import { Linkedin, Instagram } from 'lucide-react';
 
-const SpeakerSpage = () => {
-  const [activeCard, setActiveCard] = useState(null);
+const speakers = [
+  {
+    name: "Harsh Sharma",
+    role: "Founder @Shreyians Coding School",
+    imageUrl: "./harshsharma.jpg",
+    linkedIn: "https://in.linkedin.com/in/harshvandanasharma",
+    alumini:false,
+    instagram: "https://www.instagram.com/iamharshvandanasharma/?hl=en",
+    details: "Harsh Sharma is the visionary founder of **Shreyians Coding School**, an innovative platform dedicated to empowering the next generation of tech leaders through coding and data science education."  },
+  {
+    name: "Kushal Vijay",
+    role: "SDE-2 @Microsoft",
+    imageUrl: "./kushalviajy.jpg",
+    alumini:false,
+    linkedIn: "https://in.linkedin.com/in/kushalvijay",
+    instagram: "https://www.instagram.com/kushal_vijay_/?hl=en",
+    details: "Kushal Vijay is an experienced Software Development Engineer (SDE-2) at Microsoft, specializing in building innovative technologies . He plays a key role in shaping the future of the country."
+  },
+  {
+    name: "Raghu Pandey",
+    role: "Founder @iMature",
+    imageUrl: "./raghupandey.jpg",
+    alumini:false,
+    linkedIn: "https://www.linkedin.com/in/raghupandey/",
+    instagram: "https://www.instagram.com/raghupandey1/",
+    details: "Raghu Pandey is the founder of iMature, focusing on empowering youth through tech and mentorship. He drives digital transformation and innovation, with a passion for sustainable solutions."
+  },
+  
+];
+const alumini=[
+  {
+    name: "Bhoomik Sharma",
+    role: "Team lead Wipro",
+    imageUrl: "./bhoomiksharma.jpg",
+    alumini:true,
+    linkedIn: "https://www.linkedin.com/in/bhoomik-sharma/?originalSubdomain=in",
+    instagram: "https://www.instagram.com/bhoomik10/profilecard/?igsh=bnNyNHdyY2diYjIz",
+    details: "Bhoomik Sharma is a Team Lead at Wipro, specializing in leading tech teams and driving innovative solutions in software development."
+  },
+  {
+    name: "Aagam Jain",
+    role: "SDE @Goldman Sachs",
+    imageUrl: "./AAGAMJAIN.jpg",
+    alumini:true,
+    linkedIn: "https://www.linkedin.com/in/aagam-jain-a47144176/",
+    instagram: "https://www.instagram.com/aagam_jain__/?igsh=cGMzc2p6MnI2YjZu",
+    details: "Aagam Jain is a Software Development Engineer (SDE) at Goldman Sachs, focusing on building robust software solutions and driving innovation in the financial tech space."
+  },
+  {
+    name: "Shubhangi Bhargava",
+    role: "UX Designer",
+    imageUrl: "./shubhangi.jpg",
+    alumini:true,
+    linkedIn: "https://www.linkedin.com/in/shubhangi-bhargava-3270a7125/",
+    instagram: "https://www.instagram.com/shubhangibhargava/profilecard/?igsh=bTdjNjVsMHhkNHl2",
+    details: "Shubhangi Bhargava is a UX Designer, creating intuitive and engaging user experiences with a focus on accessibility and design innovation."
+  },
+  {
+    name: "Ritesh Yadav",
+    role: "Full Stack Data Scientist",
+    imageUrl: "./riteshyadav.jpg",
+    alumini:true,
+    linkedIn: "https://www.linkedin.com/in/ritesh-yadav2011/",
+    instagram: "https://www.instagram.com/whoriteshyadav/profilecard/?igsh=bnZ3YmhoNDkzZTZy",
+    details: "Ritesh Yadav is a Full Stack Data Scientist, specializing in end-to-end data solutions, from data analysis to model deployment, driving impactful business insights."
+  }
+]
 
-  const toggleInfo = (index) => {
-    setActiveCard(activeCard === index ? null : index);
-  };
+const SpeakerCard = ({ speaker, index }) => {
+  const [isFlipped, setIsFlipped] = useState(false);
 
   return (
-    <>
-      <section className="speakerspage">
-        <div className="title">Our Speakers</div>
-        <div className="carddiv">
-          <div className="contentdiv">
-            <div className="halfspeakercard1"></div>
-
-            <div className="speakercard1" onClick={() => toggleInfo(1)}>
-              {activeCard === 1 ? (
-                <div className="sessioninfo">
-                  <span>This is what will be done</span>
-                </div>
-              ) : (
-                <div className="personinfo">
-                  <img src="./bhoomiksharma.jpg" alt="speakerimg1" />
-                  <span>Bhoomik Sharma</span>
-                  <span>Team Lead @Wipro</span>
-                  <a href="https://www.linkedin.com/in/bhoomik-sharma?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
-                    <img
-                      id="linkdinlogo"
-                      src="./linkdinlogo.png"
-                      alt="LinkedIn"
-                    />
-                  </a>
-                </div>
-              )}
-            </div>
-
-            <div className="speakercard1" onClick={() => toggleInfo(2)}>
-              {activeCard === 2 ? (
-                <div className="sessioninfo">
-                  <span>This is what will be done</span>
-                </div>
-              ) : (
-                <div className="personinfo">
-                  <img src="./shubhangi.jpg" alt="speakerimg1" />
-                  <span>shubhangi Bhargava</span>
-                  <span>Manager @HSBC</span>
-                  <a href="https://www.linkedin.com/in/shubhangi-bhargava-3270a7125?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
-                    <img
-                      id="linkdinlogo"
-                      src="./linkdinlogo.png"
-                      alt="LinkedIn"
-                    />
-                  </a>
-                </div>
-              )}
-            </div>
-            <div className="speakercard1" onClick={() => toggleInfo(3)}>
-              {activeCard === 3 ? (
-                <div className="sessioninfo">
-                  <span>This is what will be done</span>
-                </div>
-              ) : (
-                <div className="personinfo">
-                  <img src="./pfp1.png" alt="speakerimg1" />
-                  <span>Andrew Hubert</span>
-                  <span>MLops @Google</span>
-                  <a href="https://www.linkedin.com/in/pushkar-chaturvedi-a83778284/">
-                    <img
-                      id="linkdinlogo"
-                      src="./linkdinlogo.png"
-                      alt="LinkedIn"
-                    />
-                  </a>
-                </div>
-              )}
-            </div>
-
-            <div className="halfspeakercard2"></div>
-          </div>
-
-          <div className="contentdiv">
-            <div className="speakercard2" onClick={() => toggleInfo(4)}>
-              {activeCard === 4 ? (
-                <div className="sessioninfo">
-                  <span>This is what will be done</span>
-                </div>
-              ) : (
-                <div className="personinfo">
-                  <img src="./AAGAMJAIN.jpg" alt="speakerimg1" />
-                  <span>Aagam jain</span>
-                  <span>Software Engineer @Goldman Sachs</span>
-                  <a href="https://www.linkedin.com/in/aagam-jain-a47144176?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
-                    <img
-                      id="linkdinlogo"
-                      src="./linkdinlogo.png"
-                      alt="LinkedIn"
-                    />
-                  </a>
-                </div>
-              )}
-            </div>
-            <div className="speakercard2" onClick={() => toggleInfo(5)}>
-              {activeCard === 5 ? (
-                <div className="sessioninfo">
-                  <span>This is what will be done</span>
-                </div>
-              ) : (
-                <div className="personinfo">
-                  <img src="./pfp2.png" alt="speakerimg1" />
-                  <span>Jane Doe</span>
-                  <span>AI Engineer @Meta</span>
-                  <a href="https://www.linkedin.com/in/pushkar-chaturvedi-a83778284/">
-                    <img
-                      id="linkdinlogo"
-                      src="./linkdinlogo.png"
-                      alt="LinkedIn"
-                    />
-                  </a>
-                </div>
-              )}
-            </div>
-            <div className="speakercard2" onClick={() => toggleInfo(6)}>
-              {activeCard === 6 ? (
-                <div className="sessioninfo">
-                  <span>This is what will be done</span>
-                </div>
-              ) : (
-                <div className="personinfo">
-                  <img src="./pfp2.png" alt="speakerimg1" />
-                  <span>Jane Doe</span>
-                  <span>AI Engineer @Meta</span>
-                  <a href="https://www.linkedin.com/in/pushkar-chaturvedi-a83778284/">
-                    <img
-                      id="linkdinlogo"
-                      src="./linkdinlogo.png"
-                      alt="LinkedIn"
-                    />
-                  </a>
-                </div>
-              )}
-            </div>
-          </div>
-
-          <div className="contentdiv">
-            <div className="halfspeakercard1"></div>
-
-            <div className="speakercard1" onClick={() => toggleInfo(7)}>
-              {activeCard === 7 ? (
-                <div className="sessioninfo">
-                  <span>This is what will be done</span>
-                </div>
-              ) : (
-                <div className="personinfo">
-                  <img src="./riteshyadav.jpg" alt="speakerimg1" />
-                  <span>Ritesh Yadav</span>
-                  <span>Data Scientist @Intellectai</span>
-                  <a href="https://www.linkedin.com/in/ritesh-yadav2011?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
-                    <img
-                      id="linkdinlogo"
-                      src="./linkdinlogo.png"
-                      alt="LinkedIn"
-                    />
-                  </a>
-                </div>
-              )}
-            </div>
-
-            <div className="speakercard1" onClick={() => toggleInfo(8)}>
-              {activeCard === 8 ? (
-                <div className="sessioninfo">
-                  <span>This is what will be done</span>
-                </div>
-              ) : (
-                <div className="personinfo">
-                  <img src="./pfp1.png" alt="speakerimg1" />
-                  <span>Andrew Hubert</span>
-                  <span>MLops @Google</span>
-                  <a href="https://www.linkedin.com/in/pushkar-chaturvedi-a83778284/">
-                    <img
-                      id="linkdinlogo"
-                      src="./linkdinlogo.png"
-                      alt="LinkedIn"
-                    />
-                  </a>
-                </div>
-              )}
-            </div>
-            <div className="speakercard1" onClick={() => toggleInfo(9)}>
-              {activeCard === 9 ? (
-                <div className="sessioninfo">
-                  <span>This is what will be done</span>
-                </div>
-              ) : (
-                <div className="personinfo">
-                  <img src="./pfp1.png" alt="speakerimg1" />
-                  <span>Andrew Hubert</span>
-                  <span>MLops @Google</span>
-                  <a href="https://www.linkedin.com/in/pushkar-chaturvedi-a83778284/">
-                    <img
-                      id="linkdinlogo"
-                      src="./linkdinlogo.png"
-                      alt="LinkedIn"
-                    />
-                  </a>
-                </div>
-              )}
-            </div>
-
-            <div className="halfspeakercard2"></div>
-          </div>
-
-          <div className="contentdivmobile">
-            <div className="halfspeakercard1"></div>
-            <div className="speakercard1" onClick={() => toggleInfo(1)}>
-              {activeCard === 1 ? (
-                <div className="sessioninfo">
-                  <span>This is what will be done</span>
-                </div>
-              ) : (
-                <div className="personinfo">
-                  <img src="./pfp1.png" alt="speakerimg1" />
-                  <span>Andrew Hubert</span>
-                  <span>MLops @Google</span>
-                  <a href="https://www.linkedin.com/in/pushkar-chaturvedi-a83778284/">
-                    <img
-                      id="linkdinlogo"
-                      src="./linkdinlogo.png"
-                      alt="LinkedIn"
-                    />
-                  </a>
-                </div>
-              )}
-            </div>
-            <div className="speakercard1" onClick={() => toggleInfo(2)}>
-              {activeCard === 2 ? (
-                <div className="sessioninfo">
-                  <span>This is what will be done</span>
-                </div>
-              ) : (
-                <div className="personinfo">
-                  <img src="./pfp1.png" alt="speakerimg1" />
-                  <span>Andrew Hubert</span>
-                  <span>MLops @Google</span>
-                  <a href="https://www.linkedin.com/in/pushkar-chaturvedi-a83778284/">
-                    <img
-                      id="linkdinlogo"
-                      src="./linkdinlogo.png"
-                      alt="LinkedIn"
-                    />
-                  </a>
-                </div>
-              )}
-            </div>
-            <div className="speakercard1" onClick={() => toggleInfo(3)}>
-              {activeCard === 3 ? (
-                <div className="sessioninfo">
-                  <span>This is what will be done</span>
-                </div>
-              ) : (
-                <div className="personinfo">
-                  <img src="./pfp1.png" alt="speakerimg1" />
-                  <span>Andrew Hubert</span>
-                  <span>MLops @Google</span>
-                  <a href="https://www.linkedin.com/in/pushkar-chaturvedi-a83778284/">
-                    <img
-                      id="linkdinlogo"
-                      src="./linkdinlogo.png"
-                      alt="LinkedIn"
-                    />
-                  </a>
-                </div>
-              )}
-            </div>
-            <div className="speakercard1" onClick={() => toggleInfo(4)}>
-              {activeCard === 4 ? (
-                <div className="sessioninfo">
-                  <span>This is what will be done</span>
-                </div>
-              ) : (
-                <div className="personinfo">
-                  <img src="./pfp1.png" alt="speakerimg1" />
-                  <span>Andrew Hubert</span>
-                  <span>MLops @Google</span>
-                  <a href="https://www.linkedin.com/in/pushkar-chaturvedi-a83778284/">
-                    <img
-                      id="linkdinlogo"
-                      src="./linkdinlogo.png"
-                      alt="LinkedIn"
-                    />
-                  </a>
-                </div>
-              )}
-            </div>
-            <div className="speakercard1" onClick={() => toggleInfo(5)}>
-              {activeCard === 5 ? (
-                <div className="sessioninfo">
-                  <span>This is what will be done</span>
-                </div>
-              ) : (
-                <div className="personinfo">
-                  <img src="./pfp1.png" alt="speakerimg1" />
-                  <span>Andrew Hubert</span>
-                  <span>MLops @Google</span>
-                  <a href="https://www.linkedin.com/in/pushkar-chaturvedi-a83778284/">
-                    <img
-                      id="linkdinlogo"
-                      src="./linkdinlogo.png"
-                      alt="LinkedIn"
-                    />
-                  </a>
-                </div>
-              )}
-            </div>
-            <div className="speakercard1" onClick={() => toggleInfo(6)}>
-              {activeCard === 6 ? (
-                <div className="sessioninfo">
-                  <span>This is what will be done</span>
-                </div>
-              ) : (
-                <div className="personinfo">
-                  <img src="./pfp1.png" alt="speakerimg1" />
-                  <span>Andrew Hubert</span>
-                  <span>MLops @Google</span>
-                  <a href="https://www.linkedin.com/in/pushkar-chaturvedi-a83778284/">
-                    <img
-                      id="linkdinlogo"
-                      src="./linkdinlogo.png"
-                      alt="LinkedIn"
-                    />
-                  </a>
-                </div>
-              )}
-            </div>
-            <div className="speakercard1" onClick={() => toggleInfo(7)}>
-              {activeCard === 7 ? (
-                <div className="sessioninfo">
-                  <span>This is what will be done</span>
-                </div>
-              ) : (
-                <div className="personinfo">
-                  <img src="./pfp1.png" alt="speakerimg1" />
-                  <span>Andrew Hubert</span>
-                  <span>MLops @Google</span>
-                  <a href="https://www.linkedin.com/in/pushkar-chaturvedi-a83778284/">
-                    <img
-                      id="linkdinlogo"
-                      src="./linkdinlogo.png"
-                      alt="LinkedIn"
-                    />
-                  </a>
-                </div>
-              )}
-            </div>
-            <div className="speakercard1" onClick={() => toggleInfo(8)}>
-              {activeCard === 8 ? (
-                <div className="sessioninfo">
-                  <span>This is what will be done</span>
-                </div>
-              ) : (
-                <div className="personinfo">
-                  <img src="./pfp1.png" alt="speakerimg1" />
-                  <span>Andrew Hubert</span>
-                  <span>MLops @Google</span>
-                  <a href="https://www.linkedin.com/in/pushkar-chaturvedi-a83778284/">
-                    <img
-                      id="linkdinlogo"
-                      src="./linkdinlogo.png"
-                      alt="LinkedIn"
-                    />
-                  </a>
-                </div>
-              )}
-            </div>
-            <div className="speakercard1" onClick={() => toggleInfo(9)}>
-              {activeCard === 9 ? (
-                <div className="sessioninfo">
-                  <span>This is what will be done</span>
-                </div>
-              ) : (
-                <div className="personinfo">
-                  <img src="./pfp1.png" alt="speakerimg1" />
-                  <span>Andrew Hubert</span>
-                  <span>MLops @Google</span>
-                  <a href="https://www.linkedin.com/in/pushkar-chaturvedi-a83778284/">
-                    <img
-                      id="linkdinlogo"
-                      src="./linkdinlogo.png"
-                      alt="LinkedIn"
-                    />
-                  </a>
-                </div>
-              )}
-            </div>
-
-            <div className="halfspeakercard2"></div>
+    <div 
+      className="speaker-card"
+      style={{ animationDelay: `${index * 100}ms` }}
+      onClick={() => setIsFlipped(!isFlipped)}
+    >
+      <div className={`card-inner ${isFlipped ? 'is-flipped' : ''}`}>
+        {/* Front of card */}
+        <div className="card-face card-front">
+          <img
+            src={speaker.imageUrl}
+            alt={speaker.name}
+            className="speaker-image"
+          />
+          <div className="speaker-overlay">
+            <h2 className="speaker-name" style={{color:'white'}}>{speaker.name}</h2>
+            <p className="speaker-role">{speaker.role}</p>
           </div>
         </div>
-      </section>
-      <Footer />
-    </>
+
+        {/* Back of card */}
+        <div className="card-face card-back">
+          <div className="card-content">
+            <h2 className="speaker-name" style={{color:speaker.alumini===true?'#0077b5':'gold'}}>{speaker.name}</h2>
+            <p className="speaker-role">{speaker.role}</p>
+            <p className="speaker-details">{speaker.details}</p>
+            <div className="social-links">
+              <a
+                href={speaker.linkedIn}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-button linkedin-button"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Linkedin size={20} />
+              </a>
+              <a
+                href={speaker.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-button instagram-button"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Instagram size={20} />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+const SpeakersPage = () => {
+  return (
+    <div className="speakers-page">
+      <header className="speakers-header">
+        <h1 className="page-title">Our Speakers</h1>
+      </header>
+      
+      <main className="speakers-grid">
+        {speakers.map((speaker, index) => (
+          <SpeakerCard key={index} speaker={speaker} index={index} />
+        ))}
+        </main>
+        <main className="alumni-grid">
+        {alumini.map((alumini, index) => (
+          <SpeakerCard key={index} speaker={alumini} index={index + speakers.length} />
+        ))}
+     </main>
+    </div>
   );
 };
 
-export default SpeakerSpage;
+export default SpeakersPage;
