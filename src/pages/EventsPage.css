@@ -228,7 +228,7 @@
 /* Styles for the Other Events Grid */
 .events-box .event-boxes-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
   gap: 0; /* Remove gap between cards */
   margin-top: 16px;
   margin-bottom: 10vh;
@@ -241,7 +241,7 @@
   width: 28vh;
   /* margin-left: 70vh; */
   border-radius: 8px;
-  background:rgba(255, 255, 255, 0.1);
+  
   text-align: left;
   transition: transform 0.3s;
 }
@@ -523,64 +523,227 @@
 
 }
 
-@media (max-width: 480px) {
-  .event-card {
-    padding: 0;
-    width: 38vh;
+/* Events Box Container */
+.events-box {
+  padding: 2rem;
+ 
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  text-align: center; /* Optional: center text */
+  max-width: 1200px; /* Prevents stretching */
+  margin: 0 auto; /* Center the container */
+  min-height: 100vh; /* Full height for the container */
+  overflow: hidden; /* Prevents overflow on smaller screens */
+}
+
+/* Title of the section */
+.other-events {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: white;
+  text-align:left;
+  margin-right:83%;
+}
+
+/* Container for event boxes */
+.event-boxes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 3fr)); /* Ensures responsive grid */
+  gap: 1.5rem;
+  margin-top: 2rem;
+  justify-items: center; /* Centers each item inside the grid */
+  align-items: start; /* Aligns items at the top for consistency */
+  max-width: 100%; /* Prevents the grid from stretching */
+  width: 100%; /* Ensures it takes full width */
+  padding: 0 1rem; /* Padding to avoid edges touching */
+  box-sizing: border-box; /* Includes padding in width calculation */
+}
+
+/* Each individual event box */
+.event-box {
+ 
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 350px; /* Keeps event boxes from stretching too wide */
+  text-align: left;
+  box-sizing: border-box; /* Includes padding in width */
+  margin: 0 auto; /* Centers event box */
+}
+.card-back-event {
+  margin-bottom: 10%;
+}
+.event-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+.event-p{
+  text-align: center;
+}
+/* Event Header (name and time) */
+.event-box-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.event-box-header h4 {
+  font-size: 1.5rem;
+  color:white ;
+}
+
+.event-time {
+  margin-top: 10%;
+  font-size: 1rem;
+  color: white;
+}
+
+/* More Info Button */
+.more-info-btn {
+  margin-top: 1rem;
+  padding: 8px 16px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.more-info-btn:hover {
+  background-color: #0056b3;
+}
+
+.more-info-btn:focus {
+  outline: none;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .events-box {
+    padding: 1rem;
   }
 
-  .event-content h3 {
-    font-size: 1.1rem;
-  }
-
-  .event-content p {
-    font-size: 0.85rem;
-  }
-
-  .event-card p {
-    margin-right: 19vh;
-    font-size: 1.8rem;
-    margin-top: 45vh;
-  }
-  .card-front h3{
-    font-size: 20px;
-    margin-left: 20px;
-  }
-  .event-details {
-    font-size: 0.8rem;
-    margin-top: 0.6rem;
-    padding-top: 0.6rem;
-  }
-  .event-card img.event-image {
+  .event-boxes-container {
+    grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
+    padding: 0; /* Remove unnecessary padding */
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    box-sizing: border-box;
   }
 
-  .events-table {
-    margin-top: 20px;
+  .event-box {
+    padding: 1rem;
+    max-width: 100%; /* Allow event boxes to take up full width */
+    margin: 0; /* Remove any unwanted margin */
   }
-  .Other-Event{
-    text-align: center;
-    color: #ffffff;
-    font-size: 50px;
+
+  .event-box-header h4 {
+    font-size: 1.2rem;
   }
-  
-  .events-table table {
-    margin-bottom: 10vh;
-    width: 82%;
-    margin-left: 3vh;
-    border-collapse: collapse;
+
+  .event-time {
+    font-size: 0.9rem;
   }
-  
-  .events-table th, .events-table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    font-size: 20px;
-    text-align: center;
+
+  .more-info-btn {
+    font-size: 0.9rem;
   }
-  
-  .events-table th {
-    background-color:#2b0404;
+}
+
+@media (max-width: 480px) {
+  .event-box {
+    padding: 1rem;
+    max-width: 100%; /* Allow full width on very small screens */
+  }
+
+  .event-box-header h4 {
+    font-size: 1rem;
+  }
+
+  .event-time {
+    font-size: 0.8rem;
+  }
+
+  .more-info-btn {
+    font-size: 0.8rem;
+  }
+}
+/* Container for event boxes */
+.event-boxes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(480px, 1fr)); /* Ensures responsive grid */
+  gap: 1.5rem;
+  margin-top: 2rem;
+  justify-items: center; /* Centers each item inside the grid */
+  align-items: start; /* Aligns items at the top for consistency */
+  max-width: 100%; /* Prevents the grid from stretching */
+  width: 100%; /* Ensures it takes full width */
+  padding: 0 1rem; /* Padding to avoid edges touching */
+  box-sizing: border-box; /* Includes padding in width calculation */
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .events-box {
+    padding: 1rem;
+  }
+
+  .event-boxes-container {
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); /* Reduce the min-width on smaller screens */
+    padding: 0; /* Remove unnecessary padding */
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .event-box {
+    padding: 1rem;
+    max-width: 100%; /* Allow event boxes to take up full width */
+    margin: 0; /* Remove any unwanted margin */
+  }
+
+  .event-box-header h4 {
+    font-size: 1.2rem;
+  }
+
+  .event-time {
+    color: white;
+    font-size: 0.9rem;
+  }
+
+  .more-info-btn {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-boxes-container {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Reduce the min-width on smaller screens */
+    padding: 0; /* Remove unnecessary padding */
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .event-box {
+    padding: 1rem;
+    max-width: 100%; /* Allow full width on very small screens */
+  }
+
+  .event-box-header h4 {
+    font-size: 1rem;
+  }
+
+  .event-time {
+    color: white;
+    font-size: 0.8rem;
+  }
+
+  .more-info-btn {
+    font-size: 0.8rem;
   }
 }

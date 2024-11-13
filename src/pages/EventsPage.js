@@ -1,96 +1,93 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import './EventsPage.css';
+import { MapPin ,Clock4} from 'lucide-react';
 import Footer from "../components/Footer";
 
 const eventsData = { 
   "CSE": {
     "Rospinot": [
-      { id: 1, name: "Robo Charades", description: "Interactive robot charades competition", venue: "Lab 1", image: "/eventgame.png" },
-      { id: 2, name: "Robo War", description: "Robot combat challenge", venue: "Arena", image: "/eventgame.png" },
-      { id: 3, name: "Robo Bazzinga", description: "Robot rally challenge", venue: "Arena" },
-      { id: 4, name: "The Escape Room", description: "Robot basketball challenge", venue: "Arena" },
-      { id: 5, name: "Simulation Gaming Tournament", description: "Robot soccer challenge", venue: "Arena" },
+      { id: 1, name: "Robo Bazzinga", description: "Rospinot fun maze solving challenge for robots", venue: "AB Corridor" , image: "./eventgame1.jpeg" , time:"17th,  10:00 AM " },
+      { id: 2, name: "Cicada 036", description: "A mysterious online puzzle, with complex cryptography and intelligence clues", venue: "LT-2", image: "./eventgame2.jpeg", time:"16th , 2:00 PM - 6:00 PM"},
+      { id: 3, name: "Robo Soccer", description: "Robots compete to score goals on the field", venue: "AB Corridor", image: "/eventgame.png" ,time:"16th, 6:00 PM - 8:00 PM" },
+      { id: 4, name: "The Escape Room", description: "Robots race to solve clues and escape", venue: "AB Corridor", time:"17th, 10:00 AM" },
     ],
     "CSI-Bitwise": [
-      { id: 6, name: "Blind Code", description: "Coding without seeing the output", venue: "Lab 1", image: "/eventgame.png"  },
-      { id: 7, name: "Code Mania", description: "Competitive coding event", venue: "Lab 1", image: "/eventgame.png" },
-      { id: 8, name: "Newbie Code", description: "Code golf challenge", venue: "Lab 1" },
+      { id: 5, name: "Blind Code", description: "Test your coordination in a challenging blindfolded coding relay", venue: "CL-3 & CL-5", image: "./eventgame3.jpeg", time: "16th, 2:00 PM - 4:00 PM" },
+      { id: 6, name: "Code Mania", description: "Multiple round coding event", venue: "Online", image: "./eventgame4.jpeg", time: "15th, 7:00 PM - 10:00 PM" },
+      { id: 7, name: "Newbie Code", description: "Kodeathon for freshman year", venue: "CL (ALL)", time: "17th, 10:00 AM - 12:00 PM" },
     ],
     "CSI-Development": [
-      { id: 9, name: "Hack Sprint", description: "Quick development challenge", venue: "Lab 2", image: "/eventgame.png"  },
-      { id: 10, name: "Code Relay", description: "Team coding relay", venue: "Lab 2", image: "/eventgame.png" },
-      { id: 11, name: "Smash Kart.io", description: "Quick development challenge", venue: "Lab 2"},
+      { id: 8, name: "Hack Sprint", description: "Code against the clock to solve real-world problems (Hackathon)", venue: "MPH", image: "./eventgame5.jpeg", time: "16th, 9:00 PM - 12:00 AM" },
+      { id: 9, name: "Code Relay", description: "Collaborate seamlessly to tackle coding challenges in relay style", venue: "LT-1", image: "./eventgame1.jpeg", time: "17th, 4:00 PM - 6:00 PM" },
+      { id: 10, name: "Smash Kart.io", description: "Gaming event", venue: "LT-2", time: "15th, 7:00 PM - 8:00 PM" },
     ],
     "CSI-Botnet": [
-      { id: 12, name: "Cryptic Hunt", description: "Cryptography challenge", venue: "Lab 2", image: "/eventgame.png" },
-      { id: 13, name: "CTF", description: "Capture The Flag security event", venue: "Lab 2", image: "/eventgame.png" },
-      { id: 14, name: "Phishers", description: "Breaking the code", venue: "Lab 2" },
+      { id: 11, name: "Cryptic Hunt", description: "Decode and debug your way through a cryptic, beginner-friendly hunt", venue: "CL-4", image: "./eventgame2.jpeg", time: "17th, 3:00 PM - 4:00 PM" },
+      { id: 12, name: "Chakravyuh - CTF", description: "Puzzle event based on cyber security", venue: "Online", image: "./eventgame3.jpeg", time: "15th, 9:00 PM - 11:00 PM" },
+      { id: 13, name: "Phishers", description: "Breaking the code", venue: "Lab 2" },
     ],
     "CSI-MM&UI/UX": [
-      { id: 15, name: "GLITCH", description: "UI/UX design challenge", venue: "Design Lab", image: "/eventgame.png" },
-      { id: 16, name: "ARCADE BOX", description: "Interactive design competition", venue: "Lab 2", image:"/eventgame.png" },
-      { id: 17, name: "TYPOLYMPICS", description: "UI/UX design competition", venue: "Lab 2" },
-      { id: 18, name: "COMICSTER", description: "Quick development challenge", venue: "Lab 2" },
+      { id: 14, name: "GLITCH", description: "E-sports zone", venue: "LT-5", image: "./eventgame5.jpeg", time: "17th, 12:00 PM" },
+      { id: 15, name: "ARCADE BOX", description: "A fun retro game base console system for reliving the old games era", venue: "Nehru Plaza", image: "./eventgame4.jpeg", time: "16th, 1:00 PM - 4:00 PM" },
+      { id: 16, name: "TYPOLYMPICS", description: "Speed typing event in which various body parts are used for typing sentences", venue: "CL-3", time: "16th, 4:00 PM -  5:00 PM" },
+      { id: 17, name: "COMICSTER", description: "Quick development challenge", venue: "Lab 2" },
     ],
     "JDSC": [
-      { id: 19, name: "CSS Lottery", description: "CSS styling challenge", venue: "Lab 3", image: "/eventgame.png"  },
-      { id: 20, name: "Steganofy", description: "Steganography event", venue: "Lab 3", image:"/eventgame.png" },
-      { id: 21, name: "Image Imagine", description: "UI/UX design competition", venue: "Lab 3"}
+      { id: 18, name: "CSS Lottery", description: "Showcase your CSS skills in a fast-paced digital lottery", venue: "LT-1", image: "./eventgame1.jpeg", time: "16th, 2:00 PM - 3:00 PM" },
+      { id: 19, name: "Steganofy", description: "Hide and uncover secret messages using steganography techniques", venue: "LT-3", image: "./eventgame2.jpeg", time: "15th, 8:00 PM - 9:00 PM" },
+      { id: 20, name: "Image Imagine", description: "Generate and transform images based on unique prompts", venue: "LT-1", time: "17th, 12:00 PM" }
     ],
     "VR AR MR": [
-      { id: 22, name: "Cow Boy Shooter", description: "VR shooting game", venue: "VR Lab", image: "/eventgame.png" },
-      { id: 23, name: "AR Treasure Hunt", description: "AR-based treasure hunt", venue: "Campus Wide", image: "/eventgame.png" },
-      { id: 24, name: "2D-Game", description: "VR pong game", venue: "VR Lab"},
+      { id: 21, name: "Cow Boy Shooter", description: "VR shooting game", venue: "VR Lab", image: "./eventgame3.jpeg" },
+      { id: 22, name: "AR Treasure Hunt", description: "AR-based treasure hunt", venue: "Campus Wide", image: "./eventgame4.jpeg" },
+      { id: 23, name: "2D-Game", description: "VR pong game", venue: "VR Lab" },
     ],
     "GFG": [
-      { id: 25, name: "Query Quest", description: "Database query challenge", venue: "Lab 3", image: "/eventgame.png"  },
-      { id: 26, name: "Brain Teaser", description: "Logic puzzle competition", venue: "Lab 3", image: "/eventgame.png" },
-      { id: 27, name: "Spot The Brand", description: "Quiz competition", venue: "Lab 3" },
-      
+      { id: 24, name: "Query Quest", description: "SQL query challenge", venue: "LT-6", image: "./eventgame1.jpeg", time: "17th, 3:30 PM - 5:00 PM" },
+      { id: 25, name: "Brain Teaser", description: "Aptitude test and quiz", venue: "LT-1", image: "./eventgame2.jpeg", time: "16th, 6:00 PM - 7:30 PM" },
+      { id: 26, name: "Spot The Brand", description: "Quiz competition", venue: "Lab 3" },
     ],
     "Mozilla": [
-      { id: 28, name: "War For Trezor", description: "Web security challenge", venue: "Lab 3", image: "/eventgame.png" },
-      { id: 29, name: "Website Pixel Art", description: "Web design competition", venue: "Lab 3", image:"/eventgame.png" }
+      { id: 27, name: "War For Trezor", description: "Web security challenge", venue: "Online", image: "./eventgame3.jpeg", time: "16th, 9:00 PM - 11:00 PM" },
+      { id: 28, name: "Website Pixel Art", description: "Fun event where students have to find correct answers for problems", venue: "Online", image: "./eventgame4.jpeg", time: "15th, 9:00 PM - 11:00 PM" },
+      { id: 29, name: "Hack in a Box", description: "Online coding challenge for beginners with a virtual 'mystery box' of prompts, APIs, and fun twists", venue: "Online", image: "./eventgame5.jpeg", time: "17th, 9:00 PM - 11:00 PM" }
     ]
   },
   "ECE": [
-    { id: 30, name: "Robo War", description: "Robot combat challenge", venue: "Arena",image: "/eventgame.png" },
-    { id: 31, name: "Laser Tag", description: "Electronic laser tag game", venue: "Field", image: "/eventgame.png" },
-    { id: 32, name: "Robo Race", description: "Block-based game", venue: "Arena" },
-    { id: 33, name: "Maze Bot", description: "Electronic laser tag game", venue: "Field"},
+    { id: 30, name: "Robo War", description: "Robot combat challenge", venue: "Arena", image: "./eventgame5.jpeg" },
+    { id: 31, name: "Laser Tag", description: "Event in dark where you have to find the right path for your laser", venue: "In front of ISF Room", image: "./eventgame1.jpeg" },
+    { id: 32, name: "Robo Race", description: "A high-speed race where robots navigate challenging tracks to the finish line", venue: "Chhota Mandir" },
+    { id: 33, name: "Maze Bot", description: "Navigate unseen twists in the ultimate maze challenge", venue: "In front of Tuck 1" },
     { id: 34, name: "Pinball", description: "Robotics challenge", venue: "Arena" },
-    { id: 35, name: "Junkyar War", description: "Robot racing challenge", venue: "Arena"},
-    { id: 36, name: "Exibition", description: "Robotics challenge", venue: "Arena"},
-   
+    { id: 35, name: "Junkyard War", description: "Treasure hunt to create something unique by finding hidden tools", venue: "In front of ISF room" },
+    { id: 36, name: "Exhibition", description: "Robotics challenge", venue: "Arena" },
   ],
   "MECHANICAL": [
-    { id: 37, name: "Hawkeye Bow", description: "Mechanical bow design", venue: "Workshop", image: "/eventgame.png"  },
-    { id: 38, name: "Hydraulic Arms", description: "Hydraulic system design", venue: "Lab", image: "/eventgame.png" },
-    { id: 39, name: "Assembling Gear", description: "Mechanical challenge", venue: "Arena"},
-    { id: 40, name: "Waterjet", description: "Mechanical bow design", venue: "Workshop"},
-    { id: 41, name: "Spring Suspension Car", description: "Mechanical challenge", venue: "Arena"},
-    { id: 42, name: "DIY Enfineering Competition", description: "Mechanical bow design", venue: "Workshop"},
-    { id: 43, name: "Making Traffic Lights and with Arduino + train", description: "Hydraulic system design", venue: "Lab" },
-   
+    { id: 37, name: "Hawkeye Bow", description: "Mechanical bow design", venue: "Workshop", image: "./eventgame2.jpeg" },
+    { id: 38, name: "Hydraulic Arms", description: "Hydraulic system design", venue: "Lab", image: "./eventgame3.jpeg" },
+    { id: 39, name: "Assembling Gear", description: "A speed test competition for assembling and de-assembling of gearbox", venue: "MES Club" },
+    { id: 40, name: "Waterjet", description: "Mechanical bow design", venue: "Workshop" },
+    { id: 41, name: "Spring Suspension Car", description: "Event in which basic principles of elasticity will be used to make cars", venue: "MES Club" },
+    { id: 42, name: "DIY Engineering Competition", description: "Showcasing your coordination and engineering skills", venue: "MES Club" },
+    { id: 43, name: "Making Traffic Lights with Arduino + Hydraulic Arm", description: "Science Exhibition", venue: "AB Corridor" },
   ],
   "CIVIL": [
-    { id: 44, name: "BOB the Builder", description: "Construction challenge", venue: "Field", image:"/eventgame.png"  },
-    { id: 45, name: "TIC TAC TOE", description: "Strategic building game", venue: "Lab", image: "/eventgame.png" },
-    { id: 46, name: "Float The Ball", description: "Construction challenge", venue: "Field",  },
-    { id: 47, name: "Clay Modelling", description: "Construction challenge", venue: "Field",  },
-    { id: 48, name: "DEFYROUE", description: "Construction challenge", venue: "Field", },
+    { id: 44, name: "BOB the Builder", description: "Construction challenge", venue: "Field", image: "./eventgame4.jpeg" },
+    { id: 45, name: "TIC TAC TOE", description: "Strategic building game", venue: "Lab", image: "./eventgame5.jpeg" },
+    { id: 46, name: "Float The Ball", description: "A team event to create a seamless pathway for a ball using coordinated pipe movements.", venue: "Nehru Plaza" },
+    { id: 47, name: "Clay Modelling", description: "Craft and shape unique designs with clay this artistic challenge", venue: "CE Dept" },
+    { id: 48, name: "DEFYROULETTE", description: "Scan Virtual card in AR to complete thrilling real-world dare", venue: "Nehru Plaza" },
   ],
-  "CHEMICAL":[
-      { id: 49, name: "Flame Fun", description: "Chemical reaction demonstration", venue: "Lab", image: "/eventgame.png" },
-      { id: 50, name: "Litmus Art", description: "pH indicator art", venue: "Lab", image: "/eventgame.png" },
-      { id: 51, name: "Non-Newtonian Fluid", description: "Chemical reaction demonstration", venue: "Lab" },
-      { id: 52, name: "Chemical Chameleon", description: "pH indicator art", venue: "Lab" },
-      { id: 53, name: "Lava Lamp", description: "Chemical reaction demonstration", venue: "Lab" },
-      { id: 54, name: "Racing Car", description: "pH indicator art", venue: "Lab" },
-
+  "CHEMICAL": [
+    { id: 49, name: "Flame Fun", description: "Colourful flames from different salts", venue: "AB Corridor", image: "./eventgame1.jpeg" },
+    { id: 50, name: "Litmus Art", description: "Using the properties of turmeric powder, letting people draw on plain canvas", venue: "AB Corridor", image: "./eventgame2.jpeg" },
+    { id: 51, name: "Non-Newtonian Fluid", description: "Your force matters", venue: "Lab" },
+    { id: 52, name: "Chemical Chameleon", description: "Color change automation by titration", venue: "Lab" },
+    { id: 53, name: "Lava Lamp", description: "Miniature volcano by different chemicals", venue: "Lab" },
+    { id: 54, name: "Racing Car", description: "Fun event in which chemical compounds will be used as fuel for racing cars", venue: "In front of Tuck-2" },
   ]
- };
+};
 
 const branchIcons = {
   'CSE': '💻',
@@ -213,26 +210,37 @@ const Events = () => {
         <p>{event.venue}</p>
       </div>
       <div className="card-back">
-        <p>{extendedDescriptions[event.id] || event.description}</p>
+      <h3>{event.name}</h3>
+      <p className='event-p'>{event.venue}</p>
+        <p><strong>Description:</strong>{extendedDescriptions[event.id] || event.description}</p>
       </div>
     </div>
   );
 
   const renderEventsBox = (events) => (
     <div className="events-box">
-      <h3 className="Other-Event">Other Events</h3>
+      <h3 className="other-events" style={{marginBottom:'-0.5%'}}>Other Events</h3>
+      <hr style={{width:'100%'}}></hr>
       <div className="event-boxes-container">
-        {events.map((event) => (
-          <div key={event.id} className="event-box">
-            <h4>{event.name}</h4>
-            <p><strong>Description:</strong> {event.description}</p>
-            <p><strong>Venue:</strong> {event.venue}</p>
-            <p><strong>Time:</strong> {event.time || 'TBA'}</p>
-          </div>
-        ))}
+        {events.length === 0 ? (
+          <p>No upcoming events available at the moment.</p>
+        ) : (
+          events.map((event) => (
+            <div key={event.id} className="event-box">
+              <div className="event-box-header">
+                <h4>{event.name}</h4>
+              </div>
+              <p style={{marginTop:'-10%'}}><strong>Description:</strong> {event.description || 'No description available.'}</p>
+              <p><strong><MapPin/></strong> {event.venue || 'Venue details unavailable.'}</p>
+              <span className="event-time" ><Clock4/><span style={{marginLeft:'10px'}}>{event.time || 'TBA'}</span></span>
+          
+            </div>
+          ))
+        )}
       </div>
     </div>
   );
+  
 
   const renderEvents = (events) => {
     const mainEvents = events.slice(0, 2);
