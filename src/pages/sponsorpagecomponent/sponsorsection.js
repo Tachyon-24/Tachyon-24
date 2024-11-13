@@ -47,6 +47,7 @@ const SponsorsSection = () => {
       <div className="scroller" data-speed="fast" data-direction = "right">
         <ul className="tag-list scroller__inner">
           <li><img id="someonelogo" src="/someone.png" alt="SOMEONE"></img></li>
+          <li><img id="axisbanklogo" src="/axis_bank_logo.png" alt="Axix Bank"></img></li>
           <li><img id="protienlogo" src="/Protien-4Ulogo.png" alt="Protein4U"></img></li>
           <li><img id="Trip247logo" src="/Trip247logo.png" alt="Trip24/7"></img></li>
           <li><img id="gunaagrologo" src="/gunaagro-logo.png" alt="Gunaagro"></img></li>

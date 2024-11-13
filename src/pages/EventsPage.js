@@ -54,47 +54,47 @@ const eventsData = {
       { id: 29, name: "Hack in a Box", description: "Online coding challenge for beginners with a virtual 'mystery box' of prompts, APIs, and fun twists", venue: "Online", image: "./eventgame5.jpeg", time: "17th, 9:00 PM - 11:00 PM" }
     ]
   },
-  "ECE": [
-    { id: 30, name: "Robo War", description: "Robot combat challenge", venue: "Arena", image: "./eventgame5.jpeg" },
-    { id: 31, name: "Laser Tag", description: "Event in dark where you have to find the right path for your laser", venue: "In front of ISF Room", image: "./eventgame1.jpeg" },
-    { id: 32, name: "Robo Race", description: "A high-speed race where robots navigate challenging tracks to the finish line", venue: "Chhota Mandir" },
-    { id: 33, name: "Maze Bot", description: "Navigate unseen twists in the ultimate maze challenge", venue: "In front of Tuck 1" },
-    { id: 34, name: "Pinball", description: "Robotics challenge", venue: "Arena" },
-    { id: 35, name: "Junkyard War", description: "Treasure hunt to create something unique by finding hidden tools", venue: "In front of ISF room" },
-    { id: 36, name: "Exhibition", description: "Robotics challenge", venue: "Arena" },
+  "ISF": [
+    { id: 30, name: "Robo War", description: "Robot combat challenge", venue: "Arena", image: "./eventgame5.jpeg", time: "16th, 6:00 - 8:00 PM" },
+    { id: 31, name: "Laser Tag", description: "Event in dark where you have to find the right path for your laser", venue: "In front of ISF Room", image: "./eventgame1.jpeg", time: "15th, 7:00 - 9:00 PM" },
+    { id: 32, name: "Robo Race", description: "A high-speed race where robots navigate challenging tracks to the finish line", venue: "Chhota Mandir", time: "17th, 10:00 AM - 12:00 PM" },
+    { id: 33, name: "Maze Bot", description: "Navigate unseen twists in the ultimate maze challenge", venue: "In front of Tuck 1", time: "17th, 2:00 - 4:00 PM" },
+    // { id: 34, name: "Pinball", description: "Robotics challenge", venue: "Arena", time: "16th, 3:00 - 5:00 PM" },
+    { id: 34, name: "Junkyard War", description: "Treasure hunt to create something unique by finding hidden tools", venue: "In front of ISF room", time: "16th, 3:00 - 5:00 PM" },
+    // { id: 36, name: "Exhibition", description: "Robotics challenge", venue: "Arena", time: "16th, 6:00 - 8:00 PM" },
   ],
-  "MECHANICAL": [
-    { id: 37, name: "Hawkeye Bow", description: "Mechanical bow design", venue: "Workshop", image: "./eventgame2.jpeg" },
-    { id: 38, name: "Hydraulic Arms", description: "Hydraulic system design", venue: "Lab", image: "./eventgame3.jpeg" },
-    { id: 39, name: "Assembling Gear", description: "A speed test competition for assembling and de-assembling of gearbox", venue: "MES Club" },
-    { id: 40, name: "Waterjet", description: "Mechanical bow design", venue: "Workshop" },
-    { id: 41, name: "Spring Suspension Car", description: "Event in which basic principles of elasticity will be used to make cars", venue: "MES Club" },
-    { id: 42, name: "DIY Engineering Competition", description: "Showcasing your coordination and engineering skills", venue: "MES Club" },
-    { id: 43, name: "Making Traffic Lights with Arduino + Hydraulic Arm", description: "Science Exhibition", venue: "AB Corridor" },
+  "MES": [
+    { id: 35, name: "Hawkeye Bow", description: "Mechanical bow design", venue: "Workshop", image: "./eventgame2.jpeg", time: "16th, 5:00 - 7:00 PM" },
+    { id: 36, name: "Buggy Ride", description: "A funny buggy ride demo", venue: "MES Club", image: "./eventgame3.jpeg", time: "17th, 5:00 - 7:00 PM" },
+    { id: 37, name: "Assembling Gear", description: "A speed test competition for assembling and de-assembling of gearbox", venue: "MES Club", time: "16th, 6:00 - 7:30 PM" },
+    { id: 38, name: "Waterjet", description: "Mechanical bow design", venue: "Workshop", time: "16th, 3:00 - 5:00 PM" },
+    { id: 39, name: "Spring Suspension Car", description: "Event in which basic principles of elasticity will be used to make cars", venue: "MES Club", time: "15th, 8:00 - 9:00 PM" },
+    { id: 40, name: "DIY Engineering Competition", description: "Showcasing your coordination and engineering skills", venue: "MES Club", time: "17th, 7:00 - 8:00 PM" },
+    { id: 41, name: "WorkShop Worriror", description: "Design something creative by using carpentary skills", venue: "MES Department", time: "17th, 11:00 AM - 1:00 PM" },
   ],
-  "CIVIL": [
-    { id: 44, name: "BOB the Builder", description: "Construction challenge", venue: "Field", image: "./eventgame4.jpeg" },
-    { id: 45, name: "TIC TAC TOE", description: "Strategic building game", venue: "Lab", image: "./eventgame5.jpeg" },
-    { id: 46, name: "Float The Ball", description: "A team event to create a seamless pathway for a ball using coordinated pipe movements.", venue: "Nehru Plaza" },
-    { id: 47, name: "Clay Modelling", description: "Craft and shape unique designs with clay this artistic challenge", venue: "CE Dept" },
-    { id: 48, name: "DEFYROULETTE", description: "Scan Virtual card in AR to complete thrilling real-world dare", venue: "Nehru Plaza" },
+  "CE": [
+    { id: 42, name: "Truss It", description: "Design and build strong truss structures to test load-bearing and structural efficiency", venue: "AB Corridor", image: "./eventgame4.jpeg" , time: "15th, 7:00 - 9:00 PM"},
+    { id: 43, name: "TIC TAC TOE", description: "Strategic building game", venue: "Lab", image: "./eventgame5.jpeg", time: "17th, 5:00 - 6:30 PM" },
+    { id: 44, name: "Float The Ball", description: "A team event to create a seamless pathway for a ball using coordinated pipe movements.", venue: "Nehru Plaza", time: "17th, 2:00 - 3:00 PM" },
+    { id: 45, name: "Clay Modelling", description: "Craft and shape unique designs with clay this artistic challenge", venue: "CE Dept" , time: "17th, 10:00 - 11:30 AM"},
+    { id: 46, name: "DEFYROULETTE", description: "Scan Virtual card in AR to complete thrilling real-world dare", venue: "Nehru Plaza" , time: "16th, 6:00 - 7:00 PM"},
   ],
-  "CHEMICAL": [
-    { id: 49, name: "Flame Fun", description: "Colourful flames from different salts", venue: "AB Corridor", image: "./eventgame1.jpeg" },
-    { id: 50, name: "Litmus Art", description: "Using the properties of turmeric powder, letting people draw on plain canvas", venue: "AB Corridor", image: "./eventgame2.jpeg" },
-    { id: 51, name: "Non-Newtonian Fluid", description: "Your force matters", venue: "Lab" },
-    { id: 52, name: "Chemical Chameleon", description: "Color change automation by titration", venue: "Lab" },
-    { id: 53, name: "Lava Lamp", description: "Miniature volcano by different chemicals", venue: "Lab" },
-    { id: 54, name: "Racing Car", description: "Fun event in which chemical compounds will be used as fuel for racing cars", venue: "In front of Tuck-2" },
+  "CHE": [
+    { id: 49, name: "Flame Fun", description: "Colourful flames from different salts", venue: "AB Corridor", image: "./eventgame1.jpeg", time: "17th, 10:00 - 11:00 AM" },
+    { id: 50, name: "Litmus Art", description: "Using the properties of turmeric powder, letting people draw on plain canvas", venue: "AB Corridor", image: "./eventgame2.jpeg" , time: "16th, 1:00 - 3:00 PM"},
+    { id: 51, name: "Non-Newtonian Fluid", description: "Your force matters", venue: "Lab", time: "17th, 1:00 - 2:00 PM" },
+    { id: 52, name: "Chemical Chameleon", description: "Color change automation by titration", venue: "Lab", time: "17th, 5:00 - 6:00 PM" },
+    { id: 53, name: "Lava Lamp", description: "Miniature volcano by different chemicals", venue: "Lab", time: "16th, 1:00 - 3:00 PM" },
+    { id: 54, name: "Racing Car", description: "Fun event in which chemical compounds will be used as fuel for racing cars", venue: "In front of Tuck-2", time: "16th, 1:00 - 2:00 PM" },
   ]
 };
 
 const branchIcons = {
   'CSE': '💻',
-  'ECE': '⚡',
-  'MECHANICAL': '⚙️',
-  'CIVIL': '🏗️',
-  'CHEMICAL': '🧪'
+  'ISF': '⚡',
+  'MES': '⚙️',
+  'CE': '🏗️',
+  'CHE': '🧪'
 };
 
 const extendedDescriptions = { 
