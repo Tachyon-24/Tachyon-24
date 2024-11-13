@@ -182,11 +182,11 @@
 }
 
 .card-back {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+ bottom:1%;
+
   transform: rotateY(180deg);
-  padding: 10px;
+  padding: 0px;
   text-align: center;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.6); /* Slightly darker background */
@@ -196,10 +196,10 @@
 }
 
 .card-back p{
-  font-size: 1.8rem;
+  font-size: 1rem;
   /* margin-right: 33vh; */
   text-align: center;
-  margin-top: -5%;
+ 
 }
 
 .event-card.flipped .card-front {
