@@ -11,7 +11,7 @@ export const useMerchandise = () => useContext(MerchandiseContext);
 export const MerchandiseProvider = ({ children }) => {
     const product = {
         name: "Shinzo Wo Sasageyo",
-        price: 400,
+        price: 450,
         images: [
             "./assests/Front.png",
             "./assests/Back.png",
