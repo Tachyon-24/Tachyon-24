@@ -13,9 +13,10 @@ const FAB = () => {
     { path: '/events', label: 'Events' },
     { path: '/about', label: 'About' },
     { path: '/team', label: 'Team' },
-    {path:'/contact', label:'Contact'},
+    {path:'/speakers', label:'Speakers'},
     {path:'/merchandise',label:'Merchandise'},
-    {path : '/sponsors', label:'Sponsors'}
+    {path : '/sponsors', label:'Sponsors'},
+    {path:'/contact', label:'Contact'}
   ];
 
   useEffect(() => {
