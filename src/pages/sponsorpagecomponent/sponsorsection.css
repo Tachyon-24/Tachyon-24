@@ -144,6 +144,22 @@
   height: 200px;
 }
 
+#hdfc {
+  width: 300px;
+  height: 150px;
+}
+
+
+#santushtilogo {
+  width: 200px;
+  height: 200px;
+}
+
+#sbilogo {
+  width: 200px;
+  height: 100px;
+}
+
 .scroller>.scroller__inner>li>img:hover {
   transform: scale(1.1);
 }
