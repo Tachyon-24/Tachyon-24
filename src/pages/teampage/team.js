@@ -447,7 +447,11 @@ const Team = () => {
         },
       ],
       members: [
-        {
+    {
+          name: "Ashutosh Sultania",
+          role: "Management Co-ordinator",
+          image: charlieImage,
+        }   , {
           name: "Ajitesh Singh",
           role: "Management Co-ordinator",
           image: charlieImage,
