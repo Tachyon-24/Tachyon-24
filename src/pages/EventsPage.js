@@ -86,6 +86,10 @@ const eventsData = {
     { id: 52, name: "Chemical Chameleon", description: "Color change automation by titration", venue: "Lab", time: "17th, 5:00 - 6:00 PM" },
     { id: 53, name: "Lava Lamp", description: "Miniature volcano by different chemicals", venue: "Lab", time: "16th, 1:00 - 3:00 PM" },
     { id: 54, name: "Racing Car", description: "Fun event in which chemical compounds will be used as fuel for racing cars", venue: "In front of Tuck-2", time: "16th, 1:00 - 2:00 PM" },
+  ],
+  "IIC":[
+    {id:55,name:"Bit to Build" ,description:"Founders Bidding Leaque",venue:"LT-1", image: "./eventgame2.jpeg",time:"17th,11am"},
+    
   ]
 };
 
@@ -94,7 +98,8 @@ const branchIcons = {
   'ISF': '⚡',
   'MES': '⚙️',
   'CE': '🏗️',
-  'CHE': '🧪'
+  'CHE': '🧪',
+  'IIC':'🚀'
 };
 
 const extendedDescriptions = { 
