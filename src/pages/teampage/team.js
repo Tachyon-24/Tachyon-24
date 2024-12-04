@@ -17,7 +17,7 @@ import himanshuSir from "../../assests/team/himanshusir.png";
 import himanshuSirBg from "../../assests/team/c6c2ceb6baa9990646e5466518b470da.png";
 import hardikSirBg from "../../assests/team/main-qimg-e023e6d31c3f1dd8ad673464e1b52c08-lq.jpg";
 import alisirbg from "../../assests/team/OIP.png";
-import sampurn from "../../assests/team/WhatsApp Image 2024-12-04 at 6.04.12 PM(1)";
+import sampurn from "../../assests/team/WhatsApp_Image_2024-12-04_at_6.04.12_PM_1_-removebg-preview.png";
 import sampurnbg from "../../assests/team/5e0a02131c0567d225ee1b2d5c25232b.jpg";
 import yrichi from "../../assests/team/yorichi.jpg";
 import pritam from "../../assests/team/pritam.png";
